@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wretched of the Earth — LOD Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav id="nav">
+    <div class="nav-logo">LOD PROJECT</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Knowledge Organization</a>
+        <div class="dropdown-content">
+          <a href="#models">03 — Knowledge Models</a>
+          <a href="#metadata-analysis">04 — Metadata Analysis &amp; Alignment</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Knowledge Representation</a>
+        <div class="dropdown-content">
+          <a href="#items">05 — Items Description</a>
+          <a href="#uri">06 — URI Production</a>
+          <a href="#tei">07 — TEI Encoding</a>
+          <a href="#rdf-production">08 — RDF Production</a>
+          <a href="#rdf">09 — RDF Visualization</a>
+        </div>
+      </li>
+
+      <li><a href="#footer">Contacts</a></li>
+    </ul>
+    <div class="nav-progress"><span id="pb"></span></div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-label rev">Linked Open Data Project</div>
+      <h1 class="hero-title rev">
+        <span>The</span>
+        <span class="gold">Wretched</span>
+        <span>of the</span>
+        <span class="gold">Earth</span>
+      </h1>
+      <div class="hero-byline rev">— by Frantz Fanon</div>
+      <p class="hero-sub rev">A knowledge organisation and representation project on a landmark work of postcolonial
+        theory.</p>
+      <a href="#about" class="hero-cta rev">Explore the project ↓</a>
+    </div>
+    <div class="hero-year rev">1961</div>
+  </section>
+
+  <section id="about">
+    <div class="about-content">
+      <div class="sec-tag">01 — Study of the Domain</div>
+      <h2 class="sec-h2">About<br><em>the project</em></h2>
+
+      <p class="about-text">
+        <strong>The Wretched of the Earth</strong> (<em>Les Damnés de la Terre</em>) is a landmark work of postcolonial
+        theory written by psychiatrist and revolutionary thinker <strong>Frantz Fanon</strong> in the final months of
+        his life, during the Algerian War of Independence. Published in 1961 with a preface by Jean-Paul Sartre, the
+        book remains one of the most influential political texts of the twentieth century.
+      </p>
+
+      <div class="placeholder">
+        <span class="label">PROJECT DESCRIPTION</span>
+        <p>This project explores the semantic representation of *The Wretched of the Earth* by Frantz Fanon and its
+          broader postcolonial intellectual context through Semantic Web technologies and Digital Humanities
+          methodologies. The project models people, concepts, places, events, organizations, and textual entities
+          related to the work in order to formalise their historical, political, and cultural relations.
+          The workflow combines theoretical modelling, E/R modelling, ontology design, metadata alignment, TEI encoding,
+          and RDF transformation. The RDF dataset reuses the CIDOC-CRM and FRBRoo ontologies and reconciles entities to
+          external authority files including VIAF, Wikidata, GeoNames, WorldCat, and Getty AAT, while the metadata
+          alignment stage maps the model to established metadata standards such as MARC21 and Dublin Core (DCTerms),
+          in order to support interoperability and Linked Open Data integration.
+          The resulting semantic structure enables the representation of bibliographic, conceptual, and historical
+          knowledge through RDF triples and ontology-based relations, transforming the selected corpus into a
+          machine-readable and interoperable knowledge graph.</p>
+      </div>
+    </div>
+
+    <div class="about-quote">
+      <img src="Alzhir.jpg" alt="Algerians celebrating independence, 1962">
+      <blockquote class="accent-quote">
+        "Decolonisation is always a violent phenomenon"
+        <cite>— Frantz Fanon, 1961</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="entities">
+    <div class="entities-header">
+      <div class="sec-tag rev">02 — Knowledge Organisation</div>
+      <h2 class="sec-h2 rev">Selected<br><em>Entities</em></h2>
+      <p class="entities-intro rev">The following <strong>14 entities</strong> have been identified as the core nodes of
+        the knowledge graph for this project.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card rev" data-t="work">
+        <div class="card-type">Work</div>
+        <h3 class="card-title">The Wretched of the Earth</h3>
+        <p class="card-desc">A landmark work of postcolonial theory written by Frantz Fanon during the Algerian War of
+          Independence. Analyses the psychological and political effects of colonialism.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/The_Wretched_of_the_Earth" target="_blank">Wikipedia
+          ↗</a>
+      </article>
+
+      <article class="card rev" data-t="person">
+        <div class="card-type">Person</div>
+        <h3 class="card-title">Frantz Fanon</h3>
+        <p class="card-desc">Martinican psychiatrist, philosopher and revolutionary. Joined the FLN in Algeria. His work
+          combines psychoanalysis, Marxism and anticolonial thought. Died of leukaemia at 36.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Frantz_Fanon" target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="person">
+        <div class="card-type">Person</div>
+        <h3 class="card-title">Jean-Paul Sartre</h3>
+        <p class="card-desc">French existentialist philosopher. Wrote the controversial preface to the 1961 edition,
+          endorsing Fanon's argument on the liberatory potential of anticolonial violence.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Jean-Paul_Sartre" target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="person">
+        <div class="card-type">Person</div>
+        <h3 class="card-title">Homi K. Bhabha</h3>
+        <p class="card-desc">Indian-British postcolonial theorist at Harvard University. Wrote the foreword to the 2004
+          edition, reinterpreting Fanon through poststructuralism. Key concepts: hybridity, mimicry, ambivalence.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Homi_K._Bhabha" target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="person">
+        <div class="card-type">Person</div>
+        <h3 class="card-title">Aimé Césaire</h3>
+        <p class="card-desc">Martinican poet, playwright and politician. Co-founder of the Négritude movement and a
+          major intellectual influence on Fanon, who studied under him.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Aimé_Césaire" target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="org">
+        <div class="card-type">Organisation</div>
+        <h3 class="card-title">Grove Press</h3>
+        <p class="card-desc">Published the first English translation in 1963, translated by Constance Farrington. Known
+          for publishing politically radical and avant-garde literature.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Grove_Press" target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="place">
+        <div class="card-type">Place</div>
+        <h3 class="card-title">Algeria</h3>
+        <p class="card-desc">A country in North Africa, formerly a French colony from 1830 to 1962. The direct
+          historical context in which Fanon wrote <em>The Wretched of the Earth</em>.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Algeria" target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="place">
+        <div class="card-type">Place</div>
+        <h3 class="card-title">Martinique</h3>
+        <p class="card-desc">A Caribbean island and French overseas territory in the Lesser Antilles. Birthplace of both
+          Frantz Fanon and Aimé Césaire.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Martinique" target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="event">
+        <div class="card-type">Event</div>
+        <h3 class="card-title">Algerian Revolution</h3>
+        <p class="card-desc">The war of independence fought between Algeria and France, 1954–1962. Resulted in Algerian
+          independence after eight years of armed struggle.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Algerian_War" target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="event">
+        <div class="card-type">Event</div>
+        <h3 class="card-title">Second Congress of Black Writers and Artists</h3>
+        <p class="card-desc">International gathering of Black intellectuals held in Rome in 1959. Fanon's speech there
+          became the basis for key sections of the book.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Congress_of_Black_Writers_and_Artists"
+          target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="concept">
+        <div class="card-type">Concept</div>
+        <h3 class="card-title">Colonialism</h3>
+        <p class="card-desc">Fanon analyses colonialism as a totalising system that destroys the identity and psychology
+          of the colonised.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Colonialism" target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="concept">
+        <div class="card-type">Concept</div>
+        <h3 class="card-title">Decolonisation</h3>
+        <p class="card-desc">A complete transformation of the social order, requiring the active participation of the
+          colonised masses.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Decolonization" target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="concept">
+        <div class="card-type">Concept</div>
+        <h3 class="card-title">Négritude</h3>
+        <p class="card-desc">A literary and intellectual movement celebrating Black African culture. Fanon critiqued it
+          as insufficient for politics.</p>
+        <a class="card-link" href="https://en.wikipedia.org/wiki/Négritude" target="_blank">Wikipedia ↗</a>
+      </article>
+
+      <article class="card rev" data-t="work">
+        <div class="card-type">Work — Chapter</div>
+        <h3 class="card-title">"On Violence"</h3>
+        <p class="card-desc">The opening chapter arguing that colonial rule is founded on violence, and liberation
+          requires it.</p>
+        <a class="card-link" href="https://web.english.upenn.edu/~cavitch/pdf-library/Fanon_Violence.pdf"
+          target="_blank">PDF ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="models">
+    <div class="entities-header">
+      <div class="sec-tag rev">03 — Knowledge Organisation</div>
+      <h2 class="sec-h2 rev">Knowledge<br><em>Models</em></h2>
+      <p class="entities-intro rev">Three levels of abstraction — from natural-language relations to formal ontology.
+        Scroll to zoom · drag to pan.</p>
+    </div>
+
+    <div class="model-tabs rev">
+      <button class="model-tab active" data-model="theor" data-src="graphs/theor.html">
+        <span class="tab-num">01</span> Theoretical
+      </button>
+      <button class="model-tab" data-model="er" data-src="graphs/er_model.html">
+        <span class="tab-num">02</span> E/R Model
+      </button>
+      <button class="model-tab" data-model="conceptual" data-src="graphs/conceptual_model.html">
+        <span class="tab-num">03</span> Conceptual
+      </button>
+    </div>
+
+    <div class="model-stage rev">
+      <iframe class="model-frame active" data-model="theor" src="graphs/theor.html"></iframe>
+      <iframe class="model-frame" data-model="er" data-src="graphs/er_model.html"></iframe>
+      <iframe class="model-frame" data-model="conceptual" data-src="graphs/conceptual_model.html"></iframe>
+    </div>
+  </section>
+
+  <section id="metadata-analysis">
+    <div class="entities-header">
+      <div class="sec-tag rev">04 — Knowledge Organisation</div>
+      <h2 class="sec-h2 rev">Metadata<br><em>Analysis &amp; Alignment</em></h2>
+    </div>
+    <div class="rev" style="margin-top:2rem; margin-bottom: 2rem;">
+      <iframe src="data/metadata_analysis.html" style="width:100%;height:85vh;border:none;border-radius:4px;"></iframe>
+    </div>
+    <div class="rev" id="metadata-alignment" style="margin-top:2rem;">
+      <iframe src="data/metadata_alignment.html" style="width:100%;height:75vh;border:none;border-radius:4px;"></iframe>
+    </div>
+  </section>
+
+  <section id="items">
+    <div class="entities-header">
+      <div class="sec-tag rev">05 — Knowledge Representation</div>
+      <h2 class="sec-h2 rev">Items<br><em>Description</em></h2>
+    </div>
+    <div class="rev" style="margin-top:2rem;">
+      <iframe src="data/items_description.html" style="width:100%;height:85vh;border:none;border-radius:4px;"></iframe>
+    </div>
+  </section>
+
+  <section id="uri">
+    <div class="entities-header">
+      <div class="sec-tag rev">06 — Knowledge Representation</div>
+      <h2 class="sec-h2 rev">URI<br><em>Production</em></h2>
+    </div>
+    <div class="rev" style="margin-top:2rem;">
+      <iframe src="data/uri_production.html" style="width:100%;height:80vh;border:none;border-radius:4px;"></iframe>
+    </div>
+  </section>
+
+  <section id="tei" class="rdf-fullwidth-section">
+    <div class="rdf-header-center">
+      <div class="sec-tag rev">07 — Knowledge Representation</div>
+      <h2 class="sec-h2 rev">TEI<br><em>Encoding</em></h2>
+    </div>
+    <div class="rdf-wrapper-full rev">
+      <div class="rdf-content-left-aligned">
+
+        <div class="rdf-placeholder">
+          <span class="label">TEI → HTML / RDF Pipeline</span>
+          <p>The source text — based on the English Wikipedia article on <em>The Wretched of the Earth</em> — was encoded in TEI/XML, with persons, places, organisations, events, concepts and titles annotated and reconciled to authority files (VIAF, Wikidata, GeoNames, WorldCat, Getty AAT). The TEI document is transformed to HTML through an XSLT stylesheet (and an equivalent Python script), and to RDF triples through a Python script that maps the TEI stand-off markup to the CIDOC-CRM / FRBRoo ontologies.</p>
+        </div>
+
+        <div class="rdf-placeholder">
+          <span class="label">Files</span>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:1.4rem;">
+            <span style="font-family:var(--fm); font-size:0.7rem; color:#1a1a1a; background:rgba(0,0,0,0.05); border:1px solid rgba(0,0,0,0.14); border-radius:4px; padding:5px 12px;">tei.xml</span>
+            <span style="font-family:var(--fm); font-size:0.7rem; color:#1a1a1a; background:rgba(0,0,0,0.05); border:1px solid rgba(0,0,0,0.14); border-radius:4px; padding:5px 12px;">tei_to_html.xsl</span>
+            <span style="font-family:var(--fm); font-size:0.7rem; color:#1a1a1a; background:rgba(0,0,0,0.05); border:1px solid rgba(0,0,0,0.14); border-radius:4px; padding:5px 12px;">tei_to_html.py</span>
+            <span style="font-family:var(--fm); font-size:0.7rem; color:#1a1a1a; background:rgba(0,0,0,0.05); border:1px solid rgba(0,0,0,0.14); border-radius:4px; padding:5px 12px;">tei_to_rdf.py</span>
+            <span style="font-family:var(--fm); font-size:0.7rem; color:#1a1a1a; background:rgba(0,0,0,0.05); border:1px solid rgba(0,0,0,0.14); border-radius:4px; padding:5px 12px;">tei_output.html</span>
+          </div>
+          <a href="data/tei.xml" download="tei.xml" class="btn-download">↓ Download tei.xml</a>
+          <a href="data/tei.xml" target="_blank" style="margin-left:1.2rem; font-family:var(--fm); font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:#888; text-decoration:none;">Open raw ↗</a>
+        </div>
+
+        <div class="rdf-placeholder" style="border-bottom:none; padding-bottom:0; margin-bottom:1rem;">
+          <span class="label">tei.xml — TEI / XML source</span>
+        </div>
+        <div class="rdf-code-block" style="max-height:560px; overflow:auto; margin-bottom:3rem;">
+          <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"
+  type="application/xml"
+  schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;TEI xmlns="http://www.tei-c.org/ns/1.0"&gt;
+ 
+  &lt;teiHeader&gt;
+    &lt;fileDesc&gt;
+      &lt;titleStmt&gt;
+        &lt;title&gt;The Wretched of the Earth — TEI Encoding&lt;/title&gt;
+        &lt;author&gt;
+          &lt;persName ref="https://viaf.org/viaf/22490"&gt;Frantz Fanon&lt;/persName&gt;
+        &lt;/author&gt;
+        &lt;respStmt&gt;
+          &lt;resp&gt;TEI encoding for LOD project&lt;/resp&gt;
+          &lt;name&gt;Information Science and Cultural Heritage, 2025–2026&lt;/name&gt;
+        &lt;/respStmt&gt;
+      &lt;/titleStmt&gt;
+      &lt;publicationStmt&gt;
+        &lt;p&gt;Encoded for the course Information Science and Cultural Heritage, University of Bologna, a.y. 2025–2026.&lt;/p&gt;
+        &lt;availability&gt;
+          &lt;licence target="https://creativecommons.org/licenses/by-sa/4.0/"&gt;CC BY-SA 4.0&lt;/licence&gt;
+        &lt;/availability&gt;
+      &lt;/publicationStmt&gt;
+      &lt;sourceDesc&gt;
+        &lt;bibl&gt;
+          &lt;title level="a"&gt;The Wretched of the Earth&lt;/title&gt;
+          &lt;author ref="https://viaf.org/viaf/22490"&gt;Frantz Fanon&lt;/author&gt;
+          &lt;ptr target="https://en.wikipedia.org/wiki/The_Wretched_of_the_Earth"/&gt;
+          &lt;date when="2025"&gt;Accessed 2025&lt;/date&gt;
+        &lt;/bibl&gt;
+      &lt;/sourceDesc&gt;
+    &lt;/fileDesc&gt;
+    &lt;encodingDesc&gt;
+      &lt;projectDesc&gt;
+        &lt;p&gt;This TEI document encodes an abridged text based on the Wikipedia article on The Wretched of the Earth (1961) by Frantz Fanon. Entities including persons, places, organisations, events and concepts are annotated and reconciled to authority files including VIAF, Wikidata, GeoNames and Getty AAT.&lt;/p&gt;
+      &lt;/projectDesc&gt;
+      &lt;samplingDecl&gt;
+        &lt;p&gt;The encoded body text is an abridged adaptation derived from the English Wikipedia article "The Wretched of the Earth" (CC BY-SA 4.0). Only representative passages were retained and lightly condensed; no claim is made that the text reproduces the source article verbatim. The complete set of identified entities is recorded in the stand-off lists of the back matter and is independent of this sampling.&lt;/p&gt;
+      &lt;/samplingDecl&gt;
+      &lt;editorialDecl&gt;
+        &lt;p&gt;Text is based on, and abridged from, the English Wikipedia article. At least 10 entities have been annotated using TEI elements. All real-world entities are linked to authority files via the @ref attribute.&lt;/p&gt;
+      &lt;/editorialDecl&gt;
+    &lt;/encodingDesc&gt;
+    &lt;profileDesc&gt;
+      &lt;langUsage&gt;
+        &lt;language ident="en"&gt;English&lt;/language&gt;
+      &lt;/langUsage&gt;
+      &lt;textClass&gt;
+        &lt;keywords&gt;
+          &lt;term&gt;postcolonialism&lt;/term&gt;
+          &lt;term&gt;decolonisation&lt;/term&gt;
+          &lt;term&gt;political theory&lt;/term&gt;
+          &lt;term&gt;Algeria&lt;/term&gt;
+          &lt;term&gt;Frantz Fanon&lt;/term&gt;
+        &lt;/keywords&gt;
+      &lt;/textClass&gt;
+    &lt;/profileDesc&gt;
+  &lt;/teiHeader&gt;
+ 
+  &lt;text&gt;
+    &lt;body&gt;
+      &lt;div type="article"&gt;
+        &lt;head&gt;The Wretched of the Earth&lt;/head&gt;
+ 
+        &lt;div type="introduction"&gt;
+          &lt;p&gt;
+            &lt;title level="m" ref="https://www.wikidata.org/wiki/Q2741364"&gt;The Wretched of the Earth&lt;/title&gt;
+            (&lt;foreign xml:lang="fr"&gt;Les Damnés de la Terre&lt;/foreign&gt;) is a 1961 non-fiction book
+            by &lt;persName ref="https://viaf.org/viaf/22490"&gt;Frantz Fanon&lt;/persName&gt;,
+            a psychiatrist and political philosopher from
+            &lt;placeName ref="https://www.geonames.org/3570311"&gt;Martinique&lt;/placeName&gt;.
+            The book addresses the psychological and political effects of
+            &lt;rs type="concept" ref="https://www.wikidata.org/wiki/Q7167"&gt;colonialism&lt;/rs&gt;
+            on colonised peoples and theorises the necessity of
+            &lt;rs type="concept" ref="https://www.wikidata.org/wiki/Q230533"&gt;decolonisation&lt;/rs&gt;
+            as a complete transformation of the social order.
+          &lt;/p&gt;
+          &lt;p&gt;
+            The book was first published in French by
+            &lt;orgName ref="https://www.wikidata.org/wiki/Q3085338"&gt;François Maspero&lt;/orgName&gt;
+            in &lt;date when="1961"&gt;1961&lt;/date&gt;, with a preface by the French philosopher
+            &lt;persName ref="https://viaf.org/viaf/76322562"&gt;Jean-Paul Sartre&lt;/persName&gt;.
+            The first English translation was published by
+            &lt;orgName ref="https://www.wikidata.org/wiki/Q3777164"&gt;Grove Press&lt;/orgName&gt;
+            in &lt;date when="1963"&gt;1963&lt;/date&gt;, translated by Constance Farrington.
+            A revised translation by Richard Philcox, with a foreword by
+            &lt;persName ref="https://www.wikidata.org/wiki/Q325741"&gt;Homi K. Bhabha&lt;/persName&gt;,
+            was published in &lt;date when="2004"&gt;2004&lt;/date&gt;.
+          &lt;/p&gt;
+        &lt;/div&gt;
+ 
+        &lt;div type="section" n="1"&gt;
+          &lt;head&gt;Overview&lt;/head&gt;
+          &lt;p&gt;
+            &lt;persName ref="https://viaf.org/viaf/22490"&gt;Fanon&lt;/persName&gt; wrote
+            &lt;title level="m" ref="https://www.wikidata.org/wiki/Q2741364"&gt;The Wretched of the Earth&lt;/title&gt;
+            during the
+            &lt;rs type="event" ref="https://www.wikidata.org/wiki/Q200790"&gt;Algerian War of Independence&lt;/rs&gt;,
+            while working as a psychiatrist in
+            &lt;placeName ref="https://www.geonames.org/2589581"&gt;Algeria&lt;/placeName&gt;
+            and serving as a member of the
+            &lt;orgName ref="https://www.wikidata.org/wiki/Q204543"&gt;Front de Libération Nationale (FLN)&lt;/orgName&gt;.
+            The book draws on his clinical experience of treating both
+            &lt;rs type="concept" ref="https://www.wikidata.org/wiki/Q7167"&gt;colonial&lt;/rs&gt;
+            soldiers and their victims.
+          &lt;/p&gt;
+          &lt;p&gt;
+            The first chapter,
+            &lt;title level="a" ref="https://www.wikidata.org/wiki/Q2741364"&gt;"On Violence"&lt;/title&gt;,
+            is the book's most controversial section. It opens with the declaration:
+            &lt;cit&gt;
+              &lt;quote&gt;Decolonization is always a violent phenomenon.&lt;/quote&gt;
+              &lt;bibl&gt;&lt;ptr target="https://www.wikidata.org/wiki/Q2741364"/&gt;&lt;/bibl&gt;
+            &lt;/cit&gt;
+            &lt;persName ref="https://viaf.org/viaf/22490"&gt;Fanon&lt;/persName&gt; argues that
+            &lt;rs type="concept" ref="https://www.wikidata.org/wiki/Q7167"&gt;colonial&lt;/rs&gt;
+            rule is itself founded on violence, and that anticolonial violence
+            can serve as a psychological and political act of liberation for the colonised.
+            The chapter drew both endorsement from
+            &lt;persName ref="https://viaf.org/viaf/76322562"&gt;Sartre&lt;/persName&gt;
+            in his preface and fierce criticism from liberal thinkers across Europe and North America.
+          &lt;/p&gt;
+          &lt;p&gt;
+            &lt;persName ref="https://viaf.org/viaf/22490"&gt;Fanon&lt;/persName&gt; also critiques the
+            &lt;rs type="concept" ref="https://www.wikidata.org/wiki/Q852544"&gt;Négritude&lt;/rs&gt;
+            movement, founded by his former teacher
+            &lt;persName ref="https://viaf.org/viaf/4925246"&gt;Aimé Césaire&lt;/persName&gt;
+            from &lt;placeName ref="https://www.geonames.org/3570311"&gt;Martinique&lt;/placeName&gt;.
+            While acknowledging its cultural importance,
+            &lt;persName ref="https://viaf.org/viaf/22490"&gt;Fanon&lt;/persName&gt; argues that
+            &lt;rs type="concept" ref="https://www.wikidata.org/wiki/Q852544"&gt;Négritude&lt;/rs&gt;
+            risks essentialising Blackness and is ultimately insufficient
+            as a political programme for
+            &lt;rs type="concept" ref="https://www.wikidata.org/wiki/Q230533"&gt;decolonisation&lt;/rs&gt;.
+          &lt;/p&gt;
+        &lt;/div&gt;
+ 
+        &lt;div type="section" n="2"&gt;
+          &lt;head&gt;Historical context&lt;/head&gt;
+          &lt;p&gt;
+            The book was written in the context of the
+            &lt;rs type="event" ref="https://www.wikidata.org/wiki/Q200790"&gt;Algerian Revolution&lt;/rs&gt;
+            (1954–1962), one of the defining anticolonial struggles of the twentieth century.
+            &lt;placeName ref="https://www.geonames.org/2589581"&gt;Algeria&lt;/placeName&gt;
+            had been a French colony since 1830, and the war for independence
+            resulted in approximately one and a half million Algerian deaths.
+          &lt;/p&gt;
+          &lt;p&gt;
+            Several of the book's key arguments originated in a speech
+            &lt;persName ref="https://viaf.org/viaf/22490"&gt;Fanon&lt;/persName&gt; delivered at the
+            &lt;rs type="event" ref="https://www.wikidata.org/wiki/Q2993133"&gt;Second Congress of Black Writers and Artists&lt;/rs&gt;
+            held in &lt;date when="1959"&gt;Rome, 1959&lt;/date&gt;, organised by the journal
+            &lt;title level="j"&gt;Présence Africaine&lt;/title&gt;.
+            The speech, later reworked into the chapter
+            &lt;title level="a"&gt;"On National Culture"&lt;/title&gt;,
+            examined the role of intellectuals in the process of
+            &lt;rs type="concept" ref="https://www.wikidata.org/wiki/Q230533"&gt;decolonisation&lt;/rs&gt;.
+            It is the source of one of the book's most quoted lines:
+            &lt;cit&gt;
+              &lt;quote&gt;Each generation must, out of relative obscurity, discover its mission, fulfil it, or betray it.&lt;/quote&gt;
+              &lt;bibl&gt;&lt;ptr target="https://www.wikidata.org/wiki/Q2741364"/&gt;&lt;/bibl&gt;
+            &lt;/cit&gt;
+          &lt;/p&gt;
+        &lt;/div&gt;
+ 
+        &lt;div type="section" n="3"&gt;
+          &lt;head&gt;Reception and legacy&lt;/head&gt;
+          &lt;p&gt;
+            &lt;title level="m" ref="https://www.wikidata.org/wiki/Q2741364"&gt;The Wretched of the Earth&lt;/title&gt;
+            was widely read by anticolonial movements across Africa, Asia,
+            and Latin America in the 1960s and 1970s.
+            The preface by &lt;persName ref="https://viaf.org/viaf/76322562"&gt;Jean-Paul Sartre&lt;/persName&gt;
+            was later removed from some editions after
+            &lt;persName ref="https://viaf.org/viaf/76322562"&gt;Sartre&lt;/persName&gt;'s
+            public support for Israel during the
+            &lt;rs type="event"&gt;Six-Day War of 1967&lt;/rs&gt;
+            led &lt;persName&gt;Josie Fanon&lt;/persName&gt;,
+            &lt;persName ref="https://viaf.org/viaf/22490"&gt;Fanon&lt;/persName&gt;'s widow,
+            to request its removal.
+          &lt;/p&gt;
+          &lt;p&gt;
+            The 2004 edition published by
+            &lt;orgName ref="https://www.wikidata.org/wiki/Q3777164"&gt;Grove Press&lt;/orgName&gt;
+            includes a new foreword by postcolonial theorist
+            &lt;persName ref="https://www.wikidata.org/wiki/Q325741"&gt;Homi K. Bhabha&lt;/persName&gt;,
+            who reinterprets
+            &lt;persName ref="https://viaf.org/viaf/22490"&gt;Fanon&lt;/persName&gt;'s legacy
+            through the lens of poststructuralism, introducing concepts of
+            hybridity and ambivalence into the reading of the text.
+          &lt;/p&gt;
+        &lt;/div&gt;
+ 
+      &lt;/div&gt;
+    &lt;/body&gt;
+ 
+    &lt;back&gt;
+ 
+      &lt;div type="listPerson"&gt;
+        &lt;listPerson&gt;
+ 
+          &lt;person xml:id="fanon"&gt;
+            &lt;persName&gt;Frantz Fanon&lt;/persName&gt;
+            &lt;persName type="full"&gt;Frantz Omar Fanon&lt;/persName&gt;
+            &lt;birth when="1925-07-20"&gt;
+              &lt;placeName ref="https://www.geonames.org/3570311"&gt;Fort-de-France, Martinique&lt;/placeName&gt;
+            &lt;/birth&gt;
+            &lt;death when="1961-12-06"&gt;
+              &lt;placeName&gt;Bethesda, Maryland, United States&lt;/placeName&gt;
+            &lt;/death&gt;
+            &lt;occupation&gt;Psychiatrist, philosopher, revolutionary&lt;/occupation&gt;
+            &lt;note&gt;Author of The Wretched of the Earth. Member of the FLN.&lt;/note&gt;
+            &lt;idno type="VIAF"&gt;https://viaf.org/viaf/22490&lt;/idno&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q193670&lt;/idno&gt;
+          &lt;/person&gt;
+ 
+          &lt;person xml:id="sartre"&gt;
+            &lt;persName&gt;Jean-Paul Sartre&lt;/persName&gt;
+            &lt;birth when="1905-06-21"&gt;&lt;placeName&gt;Paris, France&lt;/placeName&gt;&lt;/birth&gt;
+            &lt;death when="1980-04-15"&gt;&lt;placeName&gt;Paris, France&lt;/placeName&gt;&lt;/death&gt;
+            &lt;occupation&gt;Philosopher, writer&lt;/occupation&gt;
+            &lt;note&gt;Wrote the preface to the 1961 edition of The Wretched of the Earth.&lt;/note&gt;
+            &lt;idno type="VIAF"&gt;https://viaf.org/viaf/76322562&lt;/idno&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q9364&lt;/idno&gt;
+          &lt;/person&gt;
+ 
+          &lt;person xml:id="bhabha"&gt;
+            &lt;persName&gt;Homi K. Bhabha&lt;/persName&gt;
+            &lt;birth when="1949"&gt;&lt;placeName&gt;Mumbai, India&lt;/placeName&gt;&lt;/birth&gt;
+            &lt;occupation&gt;Postcolonial theorist, professor&lt;/occupation&gt;
+            &lt;note&gt;Wrote the foreword to the 2004 edition of The Wretched of the Earth.&lt;/note&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q325741&lt;/idno&gt;
+          &lt;/person&gt;
+ 
+          &lt;person xml:id="cesaire"&gt;
+            &lt;persName&gt;Aimé Césaire&lt;/persName&gt;
+            &lt;birth when="1913-06-26"&gt;
+              &lt;placeName ref="https://www.geonames.org/3570311"&gt;Basse-Pointe, Martinique&lt;/placeName&gt;
+            &lt;/birth&gt;
+            &lt;death when="2008-04-17"&gt;&lt;placeName&gt;Fort-de-France, Martinique&lt;/placeName&gt;&lt;/death&gt;
+            &lt;occupation&gt;Poet, playwright, politician&lt;/occupation&gt;
+            &lt;note&gt;Co-founder of the Négritude movement. Fanon's teacher.&lt;/note&gt;
+            &lt;idno type="VIAF"&gt;https://viaf.org/viaf/4925246&lt;/idno&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q223955&lt;/idno&gt;
+          &lt;/person&gt;
+ 
+        &lt;/listPerson&gt;
+      &lt;/div&gt;
+ 
+      &lt;div type="listPlace"&gt;
+        &lt;listPlace&gt;
+ 
+          &lt;place xml:id="martinique"&gt;
+            &lt;placeName&gt;Martinique&lt;/placeName&gt;
+            &lt;location&gt;
+              &lt;geo&gt;14.6415 -61.0242&lt;/geo&gt;
+            &lt;/location&gt;
+            &lt;note&gt;Caribbean island and French overseas territory. Birthplace of Frantz Fanon and Aimé Césaire.&lt;/note&gt;
+            &lt;idno type="GeoNames"&gt;https://www.geonames.org/3570311&lt;/idno&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q17054&lt;/idno&gt;
+          &lt;/place&gt;
+ 
+          &lt;place xml:id="algeria"&gt;
+            &lt;placeName&gt;Algeria&lt;/placeName&gt;
+            &lt;location&gt;
+              &lt;geo&gt;28.0339 1.6596&lt;/geo&gt;
+            &lt;/location&gt;
+            &lt;note&gt;Country in North Africa, formerly a French colony from 1830 to 1962. Central context of The Wretched of the Earth.&lt;/note&gt;
+            &lt;idno type="GeoNames"&gt;https://www.geonames.org/2589581&lt;/idno&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q262&lt;/idno&gt;
+          &lt;/place&gt;
+ 
+        &lt;/listPlace&gt;
+      &lt;/div&gt;
+ 
+      &lt;div type="listOrg"&gt;
+        &lt;listOrg&gt;
+ 
+          &lt;org xml:id="grovepress"&gt;
+            &lt;orgName&gt;Grove Press&lt;/orgName&gt;
+            &lt;note&gt;American independent publishing house. Published the first English translation of The Wretched of the Earth in 1963.&lt;/note&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q3777164&lt;/idno&gt;
+          &lt;/org&gt;
+ 
+        &lt;/listOrg&gt;
+      &lt;/div&gt;
+ 
+      &lt;div type="listEvent"&gt;
+        &lt;listEvent&gt;
+ 
+          &lt;event xml:id="algerianrevolution"&gt;
+            &lt;label&gt;Algerian Revolution&lt;/label&gt;
+            &lt;desc&gt;The war of independence fought between Algeria and France, 1954–1962. The direct historical context in which Fanon wrote The Wretched of the Earth.&lt;/desc&gt;
+            &lt;date from="1954" to="1962"/&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q200790&lt;/idno&gt;
+          &lt;/event&gt;
+ 
+          &lt;event xml:id="secondcongress"&gt;
+            &lt;label&gt;Second Congress of Black Writers and Artists&lt;/label&gt;
+            &lt;desc&gt;International gathering of Black intellectuals held in Rome in 1959. Fanon's speech there became the basis for key sections of The Wretched of the Earth.&lt;/desc&gt;
+            &lt;date when="1959"/&gt;
+            &lt;placeName&gt;Rome, Italy&lt;/placeName&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q2993133&lt;/idno&gt;
+          &lt;/event&gt;
+ 
+        &lt;/listEvent&gt;
+      &lt;/div&gt;
+ 
+      &lt;div type="listConcept"&gt;
+        &lt;list type="gloss"&gt;
+ 
+          &lt;label&gt;Colonialism&lt;/label&gt;
+          &lt;item xml:id="colonialism"&gt;
+            &lt;gloss&gt;A system of political and economic domination in which one country exerts control over another. Central object of critique in The Wretched of the Earth.&lt;/gloss&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q7167&lt;/idno&gt;
+            &lt;idno type="GettyAAT"&gt;https://vocab.getty.edu/aat/300055142&lt;/idno&gt;
+          &lt;/item&gt;
+ 
+          &lt;label&gt;Decolonisation&lt;/label&gt;
+          &lt;item xml:id="decolonisation"&gt;
+            &lt;gloss&gt;The process by which colonised peoples reclaim political independence and cultural identity. For Fanon, a complete transformation of the social order.&lt;/gloss&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q230533&lt;/idno&gt;
+            &lt;idno type="GettyAAT"&gt;https://vocab.getty.edu/aat/300375556&lt;/idno&gt;
+          &lt;/item&gt;
+ 
+          &lt;label&gt;Négritude&lt;/label&gt;
+          &lt;item xml:id="negritude"&gt;
+            &lt;gloss&gt;A literary and intellectual movement celebrating Black African culture and identity, founded by Aimé Césaire and Léopold Sédar Senghor. Critiqued by Fanon in The Wretched of the Earth.&lt;/gloss&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q852544&lt;/idno&gt;
+          &lt;/item&gt;
+ 
+        &lt;/list&gt;
+      &lt;/div&gt;
+ 
+      &lt;div type="listBibl"&gt;
+        &lt;listBibl&gt;
+ 
+          &lt;bibl xml:id="wretchedoftheearth"&gt;
+            &lt;title level="m"&gt;The Wretched of the Earth&lt;/title&gt;
+            &lt;author ref="https://viaf.org/viaf/22490"&gt;Frantz Fanon&lt;/author&gt;
+            &lt;date when="1961"&gt;1961&lt;/date&gt;
+            &lt;publisher&gt;François Maspero&lt;/publisher&gt;
+            &lt;pubPlace&gt;Paris&lt;/pubPlace&gt;
+            &lt;note type="translation"&gt;First English translation by Constance Farrington, Grove Press, 1963.&lt;/note&gt;
+            &lt;idno type="Wikidata"&gt;https://www.wikidata.org/wiki/Q2741364&lt;/idno&gt;
+            &lt;idno type="WorldCat"&gt;https://www.worldcat.org/oclc/31510925&lt;/idno&gt;
+          &lt;/bibl&gt;
+ 
+          &lt;bibl xml:id="onviolence"&gt;
+            &lt;title level="a"&gt;"On Violence"&lt;/title&gt;
+            &lt;note&gt;Opening chapter of The Wretched of the Earth. Argues that colonial rule is founded on violence and that anticolonial violence can serve as liberation.&lt;/note&gt;
+            &lt;relatedItem type="host"&gt;
+              &lt;bibl ref="#wretchedoftheearth"/&gt;
+            &lt;/relatedItem&gt;
+          &lt;/bibl&gt;
+ 
+        &lt;/listBibl&gt;
+      &lt;/div&gt;
+ 
+    &lt;/back&gt;
+  &lt;/text&gt;
+&lt;/TEI&gt;</code></pre>
+        </div>
+
+        <div class="rdf-placeholder" style="border-bottom:none; padding-bottom:0; margin-bottom:1rem;">
+          <span class="label">tei_to_html.xsl — XSLT stylesheet</span>
+          <a href="data/tei_to_html.xsl" download="tei_to_html.xsl" class="btn-download" style="margin-top:0.5rem;">↓ Download tei_to_html.xsl</a>
+        </div>
+        <div class="rdf-code-block" style="max-height:560px; overflow:auto;">
+          <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:t="http://www.tei-c.org/ns/1.0"
+    exclude-result-prefixes="t"&gt;
+
+  &lt;xsl:output method="html" encoding="UTF-8" indent="yes"
+              doctype-system="about:legacy-compat"/&gt;
+
+  &lt;xsl:template match="/"&gt;
+    &lt;html lang="en"&gt;
+      &lt;head&gt;
+        &lt;meta charset="UTF-8"/&gt;
+        &lt;title&gt;TEI Output (XSLT) — The Wretched of the Earth&lt;/title&gt;
+        &lt;style&gt;
+          body { background:#0c0b10; color:#e8e4dc; font-family:Georgia,serif;
+                 line-height:1.8; padding:3rem clamp(1.5rem,8vw,8rem); }
+          h1 { font-weight:normal; color:#f0ece4; }
+          .tei-head { text-transform:uppercase; letter-spacing:.06em;
+                      color:rgba(232,228,220,.4); margin:2rem 0 .5rem; }
+          .entity { border-bottom:1px solid rgba(255,255,255,.35); }
+          .person { color:#e0b3b3; } .place { color:#b3d1e0; }
+          .org { color:#c9b3e0; } .work { color:#e0d6b3; }
+          .concept { color:#b3e0c2; } .event { color:#e0c4a0; }
+          .quote { font-style:italic; color:#e0c4a0; }
+          .entity a { color:inherit; font-size:.7rem; }
+          table { width:100%; border-collapse:collapse; margin:1rem 0 2rem; }
+          th,td { border:1px solid #333; padding:8px; text-align:left; font-size:.8rem; }
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;header&gt;
+          &lt;h1&gt;&lt;xsl:value-of select="//t:titleStmt/t:title"/&gt;&lt;/h1&gt;
+        &lt;/header&gt;
+
+
+        &lt;xsl:apply-templates select="//t:body//t:div"/&gt;
+
+
+        &lt;xsl:apply-templates select="//t:back/t:div"/&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+
+  &lt;xsl:template match="t:div"&gt;
+    &lt;xsl:if test="t:head"&gt;
+      &lt;h3 class="tei-head"&gt;&lt;xsl:value-of select="t:head"/&gt;&lt;/h3&gt;
+    &lt;/xsl:if&gt;
+    &lt;xsl:apply-templates select="t:div"/&gt;
+    &lt;xsl:apply-templates select="t:p"/&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="t:p"&gt;
+    &lt;p class="tei-p"&gt;&lt;xsl:apply-templates/&gt;&lt;/p&gt;
+  &lt;/xsl:template&gt;
+
+
+  &lt;xsl:template match="t:persName"&gt;
+    &lt;xsl:call-template name="entity"&gt;&lt;xsl:with-param name="css" select="'person'"/&gt;&lt;/xsl:call-template&gt;
+  &lt;/xsl:template&gt;
+  &lt;xsl:template match="t:placeName"&gt;
+    &lt;xsl:call-template name="entity"&gt;&lt;xsl:with-param name="css" select="'place'"/&gt;&lt;/xsl:call-template&gt;
+  &lt;/xsl:template&gt;
+  &lt;xsl:template match="t:orgName"&gt;
+    &lt;xsl:call-template name="entity"&gt;&lt;xsl:with-param name="css" select="'org'"/&gt;&lt;/xsl:call-template&gt;
+  &lt;/xsl:template&gt;
+  &lt;xsl:template match="t:title"&gt;
+    &lt;xsl:call-template name="entity"&gt;&lt;xsl:with-param name="css" select="'work'"/&gt;&lt;/xsl:call-template&gt;
+  &lt;/xsl:template&gt;
+  &lt;xsl:template match="t:rs[@type='concept']"&gt;
+    &lt;xsl:call-template name="entity"&gt;&lt;xsl:with-param name="css" select="'concept'"/&gt;&lt;/xsl:call-template&gt;
+  &lt;/xsl:template&gt;
+  &lt;xsl:template match="t:rs[@type='event']"&gt;
+    &lt;xsl:call-template name="entity"&gt;&lt;xsl:with-param name="css" select="'event'"/&gt;&lt;/xsl:call-template&gt;
+  &lt;/xsl:template&gt;
+  &lt;xsl:template match="t:quote"&gt;
+    &lt;xsl:call-template name="entity"&gt;&lt;xsl:with-param name="css" select="'quote'"/&gt;&lt;/xsl:call-template&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template name="entity"&gt;
+    &lt;xsl:param name="css"/&gt;
+    &lt;span class="entity {$css}"&gt;
+      &lt;xsl:value-of select="."/&gt;
+      &lt;xsl:if test="@ref"&gt;
+        &lt;xsl:text&gt; &lt;/xsl:text&gt;
+        &lt;a href="{@ref}" target="_blank"&gt;↗&lt;/a&gt;
+      &lt;/xsl:if&gt;
+    &lt;/span&gt;
+  &lt;/xsl:template&gt;
+
+
+  &lt;xsl:template match="t:div[@type='listPerson']"&gt;
+    &lt;h3 class="tei-head"&gt;Persons&lt;/h3&gt;
+    &lt;table&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Born&lt;/th&gt;&lt;th&gt;Occupation&lt;/th&gt;&lt;th&gt;Authority&lt;/th&gt;&lt;/tr&gt;
+      &lt;xsl:for-each select="t:listPerson/t:person"&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;xsl:value-of select="t:persName[1]"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:value-of select="t:birth/@when"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:value-of select="t:occupation"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:apply-templates select="t:idno" mode="link"/&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/table&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="t:div[@type='listPlace']"&gt;
+    &lt;h3 class="tei-head"&gt;Places&lt;/h3&gt;
+    &lt;table&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Coordinates&lt;/th&gt;&lt;th&gt;Authority&lt;/th&gt;&lt;/tr&gt;
+      &lt;xsl:for-each select="t:listPlace/t:place"&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;xsl:value-of select="t:placeName"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:value-of select="t:location/t:geo"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:apply-templates select="t:idno" mode="link"/&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/table&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="t:div[@type='listOrg']"&gt;
+    &lt;h3 class="tei-head"&gt;Organisations&lt;/h3&gt;
+    &lt;table&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Authority&lt;/th&gt;&lt;/tr&gt;
+      &lt;xsl:for-each select="t:listOrg/t:org"&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;xsl:value-of select="t:orgName"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:apply-templates select="t:idno" mode="link"/&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/table&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="t:div[@type='listEvent']"&gt;
+    &lt;h3 class="tei-head"&gt;Events&lt;/h3&gt;
+    &lt;table&gt;&lt;tr&gt;&lt;th&gt;Label&lt;/th&gt;&lt;th&gt;Date&lt;/th&gt;&lt;th&gt;Authority&lt;/th&gt;&lt;/tr&gt;
+      &lt;xsl:for-each select="t:listEvent/t:event"&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;xsl:value-of select="t:label"/&gt;&lt;/td&gt;
+          &lt;td&gt;
+            &lt;xsl:choose&gt;
+              &lt;xsl:when test="t:date/@from"&gt;&lt;xsl:value-of select="concat(t:date/@from,'–',t:date/@to)"/&gt;&lt;/xsl:when&gt;
+              &lt;xsl:otherwise&gt;&lt;xsl:value-of select="t:date/@when"/&gt;&lt;/xsl:otherwise&gt;
+            &lt;/xsl:choose&gt;
+          &lt;/td&gt;
+          &lt;td&gt;&lt;xsl:apply-templates select="t:idno" mode="link"/&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/table&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="t:div[@type='listConcept']"&gt;
+    &lt;h3 class="tei-head"&gt;Concepts&lt;/h3&gt;
+    &lt;table&gt;&lt;tr&gt;&lt;th&gt;Term&lt;/th&gt;&lt;th&gt;Gloss&lt;/th&gt;&lt;th&gt;Authority&lt;/th&gt;&lt;/tr&gt;
+      &lt;xsl:for-each select="t:list/t:item"&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;xsl:value-of select="preceding-sibling::t:label[1]"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:value-of select="t:gloss"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:apply-templates select="t:idno" mode="link"/&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/table&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="t:div[@type='listBibl']"&gt;
+    &lt;h3 class="tei-head"&gt;Bibliography&lt;/h3&gt;
+    &lt;table&gt;&lt;tr&gt;&lt;th&gt;Title&lt;/th&gt;&lt;th&gt;Author&lt;/th&gt;&lt;th&gt;Date&lt;/th&gt;&lt;th&gt;Authority&lt;/th&gt;&lt;/tr&gt;
+      &lt;xsl:for-each select="t:listBibl/t:bibl[t:title]"&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;xsl:value-of select="t:title[1]"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:value-of select="t:author"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:value-of select="t:date"/&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;xsl:apply-templates select="t:idno" mode="link"/&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/table&gt;
+  &lt;/xsl:template&gt;
+
+
+  &lt;xsl:template match="t:idno" mode="link"&gt;
+    &lt;a href="{.}" target="_blank"&gt;&lt;xsl:value-of select="@type"/&gt;&lt;/a&gt;
+    &lt;xsl:text&gt; &lt;/xsl:text&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</code></pre>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="rdf-production" class="rdf-fullwidth-section">
+    <div class="rdf-header-center">
+      <div class="sec-tag rev">08 — Knowledge Representation</div>
+      <h2 class="sec-h2 rev">RDF<br><em>Production</em></h2>
+    </div>
+    <div class="rdf-wrapper-full rev">
+      <div class="rdf-content-left-aligned">
+        <div class="rdf-placeholder">
+          <span class="label">DOWNLOAD DATASET</span>
+          <p>This section presents the complete RDF serialisation of the dataset (15+ key entities) in Turtle (.ttl)
+            format, structured using CIDOC-CRM and FRBRoo ontologies.</p>
+          <a href="data/output.ttl" download="output.ttl" class="btn-download">↓ Download output.ttl</a>
+        </div>
+        <div class="rdf-code-block">
+          <pre><code>@prefix bibl: &lt;https://w3id.org/wretchedoftheearth/bibl/&gt; .
+@prefix concept: &lt;https://w3id.org/wretchedoftheearth/concept/&gt; .
+@prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
+@prefix event: &lt;https://w3id.org/wretchedoftheearth/event/&gt; .
+@prefix frbroo: &lt;http://erlangen-crm.org/efrbroo/&gt; .
+@prefix org: &lt;https://w3id.org/wretchedoftheearth/org/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix person: &lt;https://w3id.org/wretchedoftheearth/person/&gt; .
+@prefix place: &lt;https://w3id.org/wretchedoftheearth/place/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix time: &lt;https://w3id.org/wretchedoftheearth/time/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+bibl:onviolence a frbroo:F2_Expression ;
+    rdfs:label "\"On Violence\""@en .
+
+concept:colonialism a crm:E28_Conceptual_Object ;
+    rdfs:label "Colonialism"@en ;
+    owl:sameAs &lt;https://vocab.getty.edu/aat/300055142&gt;,
+        &lt;https://www.wikidata.org/wiki/Q7167&gt; .
+
+concept:decolonisation a crm:E28_Conceptual_Object ;
+    rdfs:label "Decolonisation"@en ;
+    owl:sameAs &lt;https://vocab.getty.edu/aat/300375556&gt;,
+        &lt;https://www.wikidata.org/wiki/Q230533&gt; .
+
+&lt;https://w3id.org/wretchedoftheearth/creation/creationOfTheWretchedOfTheEarth&gt; a frbroo:F28_Expression_Creation ;
+    frbroo:R17_created bibl:wretchedoftheearth .
+
+event:algerianrevolution a crm:E5_Event ;
+    rdfs:label "Algerian Revolution"@en ;
+    crm:P4_has_time-span time:1954-1962 ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q200790&gt; .
+
+event:birth-bhabha a crm:E67_Birth ;
+    crm:P4_has_time-span time:1949 ;
+    crm:P98_brought_into_life person:bhabha .
+
+event:birth-cesaire a crm:E67_Birth ;
+    crm:P4_has_time-span time:1913-06-26 ;
+    crm:P98_brought_into_life person:cesaire .
+
+event:birth-fanon a crm:E67_Birth ;
+    crm:P4_has_time-span time:1925-07-20 ;
+    crm:P98_brought_into_life person:fanon .
+
+event:birth-sartre a crm:E67_Birth ;
+    crm:P4_has_time-span time:1905-06-21 ;
+    crm:P98_brought_into_life person:sartre .
+
+event:cesaire-founding-negritude a crm:E7_Activity ;
+    crm:P14_carried_out_by person:cesaire ;
+    crm:P94_has_created concept:negritude .
+
+event:fanon-critique-negritude a crm:E7_Activity ;
+    crm:P129_is_about concept:negritude ;
+    crm:P14_carried_out_by person:fanon .
+
+event:secondcongress a crm:E5_Event ;
+    rdfs:label "Second Congress of Black Writers and Artists"@en ;
+    crm:P4_has_time-span time:1959 ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q2993133&gt; .
+
+org:grovepress a crm:E74_Group ;
+    rdfs:label "Grove Press"@en ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q3777164&gt; .
+
+place:algeria a crm:E53_Place ;
+    rdfs:label "Algeria"@en ;
+    crm:P168_place_is_defined_by "28.0339 1.6596" ;
+    owl:sameAs &lt;https://www.geonames.org/2589581&gt;,
+        &lt;https://www.wikidata.org/wiki/Q262&gt; .
+
+place:martinique a crm:E53_Place ;
+    rdfs:label "Martinique"@en ;
+    crm:P168_place_is_defined_by "14.6415 -61.0242" ;
+    owl:sameAs &lt;https://www.geonames.org/3570311&gt;,
+        &lt;https://www.wikidata.org/wiki/Q17054&gt; .
+
+bibl:wretchedoftheearth a frbroo:F2_Expression ;
+    rdfs:label "The Wretched of the Earth"@en ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q2741364&gt;,
+        &lt;https://www.worldcat.org/oclc/31510925&gt; .
+
+person:bhabha a crm:E21_Person ;
+    rdfs:label "Homi K. Bhabha"@en ;
+    crm:P2_has_type "Postcolonial theorist, professor"@en ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q325741&gt; .
+
+person:sartre a crm:E21_Person ;
+    rdfs:label "Jean-Paul Sartre"@en ;
+    crm:P2_has_type "Philosopher, writer"@en ;
+    owl:sameAs &lt;https://viaf.org/viaf/76322562&gt;,
+        &lt;https://www.wikidata.org/wiki/Q9364&gt; .
+
+time:1905-06-21 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1905-06-21"^^xsd:date .
+
+time:1913-06-26 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1913-06-26"^^xsd:date .
+
+time:1925-07-20 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1925-07-20"^^xsd:date .
+
+time:1949 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1949"^^xsd:gYear .
+
+time:1954-1962 a crm:E52_Time-Span ;
+    rdfs:label "1954-1962" .
+
+time:1959 a crm:E52_Time-Span ;
+    rdfs:label "1959" .
+
+concept:negritude a crm:E28_Conceptual_Object ;
+    rdfs:label "Négritude"@en ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q852544&gt; .
+
+person:cesaire a crm:E21_Person ;
+    rdfs:label "Aimé Césaire"@en ;
+    crm:P2_has_type "Poet, playwright, politician"@en ;
+    owl:sameAs &lt;https://viaf.org/viaf/4925246&gt;,
+        &lt;https://www.wikidata.org/wiki/Q223955&gt; .
+
+person:fanon a crm:E21_Person ;
+    rdfs:label "Frantz Fanon"@en ;
+    crm:P2_has_type "Psychiatrist, philosopher, revolutionary"@en ;
+    owl:sameAs &lt;https://viaf.org/viaf/22490&gt;,
+        &lt;https://www.wikidata.org/wiki/Q193670&gt; .</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rdf">
+    <div class="entities-header">
+      <div class="sec-tag rev">09 — Knowledge Representation</div>
+      <h2 class="sec-h2 rev">RDF<br><em>Visualization</em></h2>
+      <p class="entities-intro rev">Interactive graph of RDF triples produced from the TEI encoding. Drag nodes · Scroll
+        to zoom.</p>
+    </div>
+    <div class="rev" style="margin-top: 2rem;">
+      <iframe src="graphs/rdf_graph.html" style="width:100%; height:85vh; border:none; border-radius:4px;"></iframe>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="foot-title">The Wretched of the Earth — LOD Project</div>
+    <div class="foot-meta">A Linked Open Data Project · 2025</div>
+    <div class="foot-contact">
+      <div class="foot-name">Maria Grigoryeva</div>
+      <div>DHDK 25, unibo</div>
+      <div><a href="mailto:maria.grigoryeva@studio.unibo.it">maria.grigoryeva@studio.unibo.it</a></div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+
+  <script>
+    document.querySelectorAll('.model-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const model = tab.dataset.model;
+        document.querySelectorAll('.model-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        document.querySelectorAll('.model-frame').forEach(frame => {
+          if (frame.dataset.model === model) {
+            if (!frame.src && frame.dataset.src) frame.src = frame.dataset.src;
+            frame.classList.add('active');
+          } else {
+            frame.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

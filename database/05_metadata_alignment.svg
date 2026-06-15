@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1062" height="1256" viewBox="0 0 1062 1256" font-family="'IBM Plex Mono', monospace">
+<rect width="1062" height="1256" fill="#f4f1ea"/>
+<text x="12" y="30" font-size="20" font-weight="700" fill="#2e5c8b">Metadata Alignment</text>
+<text x="12" y="48" font-size="10.5" fill="#7a766a" letter-spacing="1.5">THE WRETCHED OF THE EARTH · DATA PROVENANCE</text>
+<line x1="12" y1="58" x2="1050" y2="58" stroke="#4a7fa5" stroke-width="1.5"/>
+<rect x="0" y="64" width="1062" height="29" fill="#2e5c8b"/>
+<text x="12" y="83" font-size="13" font-weight="600" fill="#ffffff">WHO</text>
+<text x="353" y="83" font-size="13" font-weight="600" fill="#ffffff"></text>
+<text x="510" y="83" font-size="13" font-weight="600" fill="#ffffff"></text>
+<text x="597" y="83" font-size="13" font-weight="600" fill="#ffffff"></text>
+<text x="895" y="83" font-size="13" font-weight="600" fill="#ffffff"></text>
+<text x="12" y="108" font-size="12.5" font-weight="500" fill="#4a7fa5">Property</text>
+<text x="353" y="108" font-size="12.5" font-weight="400" fill="#2a2620">DCTerms</text>
+<text x="510" y="108" font-size="12.5" font-weight="400" fill="#2a2620">MARC21</text>
+<text x="597" y="108" font-size="12.5" font-weight="400" fill="#2a2620">CIDOC-CRM</text>
+<text x="895" y="108" font-size="12.5" font-weight="400" fill="#2a2620">Schema.org</text>
+<rect x="0" y="122" width="1062" height="47" fill="#ece8df"/>
+<text x="12" y="137" font-size="12.5" font-weight="500" fill="#4a7fa5">Creator (authored)</text>
+<text x="353" y="137" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:creator</text>
+<text x="510" y="137" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="155" font-size="12.5" font-weight="400" fill="#2a2620">100</text>
+<text x="597" y="137" font-size="12.5" font-weight="400" fill="#2a2620">crm:P14_carried_out_by</text>
+<text x="895" y="137" font-size="12.5" font-weight="400" fill="#2a2620">schema:author</text>
+<text x="12" y="184" font-size="12.5" font-weight="500" fill="#4a7fa5">Contributor (preface/foreword)</text>
+<text x="353" y="184" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:contributo</text>
+<text x="353" y="202" font-size="12.5" font-weight="400" fill="#2a2620">r</text>
+<text x="510" y="184" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="202" font-size="12.5" font-weight="400" fill="#2a2620">700</text>
+<text x="597" y="184" font-size="12.5" font-weight="400" fill="#2a2620">crm:P14_carried_out_by</text>
+<text x="895" y="184" font-size="12.5" font-weight="400" fill="#2a2620">schema:contributor</text>
+<rect x="0" y="216" width="1062" height="47" fill="#ece8df"/>
+<text x="12" y="231" font-size="12.5" font-weight="500" fill="#4a7fa5">Publisher</text>
+<text x="353" y="231" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:publisher</text>
+<text x="510" y="231" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="249" font-size="12.5" font-weight="400" fill="#2a2620">260</text>
+<text x="597" y="231" font-size="12.5" font-weight="400" fill="#2a2620">crm:P108_was_produced_by</text>
+<text x="895" y="231" font-size="12.5" font-weight="400" fill="#2a2620">schema:publisher</text>
+<rect x="0" y="263" width="1062" height="29" fill="#e3edf6"/>
+<rect x="0" y="263" width="4" height="29" fill="#2e5c8b"/>
+<text x="12" y="281" font-size="12.5" font-weight="600" fill="#2e5c8b">WHAT</text>
+<rect x="0" y="292" width="1062" height="29" fill="#ece8df"/>
+<text x="12" y="307" font-size="12.5" font-weight="500" fill="#4a7fa5">Property</text>
+<text x="353" y="307" font-size="12.5" font-weight="400" fill="#2a2620">DCTerms</text>
+<text x="510" y="307" font-size="12.5" font-weight="400" fill="#2a2620">MARC21</text>
+<text x="597" y="307" font-size="12.5" font-weight="400" fill="#2a2620">CIDOC-CRM</text>
+<text x="895" y="307" font-size="12.5" font-weight="400" fill="#2a2620">Schema.org</text>
+<text x="12" y="336" font-size="12.5" font-weight="500" fill="#4a7fa5">Title</text>
+<text x="353" y="336" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:title</text>
+<text x="510" y="336" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="354" font-size="12.5" font-weight="400" fill="#2a2620">245</text>
+<text x="597" y="336" font-size="12.5" font-weight="400" fill="#2a2620">crm:P102_has_title</text>
+<text x="895" y="336" font-size="12.5" font-weight="400" fill="#2a2620">schema:name</text>
+<rect x="0" y="368" width="1062" height="47" fill="#ece8df"/>
+<text x="12" y="383" font-size="12.5" font-weight="500" fill="#4a7fa5">Type</text>
+<text x="353" y="383" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:type</text>
+<text x="510" y="383" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="401" font-size="12.5" font-weight="400" fill="#2a2620">655</text>
+<text x="597" y="383" font-size="12.5" font-weight="400" fill="#2a2620">crm:P2_has_type</text>
+<text x="895" y="383" font-size="12.5" font-weight="400" fill="#2a2620">schema:additionalType</text>
+<text x="12" y="430" font-size="12.5" font-weight="500" fill="#4a7fa5">Subject/About</text>
+<text x="353" y="430" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:subject</text>
+<text x="510" y="430" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="448" font-size="12.5" font-weight="400" fill="#2a2620">650</text>
+<text x="597" y="430" font-size="12.5" font-weight="400" fill="#2a2620">crm:P129_is_about</text>
+<text x="895" y="430" font-size="12.5" font-weight="400" fill="#2a2620">schema:about</text>
+<rect x="0" y="462" width="1062" height="47" fill="#ece8df"/>
+<text x="12" y="477" font-size="12.5" font-weight="500" fill="#4a7fa5">Is Part Of</text>
+<text x="353" y="477" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:isPartOf</text>
+<text x="510" y="477" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="495" font-size="12.5" font-weight="400" fill="#2a2620">773</text>
+<text x="597" y="477" font-size="12.5" font-weight="400" fill="#2a2620">crm:P106_is_composed_of</text>
+<text x="895" y="477" font-size="12.5" font-weight="400" fill="#2a2620">schema:isPartOf</text>
+<text x="12" y="524" font-size="12.5" font-weight="500" fill="#4a7fa5">Description</text>
+<text x="353" y="524" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:descriptio</text>
+<text x="353" y="542" font-size="12.5" font-weight="400" fill="#2a2620">n</text>
+<text x="510" y="524" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="542" font-size="12.5" font-weight="400" fill="#2a2620">520</text>
+<text x="597" y="524" font-size="12.5" font-weight="400" fill="#2a2620">crm:P3_has_note</text>
+<text x="895" y="524" font-size="12.5" font-weight="400" fill="#2a2620">schema:description</text>
+<rect x="0" y="556" width="1062" height="47" fill="#ece8df"/>
+<text x="12" y="571" font-size="12.5" font-weight="500" fill="#4a7fa5">Language</text>
+<text x="353" y="571" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:language</text>
+<text x="510" y="571" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="589" font-size="12.5" font-weight="400" fill="#2a2620">041</text>
+<text x="597" y="571" font-size="12.5" font-weight="400" fill="#2a2620">crm:P72_has_language</text>
+<text x="895" y="571" font-size="12.5" font-weight="400" fill="#2a2620">schema:inLanguage</text>
+<text x="12" y="618" font-size="12.5" font-weight="500" fill="#4a7fa5">Identifier</text>
+<text x="353" y="618" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:identifier</text>
+<text x="510" y="618" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="636" font-size="12.5" font-weight="400" fill="#2a2620">024</text>
+<text x="597" y="618" font-size="12.5" font-weight="400" fill="#2a2620">crm:P48_has_preferred_identifier</text>
+<text x="895" y="618" font-size="12.5" font-weight="400" fill="#2a2620">schema:identifier</text>
+<rect x="0" y="650" width="1062" height="29" fill="#e3edf6"/>
+<rect x="0" y="650" width="4" height="29" fill="#2e5c8b"/>
+<text x="12" y="668" font-size="12.5" font-weight="600" fill="#2e5c8b">WHERE</text>
+<text x="12" y="694" font-size="12.5" font-weight="500" fill="#4a7fa5">Property</text>
+<text x="353" y="694" font-size="12.5" font-weight="400" fill="#2a2620">DCTerms</text>
+<text x="510" y="694" font-size="12.5" font-weight="400" fill="#2a2620">MARC21</text>
+<text x="597" y="694" font-size="12.5" font-weight="400" fill="#2a2620">CIDOC-CRM</text>
+<text x="895" y="694" font-size="12.5" font-weight="400" fill="#2a2620">Schema.org</text>
+<rect x="0" y="708" width="1062" height="47" fill="#ece8df"/>
+<text x="12" y="723" font-size="12.5" font-weight="500" fill="#4a7fa5">Place of birth</text>
+<text x="353" y="723" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="510" y="723" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="741" font-size="12.5" font-weight="400" fill="#2a2620">370</text>
+<text x="597" y="723" font-size="12.5" font-weight="400" fill="#2a2620">crm:P98_brought_into_life</text>
+<text x="895" y="723" font-size="12.5" font-weight="400" fill="#2a2620">schema:birthPlace</text>
+<text x="12" y="770" font-size="12.5" font-weight="500" fill="#4a7fa5">Place of work</text>
+<text x="353" y="770" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:spatial</text>
+<text x="510" y="770" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="788" font-size="12.5" font-weight="400" fill="#2a2620">370</text>
+<text x="597" y="770" font-size="12.5" font-weight="400" fill="#2a2620">crm:P74_has_current_or_former_residenc</text>
+<text x="597" y="788" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="895" y="770" font-size="12.5" font-weight="400" fill="#2a2620">schema:workLocation</text>
+<rect x="0" y="802" width="1062" height="47" fill="#ece8df"/>
+<text x="12" y="817" font-size="12.5" font-weight="500" fill="#4a7fa5">Place of event</text>
+<text x="353" y="817" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:spatial</text>
+<text x="510" y="817" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="835" font-size="12.5" font-weight="400" fill="#2a2620">651</text>
+<text x="597" y="817" font-size="12.5" font-weight="400" fill="#2a2620">crm:P7_took_place_at</text>
+<text x="895" y="817" font-size="12.5" font-weight="400" fill="#2a2620">schema:location</text>
+<text x="12" y="864" font-size="12.5" font-weight="500" fill="#4a7fa5">Place of publication</text>
+<text x="353" y="864" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:spatial</text>
+<text x="510" y="864" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="882" font-size="12.5" font-weight="400" fill="#2a2620">260</text>
+<text x="597" y="864" font-size="12.5" font-weight="400" fill="#2a2620">crm:P7_took_place_at</text>
+<text x="895" y="864" font-size="12.5" font-weight="400" fill="#2a2620">schema:locationCreate</text>
+<text x="895" y="882" font-size="12.5" font-weight="400" fill="#2a2620">d</text>
+<rect x="0" y="896" width="1062" height="29" fill="#e3edf6"/>
+<rect x="0" y="896" width="4" height="29" fill="#2e5c8b"/>
+<text x="12" y="914" font-size="12.5" font-weight="600" fill="#2e5c8b">WHEN</text>
+<text x="12" y="940" font-size="12.5" font-weight="500" fill="#4a7fa5">Property</text>
+<text x="353" y="940" font-size="12.5" font-weight="400" fill="#2a2620">DCTerms</text>
+<text x="510" y="940" font-size="12.5" font-weight="400" fill="#2a2620">MARC21</text>
+<text x="597" y="940" font-size="12.5" font-weight="400" fill="#2a2620">CIDOC-CRM</text>
+<text x="895" y="940" font-size="12.5" font-weight="400" fill="#2a2620">Schema.org</text>
+<rect x="0" y="954" width="1062" height="47" fill="#ece8df"/>
+<text x="12" y="969" font-size="12.5" font-weight="500" fill="#4a7fa5">Date of publication</text>
+<text x="353" y="969" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:issued</text>
+<text x="510" y="969" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="987" font-size="12.5" font-weight="400" fill="#2a2620">260</text>
+<text x="597" y="969" font-size="12.5" font-weight="400" fill="#2a2620">crm:P4_has_time-span</text>
+<text x="895" y="969" font-size="12.5" font-weight="400" fill="#2a2620">schema:datePublished</text>
+<text x="12" y="1016" font-size="12.5" font-weight="500" fill="#4a7fa5">Date of event</text>
+<text x="353" y="1016" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:date</text>
+<text x="510" y="1016" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="510" y="1034" font-size="12.5" font-weight="400" fill="#2a2620">518</text>
+<text x="597" y="1016" font-size="12.5" font-weight="400" fill="#2a2620">crm:P4_has_time-span</text>
+<text x="895" y="1016" font-size="12.5" font-weight="400" fill="#2a2620">schema:startDate</text>
+<rect x="0" y="1048" width="1062" height="29" fill="#ece8df"/>
+<text x="12" y="1063" font-size="12.5" font-weight="500" fill="#4a7fa5">Связи специфичные для CIDOC-CRM</text>
+<text x="353" y="1063" font-size="12.5" font-weight="400" fill="#2a2620">DCTerms</text>
+<text x="510" y="1063" font-size="12.5" font-weight="400" fill="#2a2620">MARC21</text>
+<text x="597" y="1063" font-size="12.5" font-weight="400" fill="#2a2620">CIDOC-CRM</text>
+<text x="895" y="1063" font-size="12.5" font-weight="400" fill="#2a2620"></text>
+<text x="12" y="1092" font-size="12.5" font-weight="500" fill="#4a7fa5">critiques / advocates / theorises /</text>
+<text x="12" y="1110" font-size="12.5" font-weight="500" fill="#4a7fa5">supported</text>
+<text x="353" y="1092" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="510" y="1092" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="597" y="1092" font-size="12.5" font-weight="400" fill="#2a2620">crm:P129_is_about</text>
+<text x="895" y="1092" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<rect x="0" y="1124" width="1062" height="29" fill="#ece8df"/>
+<text x="12" y="1139" font-size="12.5" font-weight="500" fill="#4a7fa5">participated in / spoke at</text>
+<text x="353" y="1139" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="510" y="1139" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="597" y="1139" font-size="12.5" font-weight="400" fill="#2a2620">crm:P11_had_participant</text>
+<text x="895" y="1139" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="12" y="1168" font-size="12.5" font-weight="500" fill="#4a7fa5">taught by</text>
+<text x="353" y="1168" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="510" y="1168" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="597" y="1168" font-size="12.5" font-weight="400" fill="#2a2620">crm:P14_carried_out_by</text>
+<text x="895" y="1168" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<rect x="0" y="1182" width="1062" height="29" fill="#ece8df"/>
+<text x="12" y="1197" font-size="12.5" font-weight="500" fill="#4a7fa5">founded by</text>
+<text x="353" y="1197" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="510" y="1197" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="597" y="1197" font-size="12.5" font-weight="400" fill="#2a2620">crm:P94_has_created</text>
+<text x="895" y="1197" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="12" y="1226" font-size="12.5" font-weight="500" fill="#4a7fa5">originated from</text>
+<text x="353" y="1226" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="510" y="1226" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="597" y="1226" font-size="12.5" font-weight="400" fill="#2a2620">crm:P17_was_motivated_by</text>
+<text x="895" y="1226" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<line x1="341" y1="64" x2="341" y2="1240" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="498" y1="64" x2="498" y2="1240" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="585" y1="64" x2="585" y2="1240" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="883" y1="64" x2="883" y2="1240" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="64" x2="1062" y2="64" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="93" x2="1062" y2="93" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="122" x2="1062" y2="122" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="169" x2="1062" y2="169" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="216" x2="1062" y2="216" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="263" x2="1062" y2="263" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="292" x2="1062" y2="292" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="321" x2="1062" y2="321" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="368" x2="1062" y2="368" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="415" x2="1062" y2="415" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="462" x2="1062" y2="462" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="509" x2="1062" y2="509" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="556" x2="1062" y2="556" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="603" x2="1062" y2="603" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="650" x2="1062" y2="650" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="679" x2="1062" y2="679" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="708" x2="1062" y2="708" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="755" x2="1062" y2="755" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="802" x2="1062" y2="802" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="849" x2="1062" y2="849" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="896" x2="1062" y2="896" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="925" x2="1062" y2="925" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="954" x2="1062" y2="954" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1001" x2="1062" y2="1001" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1048" x2="1062" y2="1048" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1077" x2="1062" y2="1077" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1124" x2="1062" y2="1124" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1153" x2="1062" y2="1153" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1182" x2="1062" y2="1182" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1211" x2="1062" y2="1211" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1240" x2="1062" y2="1240" stroke="#cdc7ba" stroke-width="0.6"/>
+<rect x="0.5" y="64" width="1061" height="1176" fill="none" stroke="#4a7fa5" stroke-width="1"/>
+</svg>

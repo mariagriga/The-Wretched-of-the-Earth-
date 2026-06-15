@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Wretched of the Earth — Theoretical Model</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f0ece4;font-family:'IBM Plex Sans',sans-serif;margin:0;overflow:hidden}
+#wrap{display:flex;flex-direction:column;width:100vw;height:100vh;}
+#desc{
+  flex-shrink:0;
+  padding:1.4rem 2rem 1rem;
+  background:#f0ece4;
+  border-bottom:1px solid rgba(0,0,0,0.08);
+  max-width:900px;
+}
+#desc .sec-tag{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:#888;margin-bottom:0.5rem;
+}
+#desc p{
+  font-size:0.82rem;line-height:1.7;color:#444;
+}
+#graph{flex:1;min-height:0;}
+svg{display:block;pointer-events:none}
+.node{pointer-events:all;cursor:default}
+.node circle{transition:filter .15s}
+.node:hover circle{filter:drop-shadow(0 0 16px rgba(0,0,0,.25))}
+.edge-path{fill:none;stroke-linejoin:round;}
+.label-box {fill:#f0ece4;stroke:rgba(0,0,0,0.12);stroke-width:1px;rx:3px;}
+.edge-text{font-family:'IBM Plex Mono',monospace;font-size:24px;fill:#444;pointer-events:none;font-weight:500;}
+#legend{
+  position:fixed;bottom:20px;left:20px;
+  background:rgba(245,240,235,0.96);
+  border:1px solid rgba(0,0,0,0.12);
+  border-radius:8px;padding:14px 18px;
+  font-family:'IBM Plex Mono',monospace;
+  z-index:50;
+}
+#legend .leg-title{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#888;margin-bottom:10px;}
+#legend .leg-item{display:flex;align-items:center;gap:8px;margin-bottom:8px;color:#333;font-size:12px;}
+#legend .leg-dot{width:14px;height:14px;border-radius:50%;flex-shrink:0;border:2.5px solid;}
+#legend .leg-dash{width:24px;height:0;flex-shrink:0;border-top:2px dashed #aaa;}
+#legend .leg-dashauth{width:24px;height:0;flex-shrink:0;border-top:2px dashed #8b7ad0;}
+#legend .leg-solid{width:24px;height:2px;flex-shrink:0;background:#777;}
+#legend .leg-sep{border-top:1px solid rgba(0,0,0,.09);margin:8px 0;}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="desc">
+    <div class="sec-tag">Knowledge Organisation — Theoretical Model</div>
+    <p>The theoretical model represents the semantic relations surrounding <em>The Wretched of the Earth</em> and its broader postcolonial context. Each entity is anchored to external <strong>authority control</strong> records (VIAF, Wikidata, GeoNames, WorldCat, Getty AAT).</p>
+  </div>
+  <div id="graph"></div>
+</div>
+
+<div id="legend">
+  <div class="leg-title">Legend</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#2f0054;border-color:#7a4fa8"></div>Book / Text</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#003e73;border-color:#2a6aaa"></div>Person</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#006633;border-color:#2a8a5e"></div>Place</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#6e5000;border-color:#aa7a2a"></div>Event</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#7a2800;border-color:#aa4a2a"></div>Concept</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#2d2d2d;border-color:#6a6a6a"></div>Organisation</div>
+  <div class="leg-sep"></div>
+  <div class="leg-item"><div class="leg-solid"></div>Relation</div>
+  <div class="leg-item"><div class="leg-dash"></div>Attribute</div>
+  <div class="leg-item"><div class="leg-dashauth"></div>Authority control</div>
+</div>
+
+<script>
+const relations = [
+  ['Frantz Fanon','authored','The Wretched of the Earth'],
+  ['Jean-Paul Sartre','wrote preface for','The Wretched of the Earth'],
+  ['Homi K. Bhabha','wrote foreword for','The Wretched of the Earth'],
+  ['Grove Press','published','The Wretched of the Earth'],
+  ['"On Violence"','is part of','The Wretched of the Earth'],
+  ['Frantz Fanon','born in','Martinique'],
+  ['Frantz Fanon','taught by','Aimé Césaire'],
+  ['Frantz Fanon','participated in','Algerian Revolution'],
+  ['Frantz Fanon','worked in','Algeria'],
+  ['Frantz Fanon','advocated','Decolonisation'],
+  ['Frantz Fanon','critiqued','Négritude'],
+  ['Frantz Fanon','spoke at','Second Congress'],
+  ['Aimé Césaire','born in','Martinique'],
+  ['Aimé Césaire','founded','Négritude'],
+  ['Aimé Césaire','critiqued','Colonialism'],
+  ['Jean-Paul Sartre','wrote about','Colonialism'],
+  ['Jean-Paul Sartre','supported','Decolonisation'],
+  ['Algerian Revolution','took place in','Algeria'],
+  ['The Wretched of the Earth','draws on','Second Congress'],
+  ['"On Violence"','critiques','Colonialism'],
+  ['"On Violence"','theorises','Decolonisation'],
+  ['The Wretched of the Earth','critiques','Négritude'],
+  ['The Wretched of the Earth','addresses','Colonialism'],
+  ['The Wretched of the Earth','advocates','Decolonisation'],
+];
+
+const attributes = [
+  ['The Wretched of the Earth','date','1961'],
+  ['The Wretched of the Earth','language','FR / EN (1963)'],
+  ['Frantz Fanon','birth date','1925'],
+  ['Frantz Fanon','death date','1961'],
+  ['Frantz Fanon','occupation','psychiatrist'],
+  ['Frantz Fanon','field','political philosophy'],
+  ['Jean-Paul Sartre','birth date','1905'],
+  ['Jean-Paul Sartre','death date','1980'],
+  ['Jean-Paul Sartre','occupation','philosopher'],
+  ['Jean-Paul Sartre','field','existentialism'],
+  ['Homi K. Bhabha','birth date','1949'],
+  ['Homi K. Bhabha','field','postcolonial theory'],
+  ['Homi K. Bhabha','approach','poststructuralism'],
+  ['Aimé Césaire','birth date','1913'],
+  ['Aimé Césaire','death date','2008'],
+  ['Aimé Césaire','occupation','poet, politician'],
+  ['Aimé Césaire','orientation','anticolonialism'],
+  ['Grove Press','type','independent publisher'],
+  ['Grove Press','location','New York'],
+  ['Grove Press','founding date','1951'],
+  ['Algeria','type','country'],
+  ['Martinique','type','island'],
+  ['Algerian Revolution','start date','1954'],
+  ['Algerian Revolution','end date','1962'],
+  ['Second Congress','date','March–April 1959'],
+  ['Second Congress','location','Rome, Italy'],
+  ['Second Congress','organiser','Présence Africaine'],
+  ['Second Congress','theme','unity of Black cultures'],
+  ['Négritude','date','1930s'],
+  ['"On Violence"','type','essay, chapter'],
+];
+
+// AUTHORITY CONTROL 
+const authorities = [
+  ['The Wretched of the Earth','WorldCat','31510925'],
+  ['The Wretched of the Earth','Wikidata','Q2741364'],
+  ['Frantz Fanon','VIAF','22490'],
+  ['Frantz Fanon','Wikidata','Q193670'],
+  ['Jean-Paul Sartre','VIAF','76322562'],
+  ['Homi K. Bhabha','Wikidata','Q325741'],
+  ['Aimé Césaire','VIAF','4925246'],
+  ['Grove Press','Wikidata','Q3777164'],
+  ['Algeria','GeoNames','2589581'],
+  ['Martinique','GeoNames','3570311'],
+  ['Algerian Revolution','Wikidata','Q200790'],
+  ['Second Congress','Wikidata','Q2993133'],
+  ['Colonialism','Getty AAT','300055142'],
+  ['Decolonisation','Getty AAT','300375556'],
+  ['Négritude','Wikidata','Q852544'],
+];
+
+const AUTH_COLOR={
+  'VIAF':    {fill:'#3a2e1a',stroke:'#8b6a3b',tc:'#e8c89a'},
+  'Wikidata':{fill:'#1a2838',stroke:'#4a6a8a',tc:'#a8c8e8'},
+  'GeoNames':{fill:'#15281e',stroke:'#3a7a5a',tc:'#90ddb8'},
+  'WorldCat':{fill:'#281a30',stroke:'#6a4a8a',tc:'#d0b0e8'},
+  'Getty AAT':{fill:'#301a12',stroke:'#8a5a3a',tc:'#e8b890'},
+};
+
+const C = {
+  center:       {fill:'#2f0054',stroke:'#7a4fa8',tc:'#e0c8ff'},
+  book:         {fill:'#2f0054',stroke:'#7a4fa8',tc:'#e0c8ff'},
+  text:         {fill:'#3a0a30',stroke:'#aa3a80',tc:'#ffb8e0'},
+  person:       {fill:'#003e73',stroke:'#2a6aaa',tc:'#a8d0ff'},
+  place:        {fill:'#006633',stroke:'#2a8a5e',tc:'#90ddb8'},
+  event:        {fill:'#6e5000',stroke:'#aa7a2a',tc:'#ffd890'},
+  concept:      {fill:'#7a2800',stroke:'#aa4a2a',tc:'#ffb888'},
+  organisation: {fill:'#2d2d2d',stroke:'#6a6a6a',tc:'#cccccc'},
+  attr:         {fill:'#faf7f2',stroke:'#d0c8c0',tc:'#5a5a5a'},
+};
+
+const ENTITY_TYPE = {
+  'The Wretched of the Earth':'book',
+  '"On Violence"':'text',
+  'Frantz Fanon':'person',
+  'Jean-Paul Sartre':'person',
+  'Homi K. Bhabha':'person',
+  'Aimé Césaire':'person',
+  'Grove Press':'organisation',
+  'Algeria':'place',
+  'Martinique':'place',
+  'Algerian Revolution':'event',
+  'Second Congress':'event',
+  'Colonialism':'concept',
+  'Decolonisation':'concept',
+  'Négritude':'concept',
+};
+
+const ITEMS = new Set(Object.keys(ENTITY_TYPE));
+const CENTER = 'The Wretched of the Earth';
+const nodeMap = new Map();
+const links = [];
+
+function getNode(id, parentId, kind) {
+  // kind: false=entity, 'attr', 'auth'
+  const key = kind ? `${parentId}__${kind}__${id}` : id;
+  if (!nodeMap.has(key)) {
+    const type = id===CENTER?'center':ITEMS.has(id)?'item':(kind==='auth'?'auth':'attr');
+    nodeMap.set(key,{id:key,label:id,type,entityType:ENTITY_TYPE[id]||(kind==='auth'?'auth':'attr'),triples:[],pred:null,parentId:null,authType:null,authVal:null});
+  }
+  return nodeMap.get(key);
+}
+
+relations.forEach(([s,p,o])=>{
+  const src=getNode(s,null,false), tgt=getNode(o,s,false);
+  src.triples.push([p,o]);
+  links.push({source:src.id,target:tgt.id,label:p,kind:'rel'});
+});
+
+attributes.forEach(([s,p,o])=>{
+  const src=getNode(s,null,false), tgt=getNode(o,s,'attr');
+  tgt.pred=p; tgt.parentId=s;
+  src.triples.push([p,o]);
+  links.push({source:src.id,target:tgt.id,label:p,kind:'attr'});
+});
+
+authorities.forEach(([s,authType,authVal])=>{
+  const src=getNode(s,null,false);
+  const tgt=getNode(`${authType}:${authVal}`,s,'auth');
+  tgt.parentId=s; tgt.authType=authType; tgt.authVal=authVal;
+  tgt.label=authType;
+  links.push({source:src.id,target:tgt.id,label:'owl:sameAs',kind:'auth'});
+});
+
+const nodes=[...nodeMap.values()];
+const SVG_W=6400, SVG_H=6400;
+const cx=SVG_W/2, cy=SVG_H/2;
+const ITEM_R=1650, ATTR_R=640, AUTH_R=560, GAP=0.04;
+
+const itemAttrs={}, itemAuths={};
+ITEMS.forEach(id=>{itemAttrs[id]=[];itemAuths[id]=[];});
+nodes.forEach(d=>{
+  if(d.type==='attr'&&d.parentId&&itemAttrs[d.parentId]) itemAttrs[d.parentId].push(d);
+  if(d.type==='auth'&&d.parentId&&itemAuths[d.parentId]) itemAuths[d.parentId].push(d);
+});
+
+const ITEM_ORDER=[
+  'Aimé Césaire', 'Négritude', 'Colonialism', 'Decolonisation', 
+  '"On Violence"', 'Second Congress', 'Homi K. Bhabha', 'Jean-Paul Sartre', 
+  'Grove Press', 'Algerian Revolution', 'Algeria', 'Martinique', 'Frantz Fanon'
+];
+
+const itemNodes=ITEM_ORDER.map(id=>nodes.find(d=>d.id===id)).filter(Boolean);
+const weights=itemNodes.map(d=>Math.max(1,(itemAttrs[d.id]||[]).length+(itemAuths[d.id]||[]).length));
+const totalW=weights.reduce((a,b)=>a+b,0);
+const usableArc=2*Math.PI-GAP*itemNodes.length;
+
+let cursor=-Math.PI * 0.85;
+itemNodes.forEach((item,i)=>{
+  const arc=weights[i]/totalW*usableArc;
+  const a0=cursor+GAP/2, a1=a0+arc;
+  item.angle=(a0+a1)/2;
+  item.x=cx+ITEM_R*Math.cos(item.angle);
+  item.y=cy+ITEM_R*Math.sin(item.angle);
+  cursor+=GAP+arc;
+  
+  const sats=itemAttrs[item.id]||[];
+  const ns=sats.length;
+  const fan=Math.min((a1-a0)*1.3, 1.1);
+  sats.forEach((sat,j)=>{
+    const t=ns===1?0:(j/(ns-1)-0.5)*2;
+    const ang=item.angle+t*fan/2;
+    sat.x=item.x+ATTR_R*Math.cos(ang);
+    sat.y=item.y+ATTR_R*Math.sin(ang);
+  });
+
+  // authority nodes — расположены дальше наружу, в том же секторе
+  const auths=itemAuths[item.id]||[];
+  const na=auths.length;
+  const authFan=Math.min((a1-a0)*0.9, 0.6);
+  auths.forEach((au,j)=>{
+    const t=na===1?0:(j/(na-1)-0.5)*2;
+    const ang=item.angle+t*authFan/2;
+    au.x=item.x+(AUTH_R+340)*Math.cos(ang);
+    au.y=item.y+(AUTH_R+340)*Math.sin(ang);
+  });
+});
+
+const centerNode=nodes.find(d=>d.type==='center');
+centerNode.x=cx; centerNode.y=cy;
+nodes.forEach(d=>{
+  d.r=d.type==='center'?210:d.type==='item'?125:d.type==='auth'?78:88;
+});
+
+const svg=d3.select('#graph').append('svg')
+  .attr('viewBox',`0 0 ${SVG_W} ${SVG_H}`)
+  .attr('preserveAspectRatio','xMidYMid meet')
+  .style('width','100%').style('height','100%');
+
+svg.append('defs').html(`
+  <marker id="ar-s" viewBox="0 0 10 10" refX="25" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M0,1 L10,5 L0,9Z" fill="#777"/>
+  </marker>
+  <marker id="ar-d" viewBox="0 0 10 10" refX="18" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M0,1 L10,5 L0,9Z" fill="#bbb"/>
+  </marker>
+  <marker id="ar-au" viewBox="0 0 10 10" refX="18" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M0,1 L10,5 L0,9Z" fill="#8b7ad0"/>
+  </marker>
+`);
+
+const edgeG = svg.append('g');
+const nodeG = svg.append('g');
+
+links.forEach(lnk=>{
+  const s=nodeMap.get(lnk.source), t=nodeMap.get(lnk.target);
+  if(!s||!t||s.x===undefined||t.x===undefined) return;
+
+  let x1, y1, x2, y2, pathData, lx, ly;
+  const dx = t.x - s.x, dy = t.y - s.y;
+  const L = Math.hypot(dx, dy) || 1;
+  const ux = dx / L, uy = dy / L;
+
+  const isDash = lnk.kind==='attr'||lnk.kind==='auth';
+
+  if (isDash) {
+    x1 = s.x + ux * s.r; y1 = s.y + uy * s.r;
+    x2 = t.x - ux * t.r; y2 = t.y - uy * t.r;
+    pathData = `M ${x1} ${y1} L ${x2} ${y2}`;
+    lx = x1 + ux * (L - s.r - t.r) * 0.45;
+    ly = y1 + uy * (L - s.r - t.r) * 0.45;
+  } else {
+    let bend = 35; 
+    if (s.id === 'Frantz Fanon' && t.id === 'Martinique') bend = -45;
+    if (s.id === 'Aimé Césaire' && t.id === 'Colonialism') bend = 50;
+    if (s.id === 'Aimé Césaire' && t.id === 'Négritude') bend = -25;
+    if (s.type === 'center' || t.type === 'center') bend = t.type === 'center' ? 25 : -25;
+
+    const nx = -uy, ny = ux;
+    const cx1 = (s.x + t.x) / 2 + nx * bend;
+    const cy1 = (s.y + t.y) / 2 + ny * bend;
+    const sL = Math.hypot(cx1 - s.x, cy1 - s.y) || 1;
+    x1 = s.x + ((cx1 - s.x) / sL) * s.r;
+    y1 = s.y + ((cy1 - s.y) / sL) * s.r;
+    const tL = Math.hypot(cx1 - t.x, cy1 - t.y) || 1;
+    x2 = t.x + ((cx1 - t.x) / tL) * t.r;
+    y2 = t.y + ((cy1 - t.y) / tL) * t.r;
+    pathData = `M ${x1} ${y1} Q ${cx1} ${cy1} ${x2} ${y2}`;
+    lx = cx1; ly = cy1;
+  }
+
+  let stroke, sw, dash, marker;
+  if(lnk.kind==='auth'){
+    stroke='#8b7ad0'; sw=2; dash='8 6'; marker='ar-au';
+  } else if(lnk.kind==='attr'){
+    stroke='#cccccc'; sw=2.5; dash='12 8'; marker='ar-d';
+  } else {
+    stroke='#999999'; sw=3.5; dash='none'; marker='ar-s';
+  }
+
+  edgeG.append('path')
+    .attr('class', 'edge-path')
+    .attr('d', pathData)
+    .attr('stroke', stroke)
+    .attr('stroke-width', sw)
+    .attr('stroke-dasharray', dash)
+    .attr('marker-end', `url(#${marker})`);
+
+  if (lnk.kind==='rel' && lnk.label) {
+    const textG = edgeG.append('g').attr('transform', `translate(${lx}, ${ly})`);
+    const textLength = lnk.label.length * 15 + 20;
+    textG.append('rect')
+      .attr('class', 'label-box')
+      .attr('x', -textLength / 2).attr('y', -20)
+      .attr('width', textLength).attr('height', 40);
+    textG.append('text')
+      .attr('class', 'edge-text')
+      .attr('text-anchor', 'middle').attr('dominant-baseline', 'middle')
+      .text(lnk.label);
+  }
+});
+
+const FONT="'IBM Plex Sans',sans-serif";
+const MONO="'IBM Plex Mono',monospace";
+
+nodes.forEach(d=>{
+  if(d.x===undefined) return;
+  const ng=nodeG.append('g').attr('class','node').attr('transform',`translate(${d.x},${d.y})`);
+
+  if(d.type==='auth'){
+    const ac=AUTH_COLOR[d.authType]||{fill:'#2a2a2a',stroke:'#6a6a6a',tc:'#ccc'};
+    ng.append('circle').attr('r',d.r+4).attr('cx',3).attr('cy',4).attr('fill','rgba(0,0,0,0.10)');
+    ng.append('circle').attr('r',d.r).attr('fill',ac.fill).attr('stroke',ac.stroke).attr('stroke-width',2);
+    ng.append('text')
+      .attr('x',0).attr('y',-8)
+      .attr('text-anchor','middle').attr('dominant-baseline','middle')
+      .attr('font-family',MONO).attr('font-size',18).attr('font-weight','500')
+      .attr('fill',ac.tc).text(d.authType);
+    ng.append('text')
+      .attr('x',0).attr('y',14)
+      .attr('text-anchor','middle').attr('dominant-baseline','middle')
+      .attr('font-family',MONO).attr('font-size',15).attr('font-weight','400')
+      .attr('fill',ac.tc).attr('opacity',.75).text(d.authVal);
+    return;
+  }
+
+  const et=d.type==='center'?'center':d.type==='attr'?'attr':d.entityType;
+  const c=C[et]||C.attr;
+  ng.append('circle').attr('r',d.r+5).attr('cx',3).attr('cy',4).attr('fill','rgba(0,0,0,0.12)');
+  ng.append('circle').attr('r',d.r).attr('fill',c.fill).attr('stroke',c.stroke)
+    .attr('stroke-width',d.type==='center'?5:d.type==='item'?3.5:2);
+
+  const fs=d.type==='center'?44:d.type==='item'?30:22;
+  const lh=d.type==='center'?54:d.type==='item'?38:28;
+  const fw=d.type==='center'?'700':d.type==='item'?'600':'400';
+  const maxC=d.type==='center'?12:d.type==='item'?11:12;
+
+  function wrap(str,max){
+    const words=str.split(' '),out=[];let cur='';
+    words.forEach(w=>{
+      if((cur+(cur?' ':'')+w).length<=max) cur+=(cur?' ':'')+w;
+      else{if(cur)out.push(cur);cur=w;}
+    });
+    if(cur)out.push(cur);
+    return out;
+  }
+
+  const lbl=d.label;
+  const MAP={
+    'The Wretched of the Earth':['The Wretched','of the Earth'],
+    'Algerian Revolution':['Algerian','Revolution'],
+    'Second Congress':['Second','Congress'],
+    'FR / EN (1963)':['FR / EN','(1963)'],
+    'political philosophy':['political','philosophy'],
+    'independent publisher':['independent','publisher'],
+    'unity of Black cultures':['unity of Black','cultures'],
+    'March–April 1959':['March–April','1959'],
+    'Présence Africaine':['Présence','Africaine'],
+    'poet, politician':['poet,','politician'],
+    'postcolonial theory':['postcolonial','theory'],
+    'poststructuralism':['poststruc-','turalism'],
+    'anticolonialism':['anticolo-','nialism'],
+  };
+  const lines=MAP[lbl]||wrap(lbl,maxC);
+
+  lines.forEach((line,i)=>{
+    ng.append('text')
+      .attr('x',0).attr('y',-(lines.length-1)*lh/2+i*lh)
+      .attr('text-anchor','middle').attr('dominant-baseline','middle')
+      .attr('font-family',FONT).attr('font-size',fs).attr('font-weight',fw)
+      .attr('fill',c.tc).text(line);
+  });
+});
+</script>
+</body>
+</html>
+

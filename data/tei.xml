@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"
+  type="application/xml"
+  schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+ 
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Wretched of the Earth — TEI Encoding</title>
+        <author>
+          <persName ref="https://viaf.org/viaf/22490">Frantz Fanon</persName>
+        </author>
+        <respStmt>
+          <resp>TEI encoding for LOD project</resp>
+          <name>Information Science and Cultural Heritage, 2025–2026</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Encoded for the course Information Science and Cultural Heritage, University of Bologna, a.y. 2025–2026.</p>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title level="a">The Wretched of the Earth</title>
+          <author ref="https://viaf.org/viaf/22490">Frantz Fanon</author>
+          <ptr target="https://en.wikipedia.org/wiki/The_Wretched_of_the_Earth"/>
+          <date when="2025">Accessed 2025</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>This TEI document encodes an abridged text based on the Wikipedia article on The Wretched of the Earth (1961) by Frantz Fanon. Entities including persons, places, organisations, events and concepts are annotated and reconciled to authority files including VIAF, Wikidata, GeoNames and Getty AAT.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The encoded body text is an abridged adaptation derived from the English Wikipedia article "The Wretched of the Earth" (CC BY-SA 4.0). Only representative passages were retained and lightly condensed; no claim is made that the text reproduces the source article verbatim. The complete set of identified entities is recorded in the stand-off lists of the back matter and is independent of this sampling.</p>
+      </samplingDecl>
+      <editorialDecl>
+        <p>Text is based on, and abridged from, the English Wikipedia article. At least 10 entities have been annotated using TEI elements. All real-world entities are linked to authority files via the @ref attribute.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="en">English</language>
+      </langUsage>
+      <textClass>
+        <keywords>
+          <term>postcolonialism</term>
+          <term>decolonisation</term>
+          <term>political theory</term>
+          <term>Algeria</term>
+          <term>Frantz Fanon</term>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+ 
+  <text>
+    <body>
+      <div type="article">
+        <head>The Wretched of the Earth</head>
+ 
+        <div type="introduction">
+          <p>
+            <title level="m" ref="https://www.wikidata.org/wiki/Q2741364">The Wretched of the Earth</title>
+            (<foreign xml:lang="fr">Les Damnés de la Terre</foreign>) is a 1961 non-fiction book
+            by <persName ref="https://viaf.org/viaf/22490">Frantz Fanon</persName>,
+            a psychiatrist and political philosopher from
+            <placeName ref="https://www.geonames.org/3570311">Martinique</placeName>.
+            The book addresses the psychological and political effects of
+            <rs type="concept" ref="https://www.wikidata.org/wiki/Q7167">colonialism</rs>
+            on colonised peoples and theorises the necessity of
+            <rs type="concept" ref="https://www.wikidata.org/wiki/Q230533">decolonisation</rs>
+            as a complete transformation of the social order.
+          </p>
+          <p>
+            The book was first published in French by
+            <orgName ref="https://www.wikidata.org/wiki/Q3085338">François Maspero</orgName>
+            in <date when="1961">1961</date>, with a preface by the French philosopher
+            <persName ref="https://viaf.org/viaf/76322562">Jean-Paul Sartre</persName>.
+            The first English translation was published by
+            <orgName ref="https://www.wikidata.org/wiki/Q3777164">Grove Press</orgName>
+            in <date when="1963">1963</date>, translated by Constance Farrington.
+            A revised translation by Richard Philcox, with a foreword by
+            <persName ref="https://www.wikidata.org/wiki/Q325741">Homi K. Bhabha</persName>,
+            was published in <date when="2004">2004</date>.
+          </p>
+        </div>
+ 
+        <div type="section" n="1">
+          <head>Overview</head>
+          <p>
+            <persName ref="https://viaf.org/viaf/22490">Fanon</persName> wrote
+            <title level="m" ref="https://www.wikidata.org/wiki/Q2741364">The Wretched of the Earth</title>
+            during the
+            <rs type="event" ref="https://www.wikidata.org/wiki/Q200790">Algerian War of Independence</rs>,
+            while working as a psychiatrist in
+            <placeName ref="https://www.geonames.org/2589581">Algeria</placeName>
+            and serving as a member of the
+            <orgName ref="https://www.wikidata.org/wiki/Q204543">Front de Libération Nationale (FLN)</orgName>.
+            The book draws on his clinical experience of treating both
+            <rs type="concept" ref="https://www.wikidata.org/wiki/Q7167">colonial</rs>
+            soldiers and their victims.
+          </p>
+          <p>
+            The first chapter,
+            <title level="a" ref="https://www.wikidata.org/wiki/Q2741364">"On Violence"</title>,
+            is the book's most controversial section. It opens with the declaration:
+            <cit>
+              <quote>Decolonization is always a violent phenomenon.</quote>
+              <bibl><ptr target="https://www.wikidata.org/wiki/Q2741364"/></bibl>
+            </cit>
+            <persName ref="https://viaf.org/viaf/22490">Fanon</persName> argues that
+            <rs type="concept" ref="https://www.wikidata.org/wiki/Q7167">colonial</rs>
+            rule is itself founded on violence, and that anticolonial violence
+            can serve as a psychological and political act of liberation for the colonised.
+            The chapter drew both endorsement from
+            <persName ref="https://viaf.org/viaf/76322562">Sartre</persName>
+            in his preface and fierce criticism from liberal thinkers across Europe and North America.
+          </p>
+          <p>
+            <persName ref="https://viaf.org/viaf/22490">Fanon</persName> also critiques the
+            <rs type="concept" ref="https://www.wikidata.org/wiki/Q852544">Négritude</rs>
+            movement, founded by his former teacher
+            <persName ref="https://viaf.org/viaf/4925246">Aimé Césaire</persName>
+            from <placeName ref="https://www.geonames.org/3570311">Martinique</placeName>.
+            While acknowledging its cultural importance,
+            <persName ref="https://viaf.org/viaf/22490">Fanon</persName> argues that
+            <rs type="concept" ref="https://www.wikidata.org/wiki/Q852544">Négritude</rs>
+            risks essentialising Blackness and is ultimately insufficient
+            as a political programme for
+            <rs type="concept" ref="https://www.wikidata.org/wiki/Q230533">decolonisation</rs>.
+          </p>
+        </div>
+ 
+        <div type="section" n="2">
+          <head>Historical context</head>
+          <p>
+            The book was written in the context of the
+            <rs type="event" ref="https://www.wikidata.org/wiki/Q200790">Algerian Revolution</rs>
+            (1954–1962), one of the defining anticolonial struggles of the twentieth century.
+            <placeName ref="https://www.geonames.org/2589581">Algeria</placeName>
+            had been a French colony since 1830, and the war for independence
+            resulted in approximately one and a half million Algerian deaths.
+          </p>
+          <p>
+            Several of the book's key arguments originated in a speech
+            <persName ref="https://viaf.org/viaf/22490">Fanon</persName> delivered at the
+            <rs type="event" ref="https://www.wikidata.org/wiki/Q2993133">Second Congress of Black Writers and Artists</rs>
+            held in <date when="1959">Rome, 1959</date>, organised by the journal
+            <title level="j">Présence Africaine</title>.
+            The speech, later reworked into the chapter
+            <title level="a">"On National Culture"</title>,
+            examined the role of intellectuals in the process of
+            <rs type="concept" ref="https://www.wikidata.org/wiki/Q230533">decolonisation</rs>.
+            It is the source of one of the book's most quoted lines:
+            <cit>
+              <quote>Each generation must, out of relative obscurity, discover its mission, fulfil it, or betray it.</quote>
+              <bibl><ptr target="https://www.wikidata.org/wiki/Q2741364"/></bibl>
+            </cit>
+          </p>
+        </div>
+ 
+        <div type="section" n="3">
+          <head>Reception and legacy</head>
+          <p>
+            <title level="m" ref="https://www.wikidata.org/wiki/Q2741364">The Wretched of the Earth</title>
+            was widely read by anticolonial movements across Africa, Asia,
+            and Latin America in the 1960s and 1970s.
+            The preface by <persName ref="https://viaf.org/viaf/76322562">Jean-Paul Sartre</persName>
+            was later removed from some editions after
+            <persName ref="https://viaf.org/viaf/76322562">Sartre</persName>'s
+            public support for Israel during the
+            <rs type="event">Six-Day War of 1967</rs>
+            led <persName>Josie Fanon</persName>,
+            <persName ref="https://viaf.org/viaf/22490">Fanon</persName>'s widow,
+            to request its removal.
+          </p>
+          <p>
+            The 2004 edition published by
+            <orgName ref="https://www.wikidata.org/wiki/Q3777164">Grove Press</orgName>
+            includes a new foreword by postcolonial theorist
+            <persName ref="https://www.wikidata.org/wiki/Q325741">Homi K. Bhabha</persName>,
+            who reinterprets
+            <persName ref="https://viaf.org/viaf/22490">Fanon</persName>'s legacy
+            through the lens of poststructuralism, introducing concepts of
+            hybridity and ambivalence into the reading of the text.
+          </p>
+        </div>
+ 
+      </div>
+    </body>
+ 
+    <back>
+ 
+      <div type="listPerson">
+        <listPerson>
+ 
+          <person xml:id="fanon">
+            <persName>Frantz Fanon</persName>
+            <persName type="full">Frantz Omar Fanon</persName>
+            <birth when="1925-07-20">
+              <placeName ref="https://www.geonames.org/3570311">Fort-de-France, Martinique</placeName>
+            </birth>
+            <death when="1961-12-06">
+              <placeName>Bethesda, Maryland, United States</placeName>
+            </death>
+            <occupation>Psychiatrist, philosopher, revolutionary</occupation>
+            <note>Author of The Wretched of the Earth. Member of the FLN.</note>
+            <idno type="VIAF">https://viaf.org/viaf/22490</idno>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q193670</idno>
+          </person>
+ 
+          <person xml:id="sartre">
+            <persName>Jean-Paul Sartre</persName>
+            <birth when="1905-06-21"><placeName>Paris, France</placeName></birth>
+            <death when="1980-04-15"><placeName>Paris, France</placeName></death>
+            <occupation>Philosopher, writer</occupation>
+            <note>Wrote the preface to the 1961 edition of The Wretched of the Earth.</note>
+            <idno type="VIAF">https://viaf.org/viaf/76322562</idno>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q9364</idno>
+          </person>
+ 
+          <person xml:id="bhabha">
+            <persName>Homi K. Bhabha</persName>
+            <birth when="1949"><placeName>Mumbai, India</placeName></birth>
+            <occupation>Postcolonial theorist, professor</occupation>
+            <note>Wrote the foreword to the 2004 edition of The Wretched of the Earth.</note>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q325741</idno>
+          </person>
+ 
+          <person xml:id="cesaire">
+            <persName>Aimé Césaire</persName>
+            <birth when="1913-06-26">
+              <placeName ref="https://www.geonames.org/3570311">Basse-Pointe, Martinique</placeName>
+            </birth>
+            <death when="2008-04-17"><placeName>Fort-de-France, Martinique</placeName></death>
+            <occupation>Poet, playwright, politician</occupation>
+            <note>Co-founder of the Négritude movement. Fanon's teacher.</note>
+            <idno type="VIAF">https://viaf.org/viaf/4925246</idno>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q223955</idno>
+          </person>
+ 
+        </listPerson>
+      </div>
+ 
+      <div type="listPlace">
+        <listPlace>
+ 
+          <place xml:id="martinique">
+            <placeName>Martinique</placeName>
+            <location>
+              <geo>14.6415 -61.0242</geo>
+            </location>
+            <note>Caribbean island and French overseas territory. Birthplace of Frantz Fanon and Aimé Césaire.</note>
+            <idno type="GeoNames">https://www.geonames.org/3570311</idno>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q17054</idno>
+          </place>
+ 
+          <place xml:id="algeria">
+            <placeName>Algeria</placeName>
+            <location>
+              <geo>28.0339 1.6596</geo>
+            </location>
+            <note>Country in North Africa, formerly a French colony from 1830 to 1962. Central context of The Wretched of the Earth.</note>
+            <idno type="GeoNames">https://www.geonames.org/2589581</idno>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q262</idno>
+          </place>
+ 
+        </listPlace>
+      </div>
+ 
+      <div type="listOrg">
+        <listOrg>
+ 
+          <org xml:id="grovepress">
+            <orgName>Grove Press</orgName>
+            <note>American independent publishing house. Published the first English translation of The Wretched of the Earth in 1963.</note>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q3777164</idno>
+          </org>
+ 
+        </listOrg>
+      </div>
+ 
+      <div type="listEvent">
+        <listEvent>
+ 
+          <event xml:id="algerianrevolution">
+            <label>Algerian Revolution</label>
+            <desc>The war of independence fought between Algeria and France, 1954–1962. The direct historical context in which Fanon wrote The Wretched of the Earth.</desc>
+            <date from="1954" to="1962"/>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q200790</idno>
+          </event>
+ 
+          <event xml:id="secondcongress">
+            <label>Second Congress of Black Writers and Artists</label>
+            <desc>International gathering of Black intellectuals held in Rome in 1959. Fanon's speech there became the basis for key sections of The Wretched of the Earth.</desc>
+            <date when="1959"/>
+            <placeName>Rome, Italy</placeName>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q2993133</idno>
+          </event>
+ 
+        </listEvent>
+      </div>
+ 
+      <div type="listConcept">
+        <list type="gloss">
+ 
+          <label>Colonialism</label>
+          <item xml:id="colonialism">
+            <gloss>A system of political and economic domination in which one country exerts control over another. Central object of critique in The Wretched of the Earth.</gloss>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q7167</idno>
+            <idno type="GettyAAT">https://vocab.getty.edu/aat/300055142</idno>
+          </item>
+ 
+          <label>Decolonisation</label>
+          <item xml:id="decolonisation">
+            <gloss>The process by which colonised peoples reclaim political independence and cultural identity. For Fanon, a complete transformation of the social order.</gloss>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q230533</idno>
+            <idno type="GettyAAT">https://vocab.getty.edu/aat/300375556</idno>
+          </item>
+ 
+          <label>Négritude</label>
+          <item xml:id="negritude">
+            <gloss>A literary and intellectual movement celebrating Black African culture and identity, founded by Aimé Césaire and Léopold Sédar Senghor. Critiqued by Fanon in The Wretched of the Earth.</gloss>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q852544</idno>
+          </item>
+ 
+        </list>
+      </div>
+ 
+      <div type="listBibl">
+        <listBibl>
+ 
+          <bibl xml:id="wretchedoftheearth">
+            <title level="m">The Wretched of the Earth</title>
+            <author ref="https://viaf.org/viaf/22490">Frantz Fanon</author>
+            <date when="1961">1961</date>
+            <publisher>François Maspero</publisher>
+            <pubPlace>Paris</pubPlace>
+            <note type="translation">First English translation by Constance Farrington, Grove Press, 1963.</note>
+            <idno type="Wikidata">https://www.wikidata.org/wiki/Q2741364</idno>
+            <idno type="WorldCat">https://www.worldcat.org/oclc/31510925</idno>
+          </bibl>
+ 
+          <bibl xml:id="onviolence">
+            <title level="a">"On Violence"</title>
+            <note>Opening chapter of The Wretched of the Earth. Argues that colonial rule is founded on violence and that anticolonial violence can serve as liberation.</note>
+            <relatedItem type="host">
+              <bibl ref="#wretchedoftheearth"/>
+            </relatedItem>
+          </bibl>
+ 
+        </listBibl>
+      </div>
+ 
+    </back>
+  </text>
+</TEI>

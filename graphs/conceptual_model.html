@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Wretched of the Earth — Conceptual Model</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;background:#f0ece4;font-family:'IBM Plex Sans',sans-serif}
+#graph{width:100%;height:100vh}
+svg{display:block}
+.node{pointer-events:all;cursor:default}
+.node circle{transition:filter .15s}
+.node:hover circle{filter:drop-shadow(0 0 12px rgba(0,0,0,.3))}
+.edge-label{font-family:'IBM Plex Mono',monospace;pointer-events:none;paint-order:stroke;stroke:#f0ece4;stroke-width:5px;stroke-linejoin:round}
+#legend{position:fixed;bottom:18px;left:18px;background:rgba(245,240,235,0.97);border:1px solid rgba(0,0,0,0.11);border-radius:8px;padding:13px 22px 13px 16px;font-family:'IBM Plex Mono',monospace;z-index:50;max-width:280px}
+#legend .leg-title{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#888;margin-bottom:9px}
+#legend .leg-item{display:flex;align-items:center;gap:8px;margin-bottom:6px;color:#333;font-size:10px}
+#legend .leg-item:last-child{margin-bottom:0}
+#legend .leg-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;border:2px solid}
+#legend .leg-sep{border-top:1px solid rgba(0,0,0,.09);margin:7px 0}
+#legend .leg-dash{width:20px;height:0;border-top:2px dashed #aaa;flex-shrink:0}
+#tooltip{position:fixed;background:#110a1a;color:#f0e8f4;padding:.55rem .9rem;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:.62rem;pointer-events:none;opacity:0;transition:opacity .15s;max-width:270px;line-height:1.75;z-index:100;border:1px solid rgba(255,255,255,.08)}
+#tooltip.vis{opacity:1}
+.tt-lbl{font-weight:600;font-size:.7rem;margin-bottom:.25rem;color:#c9a0e8}
+.tt-cls{color:#998;font-size:.58rem;margin-bottom:.35rem}
+.tt-row{color:#9a8aaa}
+.tt-val{color:#ddd0ee;margin-left:.25rem}
+</style>
+</head>
+<body>
+<div id="graph"></div>
+<div id="legend">
+  <div class="leg-title">Entities</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#3a1a5a;border-color:#7a4fa8"></div>frbroo:F2_Expression</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#2a0a3a;border-color:#9a5fd8"></div>frbroo:F28_Expression_Creation</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#0e2a4a;border-color:#2a6aaa"></div>crm:E21_Person</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#2a2a2a;border-color:#6a6a6a"></div>crm:E74_Group</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#0a2e1e;border-color:#2a8a5e"></div>crm:E53_Place</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#3a2a0a;border-color:#aa7a2a"></div>crm:E5_Event</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#3a1a0a;border-color:#aa4a2a"></div>crm:E28_Conceptual_Object</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#0a2e2e;border-color:#2a8a8a"></div>crm:E67_Birth</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#2a2a0a;border-color:#8a8a2a"></div>crm:E7_Activity</div>
+  <div class="leg-sep"></div>
+  <div class="leg-title">Relations</div>
+  <div class="leg-item"><div class="leg-dash"></div>owl:sameAs</div>
+</div>
+<div id="tooltip"></div>
+<script>
+const ENTITY_TYPE={
+  'The Wretched\nof the Earth':'frbr',
+  '"On Violence"':'frbr',
+  'Book Creation\nEvent':'frbr_creation',
+  'Frantz Fanon':'person',
+  'Jean-Paul Sartre':'person',
+  'Homi K. Bhabha':'person',
+  'Aimé Césaire':'person',
+  'Birth of\nFrantz Fanon':'birth',
+  'Birth of\nAimé Césaire':'birth',
+  'Césaire teaching\nFanon':'activity',
+  'Founding of\nNégritude':'activity',
+  'Fanon critiquing\nNégritude':'activity',
+  'François Maspero':'group',
+  'Grove Press':'group',
+  'Algeria':'place',
+  'Martinique':'place',
+  'Algerian Revolution':'event',
+  'Second Congress':'event',
+  'Colonialism':'concept',
+  'Decolonisation':'concept',
+  'Négritude':'concept',
+};
+const CLASS_LABEL={
+  'The Wretched\nof the Earth':'frbroo:F2_Expression',
+  '"On Violence"':'frbroo:F2_Expression',
+  'Book Creation\nEvent':'frbroo:F28_Expression_Creation',
+  'Frantz Fanon':'crm:E21_Person',
+  'Jean-Paul Sartre':'crm:E21_Person',
+  'Homi K. Bhabha':'crm:E21_Person',
+  'Aimé Césaire':'crm:E21_Person',
+  'Birth of\nFrantz Fanon':'crm:E67_Birth',
+  'Birth of\nAimé Césaire':'crm:E67_Birth',
+  'Césaire teaching\nFanon':'crm:E7_Activity',
+  'Founding of\nNégritude':'crm:E7_Activity',
+  'Fanon critiquing\nNégritude':'crm:E7_Activity',
+  'François Maspero':'crm:E74_Group',
+  'Grove Press':'crm:E74_Group',
+  'Algeria':'crm:E53_Place',
+  'Martinique':'crm:E53_Place',
+  'Algerian Revolution':'crm:E5_Event',
+  'Second Congress':'crm:E5_Event',
+  'Colonialism':'crm:E28_Conceptual_Object',
+  'Decolonisation':'crm:E28_Conceptual_Object',
+  'Négritude':'crm:E28_Conceptual_Object',
+};
+const AUTHORITY={
+  'Frantz Fanon':              {label:'VIAF',color:'#8b5a2b'},
+  'Jean-Paul Sartre':          {label:'VIAF',color:'#8b5a2b'},
+  'Aimé Césaire':              {label:'VIAF',color:'#8b5a2b'},
+  'Homi K. Bhabha':            {label:'Wikidata',color:'#336699'},
+  'Grove Press':               {label:'Wikidata',color:'#336699'},
+  'François Maspero':          {label:'Wikidata',color:'#336699'},
+  'Algerian Revolution':       {label:'Wikidata',color:'#336699'},
+  'Second Congress':           {label:'Wikidata',color:'#336699'},
+  'Négritude':                 {label:'Wikidata',color:'#336699'},
+  'Algeria':                   {label:'GeoNames',color:'#2a7a3a'},
+  'Martinique':                {label:'GeoNames',color:'#2a7a3a'},
+  'The Wretched\nof the Earth':{label:'WorldCat\nMARC21',color:'#6a3a8a'},
+  '"On Violence"':             {label:'WorldCat\nMARC21',color:'#6a3a8a'},
+  'Colonialism':               {label:'Getty AAT\nCDWA',color:'#8a4a2a'},
+  'Decolonisation':            {label:'Getty AAT\nCDWA',color:'#8a4a2a'},
+};
+const ENTITY_COLORS={
+  frbr:         {fill:'#3a1a5a',stroke:'#7a4fa8',tc:'#e0c8ff'},
+  frbr_creation:{fill:'#2a0a3a',stroke:'#9a5fd8',tc:'#d0b0ff'},
+  person:       {fill:'#0e2a4a',stroke:'#2a6aaa',tc:'#a8d0ff'},
+  group:        {fill:'#2a2a2a',stroke:'#6a6a6a',tc:'#cccccc'},
+  place:        {fill:'#0a2e1e',stroke:'#2a8a5e',tc:'#90ddb8'},
+  event:        {fill:'#3a2a0a',stroke:'#aa7a2a',tc:'#ffd890'},
+  concept:      {fill:'#3a1a0a',stroke:'#aa4a2a',tc:'#ffb888'},
+  birth:        {fill:'#0a2e2e',stroke:'#2a8a8a',tc:'#90dddd'},
+  activity:     {fill:'#2a2a0a',stroke:'#8a8a2a',tc:'#dddd90'},
+  creation_e65: {fill:'#2a1408',stroke:'#8a5a2a',tc:'#e8c090'},
+  center:       {fill:'#1a0828',stroke:'#7a4fa8',tc:'#e8d0ff'},
+};
+const SAT_DATA={
+  'The Wretched\nof the Earth':[
+    ['rdf:type','frbroo:F2_Expression'],
+    ['crm:P102_has_title','"The Wretched of the Earth"@en'],
+    ['crm:P102_has_title','"Les Damnés de la Terre"@fr'],
+    ['crm:P129_is_about','concept:colonialism'],
+    ['crm:P129_is_about','concept:decolonisation'],
+    ['crm:P129_is_about','concept:negritude'],
+    ['crm:P106_is_composed_of','item:onViolence'],
+    ['dcterms:contributor','person:sartre'],
+    ['dcterms:contributor','person:bhabha'],
+    ['dcterms:publisher','org:maspero'],
+    ['dcterms:publisher','org:grovepress'],
+    ['dcterms:issued','1961'],
+    ['dcterms:issued','1963'],
+    ['dcterms:language','fr'],
+    ['dcterms:language','en'],
+    ['owl:sameAs','wd:Q2741364'],
+    ['owl:sameAs','worldcat:31510925'],
+  ],
+  '"On Violence"':[
+    ['rdf:type','frbroo:F2_Expression'],
+    ['crm:P102_has_title','"On Violence"@en'],
+    ['crm:P129_is_about','concept:colonialism'],
+    ['crm:P129_is_about','concept:decolonisation'],
+  ],
+  'Book Creation\nEvent':[
+    ['rdf:type','frbroo:F28_Expression_Creation'],
+    ['frbroo:R17_created','item:theWretchedOfTheEarth'],
+    ['crm:P14_carried_out_by','person:fanon'],
+    ['crm:P4_has_time-span','time:1961'],
+  ],
+  'Frantz Fanon':[
+    ['rdf:type','crm:E21_Person'],
+    ['rdfs:label','"Frantz Fanon"@en'],
+    ['crm:P74_has_current_or_former_residence','place:algeria'],
+    ['owl:sameAs','viaf:22490'],
+    ['owl:sameAs','wd:Q193670'],
+  ],
+  'Jean-Paul Sartre':[
+    ['rdf:type','crm:E21_Person'],
+    ['rdfs:label','"Jean-Paul Sartre"@en'],
+    ['owl:sameAs','viaf:76322562'],
+    ['owl:sameAs','wd:Q9364'],
+  ],
+  'Homi K. Bhabha':[
+    ['rdf:type','crm:E21_Person'],
+    ['rdfs:label','"Homi K. Bhabha"@en'],
+    ['owl:sameAs','wd:Q325741'],
+  ],
+  'Aimé Césaire':[
+    ['rdf:type','crm:E21_Person'],
+    ['rdfs:label','"Aimé Césaire"@en'],
+    ['owl:sameAs','viaf:4925246'],
+    ['owl:sameAs','wd:Q223955'],
+  ],
+  'Birth of\nFrantz Fanon':[
+    ['rdf:type','crm:E67_Birth'],
+    ['crm:P98_brought_into_life','person:fanon'],
+    ['crm:P7_took_place_at','place:martinique'],
+  ],
+  'Birth of\nAimé Césaire':[
+    ['rdf:type','crm:E67_Birth'],
+    ['crm:P98_brought_into_life','person:cesaire'],
+    ['crm:P7_took_place_at','place:martinique'],
+  ],
+  'Césaire teaching\nFanon':[
+    ['rdf:type','crm:E7_Activity'],
+    ['rdfs:label','"Aimé Césaire teaching Frantz Fanon"@en'],
+    ['crm:P14_carried_out_by','person:cesaire'],
+    ['crm:P11_had_participant','person:fanon'],
+  ],
+  'Founding of\nNégritude':[
+    ['rdf:type','crm:E7_Activity'],
+    ['rdfs:label','"Founding of Négritude"@en'],
+    ['crm:P14_carried_out_by','person:cesaire'],
+    ['crm:P94_has_created','concept:negritude'],
+  ],
+  'Fanon critiquing\nNégritude':[
+    ['rdf:type','crm:E7_Activity'],
+    ['rdfs:label','"Fanon critiquing Négritude"@en'],
+    ['crm:P14_carried_out_by','person:fanon'],
+    ['crm:P129_is_about','concept:negritude'],
+  ],
+  'François Maspero':[
+    ['rdf:type','crm:E74_Group'],
+    ['rdfs:label','"François Maspero"@en'],
+    ['owl:sameAs','wd:Q3085338'],
+  ],
+  'Grove Press':[
+    ['rdf:type','crm:E74_Group'],
+    ['rdfs:label','"Grove Press"@en'],
+    ['owl:sameAs','wd:Q3777164'],
+  ],
+  'Algeria':[
+    ['rdf:type','crm:E53_Place'],
+    ['rdfs:label','"Algeria"@en'],
+    ['crm:P168_place_is_defined_by','28.0339 1.6596'],
+    ['owl:sameAs','geonames:2589581'],
+    ['owl:sameAs','wd:Q262'],
+  ],
+  'Martinique':[
+    ['rdf:type','crm:E53_Place'],
+    ['rdfs:label','"Martinique"@en'],
+    ['crm:P168_place_is_defined_by','14.6415 -61.0242'],
+    ['owl:sameAs','geonames:3570311'],
+    ['owl:sameAs','wd:Q17054'],
+  ],
+  'Algerian Revolution':[
+    ['rdf:type','crm:E5_Event'],
+    ['rdfs:label','"Algerian Revolution"@en'],
+    ['crm:P7_took_place_at','place:algeria'],
+    ['crm:P11_had_participant','person:fanon'],
+    ['crm:P4_has_time-span','time:1954-1962'],
+    ['owl:sameAs','wd:Q200790'],
+  ],
+  'Second Congress':[
+    ['rdf:type','crm:E5_Event'],
+    ['rdfs:label','"Second Congress of Black Writers and Artists"@en'],
+    ['crm:P11_had_participant','person:fanon'],
+    ['crm:P11_had_participant','person:cesaire'],
+    ['crm:P4_has_time-span','time:1959'],
+    ['owl:sameAs','wd:Q2993133'],
+  ],
+  'Colonialism':[
+    ['rdf:type','crm:E28_Conceptual_Object'],
+    ['rdfs:label','"Colonialism"@en'],
+    ['owl:sameAs','wd:Q7167'],
+    ['owl:sameAs','aat:300055142'],
+  ],
+  'Decolonisation':[
+    ['rdf:type','crm:E28_Conceptual_Object'],
+    ['rdfs:label','"Decolonisation"@en'],
+    ['owl:sameAs','wd:Q230533'],
+    ['owl:sameAs','aat:300375556'],
+  ],
+  'Négritude':[
+    ['rdf:type','crm:E28_Conceptual_Object'],
+    ['rdfs:label','"Négritude"@en'],
+    ['owl:sameAs','wd:Q852544'],
+  ],
+};
+const relations=[
+  ['The Wretched\nof the Earth','P106_is_composed_of','"On Violence"'],
+  ['The Wretched\nof the Earth','P129_is_about','Colonialism'],
+  ['The Wretched\nof the Earth','P129_is_about','Decolonisation'],
+  ['The Wretched\nof the Earth','P129_is_about','Négritude'],
+  ['The Wretched\nof the Earth','dcterms:contributor','Jean-Paul Sartre'],
+  ['The Wretched\nof the Earth','dcterms:contributor','Homi K. Bhabha'],
+  ['The Wretched\nof the Earth','dcterms:publisher','François Maspero'],
+  ['The Wretched\nof the Earth','dcterms:publisher','Grove Press'],
+  // Book Creation Event — Fanon only (Sartre/Bhabha = dcterms:contributor; publication via dcterms:publisher)
+  ['Book Creation\nEvent','R17_created','The Wretched\nof the Earth'],
+  ['Book Creation\nEvent','P14_carried_out_by','Frantz Fanon'],
+  ['"On Violence"','P129_is_about','Colonialism'],
+  ['"On Violence"','P129_is_about','Decolonisation'],
+  ['Frantz Fanon','P74_has_current_or_former_residence','Algeria'],
+  // Birth modelled as crm:E67_Birth (P98 -> person, P7 -> place)
+  ['Birth of\nFrantz Fanon','P98_brought_into_life','Frantz Fanon'],
+  ['Birth of\nFrantz Fanon','P7_took_place_at','Martinique'],
+  ['Birth of\nAimé Césaire','P98_brought_into_life','Aimé Césaire'],
+  ['Birth of\nAimé Césaire','P7_took_place_at','Martinique'],
+  // Teaching, founding and critique modelled as crm:E7_Activity
+  ['Césaire teaching\nFanon','P14_carried_out_by','Aimé Césaire'],
+  ['Césaire teaching\nFanon','P11_had_participant','Frantz Fanon'],
+  ['Founding of\nNégritude','P14_carried_out_by','Aimé Césaire'],
+  ['Founding of\nNégritude','P94_has_created','Négritude'],
+  ['Fanon critiquing\nNégritude','P14_carried_out_by','Frantz Fanon'],
+  ['Fanon critiquing\nNégritude','P129_is_about','Négritude'],
+  // Participation: event -> person
+  ['Algerian Revolution','P7_took_place_at','Algeria'],
+  ['Algerian Revolution','P11_had_participant','Frantz Fanon'],
+  ['Second Congress','P11_had_participant','Frantz Fanon'],
+  ['Second Congress','P11_had_participant','Aimé Césaire'],
+];
+const CENTER='The Wretched\nof the Earth';
+const ITEM_ORDER=[
+  'Book Creation\nEvent','"On Violence"',
+  'Frantz Fanon','Birth of\nFrantz Fanon','Jean-Paul Sartre','Homi K. Bhabha',
+  'Aimé Césaire','Birth of\nAimé Césaire','Césaire teaching\nFanon','Founding of\nNégritude','Fanon critiquing\nNégritude',
+  'Grove Press','François Maspero','Martinique','Algeria',
+  'Algerian Revolution','Second Congress',
+  'Colonialism','Decolonisation','Négritude',
+];
+const nodeMap=new Map(),links=[];
+function getNode(id){
+  if(!nodeMap.has(id)){
+    const type=id===CENTER?'center':ENTITY_TYPE[id]||'concept';
+    nodeMap.set(id,{id,label:id,type,triples:SAT_DATA[id]||[],isAuth:false});
+  }
+  return nodeMap.get(id);
+}
+relations.forEach(([s,p,o])=>{getNode(s);getNode(o);links.push({source:s,target:o,label:p,dash:false});});
+Object.entries(AUTHORITY).forEach(([entityId,auth])=>{
+  const authId=`__auth__${entityId}`;
+  nodeMap.set(authId,{id:authId,label:auth.label,type:'auth',triples:[],isAuth:true,authColor:auth.color,parentId:entityId});
+  links.push({source:entityId,target:authId,label:'owl:sameAs',dash:true});
+});
+const nodes=[...nodeMap.values()];
+const SVG_W=6800,SVG_H=6800,cx=SVG_W/2,cy=SVG_H/2;
+const ITEM_R=1600,AUTH_R=520,GAP=0.045;
+const itemNodes=ITEM_ORDER.map(id=>nodes.find(d=>d.id===id)).filter(Boolean);
+const N=itemNodes.length,usableArc=2*Math.PI-GAP*N;
+let cursor=-Math.PI/2;
+itemNodes.forEach(item=>{
+  const arc=usableArc/N,a0=cursor+GAP/2,a1=a0+arc;
+  item.angle=(a0+a1)/2;
+  item.x=cx+ITEM_R*Math.cos(item.angle);
+  item.y=cy+ITEM_R*Math.sin(item.angle);
+  cursor+=GAP+arc;
+  const an=nodeMap.get(`__auth__${item.id}`);
+  if(an){an.x=item.x+AUTH_R*Math.cos(item.angle);an.y=item.y+AUTH_R*Math.sin(item.angle);}
+});
+const centerNode=nodes.find(d=>d.id===CENTER);
+centerNode.x=cx;centerNode.y=cy;
+nodes.forEach(d=>{d.r=d.isAuth?85:d.id===CENTER?210:115;});
+const svg=d3.select('#graph').append('svg')
+  .attr('viewBox',`0 0 ${SVG_W} ${SVG_H}`)
+  .attr('preserveAspectRatio','xMidYMid meet')
+  .style('width','100%').style('height','100%');
+svg.append('defs').html(`
+  <marker id="ar"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9Z" fill="#888"/></marker>
+  <marker id="ar-d"viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9Z" fill="#bbb"/></marker>
+  <marker id="ar-c"viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9Z" fill="#5a3a8a"/></marker>
+`);
+const edgeG=svg.append('g'),pairCount=new Map(),pairIdx=new Map();
+links.forEach(l=>{const k=[l.source,l.target].sort().join('|');pairCount.set(k,(pairCount.get(k)||0)+1);});
+links.forEach(lnk=>{
+  const s=nodeMap.get(lnk.source),t=nodeMap.get(lnk.target);
+  if(!s||!t||s.x===undefined||t.x===undefined)return;
+  const dx=t.x-s.x,dy=t.y-s.y,L=Math.hypot(dx,dy)||1;
+  const nx=-dy/L,ny=dx/L;
+  const x1=s.x+dx/L*s.r,y1=s.y+dy/L*s.r,x2=t.x-dx/L*t.r,y2=t.y-dy/L*t.r;
+  const k=[lnk.source,lnk.target].sort().join('|');
+  const idx=pairIdx.get(k)||0;pairIdx.set(k,idx+1);
+  const offset=(idx-(pairCount.get(k)-1)/2)*30;
+  const cpx=(x1+x2)/2+nx*offset,cpy=(y1+y2)/2+ny*offset;
+  if(lnk.dash){
+    edgeG.append('path').attr('d',`M${x1},${y1} Q${cpx},${cpy} ${x2},${y2}`)
+      .attr('fill','none').attr('stroke','#aaa').attr('stroke-width',1.2)
+      .attr('stroke-dasharray','8 5').attr('opacity',.55).attr('marker-end','url(#ar-d)');
+    return;
+  }
+  const isCenter=lnk.source===CENTER||lnk.target===CENTER;
+  const isCreation=lnk.source==='Book Creation\nEvent'||lnk.target==='Book Creation\nEvent';
+  const stroke=isCenter?'#5a3a8a':isCreation?'#7a4fa8':'#888';
+  const marker=isCenter||isCreation?'ar-c':'ar';
+  edgeG.append('path').attr('d',`M${x1},${y1} Q${cpx},${cpy} ${x2},${y2}`)
+    .attr('fill','none').attr('stroke',stroke)
+    .attr('stroke-width',isCenter?2.2:isCreation?2:1.6)
+    .attr('opacity',isCenter?.9:isCreation?.8:.65)
+    .attr('marker-end',`url(#${marker})`);
+  const tv=.42;
+  const lx=(1-tv)**2*x1+2*(1-tv)*tv*cpx+tv**2*x2+nx*18;
+  const ly=(1-tv)**2*y1+2*(1-tv)*tv*cpy+tv**2*y2+ny*18;
+  edgeG.append('text').attr('class','edge-label')
+    .attr('x',lx).attr('y',ly).attr('text-anchor','middle').attr('dominant-baseline','middle')
+    .attr('font-size',20).attr('fill',isCenter?'#6a4a9a':isCreation?'#8a5ab8':'#888')
+    .text(lnk.label.includes(':')?lnk.label:(lnk.label.startsWith('R')?'frbroo:'+lnk.label:'crm:'+lnk.label));
+});
+const FONT="'IBM Plex Sans',sans-serif";
+const nodeG=svg.append('g');
+nodes.forEach(d=>{
+  if(d.x===undefined)return;
+  const ng=nodeG.append('g').attr('class','node').attr('transform',`translate(${d.x},${d.y})`);
+  let fill,stroke,tc,fw;
+  if(d.isAuth){fill=d.authColor;stroke=d.authColor;tc='#f0ece4';fw='400';}
+  else{const col=ENTITY_COLORS[d.type]||ENTITY_COLORS.concept;fill=col.fill;stroke=col.stroke;tc=col.tc;fw=d.id===CENTER?'700':'600';}
+  ng.append('circle').attr('r',d.r+3).attr('cx',2).attr('cy',3).attr('fill','rgba(0,0,0,.18)');
+  ng.append('circle').attr('r',d.r).attr('fill',fill).attr('stroke',stroke).attr('stroke-width',2.5);
+  const fs=d.id===CENTER?28:d.isAuth?18:22;
+  const lh=d.id===CENTER?36:d.isAuth?24:28;
+  const maxChars=12;
+  function wrap(str,max){
+    const lines=str.split('\n'),out=[];
+    lines.forEach(seg=>{const words=seg.split(' ');let cur='';
+      words.forEach(w=>{if((cur+(cur?' ':'')+w).length<=max)cur+=(cur?' ':'')+w;else{if(cur)out.push(cur);cur=w;}});
+      if(cur)out.push(cur);});
+    return out;
+  }
+  const rawLabel=d.isAuth?d.label:(d.label||d.id);
+  const cls=CLASS_LABEL[d.id]?CLASS_LABEL[d.id].replace(/crm:|frbroo:/g,''):'';
+  let lines;
+  if(d.id==='The Wretched\nof the Earth')lines=['The Wretched','of the Earth'];
+  else if(d.id==='Algerian Revolution')lines=['Algerian','Revolution'];
+  else if(d.id==='Second Congress')lines=['Second','Congress'];
+  else if(d.id==='Book Creation\nEvent')lines=['Book Creation','Event'];
+  else lines=wrap(rawLabel,maxChars);
+  const totalH=(lines.length-1)*lh;
+  lines.forEach((line,i)=>{
+    ng.append('text').attr('x',0).attr('y',-totalH/2+i*lh)
+      .attr('text-anchor','middle').attr('dominant-baseline','middle')
+      .attr('font-family',FONT).attr('font-size',fs).attr('font-weight',fw)
+      .attr('fill',tc).attr('pointer-events','none').text(line);
+  });
+  if(!d.isAuth&&cls&&d.id!==CENTER){
+    ng.append('text').attr('x',0).attr('y',totalH/2+lh*0.9)
+      .attr('text-anchor','middle').attr('dominant-baseline','middle')
+      .attr('font-family',"'IBM Plex Mono',monospace").attr('font-size',16)
+      .attr('fill',tc).attr('opacity',.55).attr('pointer-events','none').text(cls);
+  }
+  ng.on('mousemove',function(e){
+    const label=d.isAuth?`owl:sameAs → ${d.label}`:rawLabel.replace(/\n/g,' ');
+    let html=`<div class="tt-lbl">${label}</div>`;
+    if(CLASS_LABEL[d.id])html+=`<div class="tt-cls">${CLASS_LABEL[d.id]}</div>`;
+    if(d.isAuth){html+=`<div class="tt-row">External authority record</div>`;}
+    else{(d.triples||[]).slice(0,8).forEach(([p,o])=>{html+=`<div><span class="tt-row">${p} → </span><span class="tt-val">${o}</span></div>`;});}
+    const tt=document.getElementById('tooltip');
+    tt.innerHTML=html;tt.classList.add('vis');
+    tt.style.left=(e.clientX+18)+'px';tt.style.top=(e.clientY-10)+'px';
+  }).on('mouseleave',()=>document.getElementById('tooltip').classList.remove('vis'));
+});
+</script>
+</body>
+</html>

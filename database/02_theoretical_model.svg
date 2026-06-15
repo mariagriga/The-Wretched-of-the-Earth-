@@ -1,0 +1,356 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="637" height="2377" viewBox="0 0 637 2377" font-family="'IBM Plex Mono', monospace">
+<rect width="637" height="2377" fill="#f4f1ea"/>
+<text x="12" y="30" font-size="20" font-weight="700" fill="#2e5c8b">Theoretical model</text>
+<text x="12" y="48" font-size="10.5" fill="#7a766a" letter-spacing="1.5">THE WRETCHED OF THE EARTH · DATA PROVENANCE</text>
+<line x1="12" y1="58" x2="625" y2="58" stroke="#4a7fa5" stroke-width="1.5"/>
+<rect x="0" y="64" width="637" height="29" fill="#2e5c8b"/>
+<text x="12" y="83" font-size="13" font-weight="600" fill="#ffffff">Source</text>
+<text x="212" y="83" font-size="13" font-weight="600" fill="#ffffff">Relation</text>
+<text x="362" y="83" font-size="13" font-weight="600" fill="#ffffff">Target</text>
+<text x="562" y="83" font-size="13" font-weight="600" fill="#ffffff">Type</text>
+<text x="12" y="108" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="108" font-size="12.5" font-weight="400" fill="#2a2620">authored</text>
+<text x="362" y="108" font-size="12.5" font-weight="400" fill="#2a2620">The Wretched of the</text>
+<text x="362" y="126" font-size="12.5" font-weight="400" fill="#2a2620">Earth</text>
+<text x="562" y="108" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="140" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="155" font-size="12.5" font-weight="500" fill="#4a7fa5">Jean-Paul Sartre</text>
+<text x="212" y="155" font-size="12.5" font-weight="400" fill="#2a2620">wrote preface for</text>
+<text x="362" y="155" font-size="12.5" font-weight="400" fill="#2a2620">The Wretched of the</text>
+<text x="362" y="173" font-size="12.5" font-weight="400" fill="#2a2620">Earth</text>
+<text x="562" y="155" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="202" font-size="12.5" font-weight="500" fill="#4a7fa5">Homi K. Bhabha</text>
+<text x="212" y="202" font-size="12.5" font-weight="400" fill="#2a2620">wrote foreword</text>
+<text x="212" y="220" font-size="12.5" font-weight="400" fill="#2a2620">for</text>
+<text x="362" y="202" font-size="12.5" font-weight="400" fill="#2a2620">The Wretched of the</text>
+<text x="362" y="220" font-size="12.5" font-weight="400" fill="#2a2620">Earth</text>
+<text x="562" y="202" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="234" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="249" font-size="12.5" font-weight="500" fill="#4a7fa5">Grove Press</text>
+<text x="212" y="249" font-size="12.5" font-weight="400" fill="#2a2620">published</text>
+<text x="362" y="249" font-size="12.5" font-weight="400" fill="#2a2620">The Wretched of the</text>
+<text x="362" y="267" font-size="12.5" font-weight="400" fill="#2a2620">Earth</text>
+<text x="562" y="249" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="296" font-size="12.5" font-weight="500" fill="#4a7fa5">On Violence</text>
+<text x="212" y="296" font-size="12.5" font-weight="400" fill="#2a2620">is part of</text>
+<text x="362" y="296" font-size="12.5" font-weight="400" fill="#2a2620">The Wretched of the</text>
+<text x="362" y="314" font-size="12.5" font-weight="400" fill="#2a2620">Earth</text>
+<text x="562" y="296" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="328" width="637" height="29" fill="#ece8df"/>
+<text x="12" y="343" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="343" font-size="12.5" font-weight="400" fill="#2a2620">born in</text>
+<text x="362" y="343" font-size="12.5" font-weight="400" fill="#2a2620">Martinique</text>
+<text x="562" y="343" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="372" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="372" font-size="12.5" font-weight="400" fill="#2a2620">taught by</text>
+<text x="362" y="372" font-size="12.5" font-weight="400" fill="#2a2620">Aimé Césaire</text>
+<text x="562" y="372" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="386" width="637" height="29" fill="#ece8df"/>
+<text x="12" y="401" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="401" font-size="12.5" font-weight="400" fill="#2a2620">participated in</text>
+<text x="362" y="401" font-size="12.5" font-weight="400" fill="#2a2620">Algerian Revolution</text>
+<text x="562" y="401" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="430" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="430" font-size="12.5" font-weight="400" fill="#2a2620">worked in</text>
+<text x="362" y="430" font-size="12.5" font-weight="400" fill="#2a2620">Algeria</text>
+<text x="562" y="430" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="444" width="637" height="29" fill="#ece8df"/>
+<text x="12" y="459" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="459" font-size="12.5" font-weight="400" fill="#2a2620">advocated</text>
+<text x="362" y="459" font-size="12.5" font-weight="400" fill="#2a2620">Decolonisation</text>
+<text x="562" y="459" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="488" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="488" font-size="12.5" font-weight="400" fill="#2a2620">critiqued</text>
+<text x="362" y="488" font-size="12.5" font-weight="400" fill="#2a2620">Négritude</text>
+<text x="562" y="488" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="502" width="637" height="29" fill="#ece8df"/>
+<text x="12" y="517" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="517" font-size="12.5" font-weight="400" fill="#2a2620">spoke at</text>
+<text x="362" y="517" font-size="12.5" font-weight="400" fill="#2a2620">Second Congress</text>
+<text x="562" y="517" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="546" font-size="12.5" font-weight="500" fill="#4a7fa5">Aimé Césaire</text>
+<text x="212" y="546" font-size="12.5" font-weight="400" fill="#2a2620">born in</text>
+<text x="362" y="546" font-size="12.5" font-weight="400" fill="#2a2620">Martinique</text>
+<text x="562" y="546" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="560" width="637" height="29" fill="#ece8df"/>
+<text x="12" y="575" font-size="12.5" font-weight="500" fill="#4a7fa5">Aimé Césaire</text>
+<text x="212" y="575" font-size="12.5" font-weight="400" fill="#2a2620">founded</text>
+<text x="362" y="575" font-size="12.5" font-weight="400" fill="#2a2620">Négritude</text>
+<text x="562" y="575" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="604" font-size="12.5" font-weight="500" fill="#4a7fa5">Aimé Césaire</text>
+<text x="212" y="604" font-size="12.5" font-weight="400" fill="#2a2620">critiqued</text>
+<text x="362" y="604" font-size="12.5" font-weight="400" fill="#2a2620">Colonialism</text>
+<text x="562" y="604" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="618" width="637" height="29" fill="#ece8df"/>
+<text x="12" y="633" font-size="12.5" font-weight="500" fill="#4a7fa5">Jean-Paul Sartre</text>
+<text x="212" y="633" font-size="12.5" font-weight="400" fill="#2a2620">wrote about</text>
+<text x="362" y="633" font-size="12.5" font-weight="400" fill="#2a2620">Colonialism</text>
+<text x="562" y="633" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="662" font-size="12.5" font-weight="500" fill="#4a7fa5">Jean-Paul Sartre</text>
+<text x="212" y="662" font-size="12.5" font-weight="400" fill="#2a2620">supported</text>
+<text x="362" y="662" font-size="12.5" font-weight="400" fill="#2a2620">Decolonisation</text>
+<text x="562" y="662" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="676" width="637" height="29" fill="#ece8df"/>
+<text x="12" y="691" font-size="12.5" font-weight="500" fill="#4a7fa5">Algerian Revolution</text>
+<text x="212" y="691" font-size="12.5" font-weight="400" fill="#2a2620">took place in</text>
+<text x="362" y="691" font-size="12.5" font-weight="400" fill="#2a2620">Algeria</text>
+<text x="562" y="691" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="720" font-size="12.5" font-weight="500" fill="#4a7fa5">The Wretched of the</text>
+<text x="12" y="738" font-size="12.5" font-weight="500" fill="#4a7fa5">Earth</text>
+<text x="212" y="720" font-size="12.5" font-weight="400" fill="#2a2620">draws on</text>
+<text x="362" y="720" font-size="12.5" font-weight="400" fill="#2a2620">Second Congress</text>
+<text x="562" y="720" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="752" width="637" height="29" fill="#ece8df"/>
+<text x="12" y="767" font-size="12.5" font-weight="500" fill="#4a7fa5">On Violence</text>
+<text x="212" y="767" font-size="12.5" font-weight="400" fill="#2a2620">critiques</text>
+<text x="362" y="767" font-size="12.5" font-weight="400" fill="#2a2620">Colonialism</text>
+<text x="562" y="767" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="796" font-size="12.5" font-weight="500" fill="#4a7fa5">On Violence</text>
+<text x="212" y="796" font-size="12.5" font-weight="400" fill="#2a2620">theorises</text>
+<text x="362" y="796" font-size="12.5" font-weight="400" fill="#2a2620">Decolonisation</text>
+<text x="562" y="796" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="810" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="825" font-size="12.5" font-weight="500" fill="#4a7fa5">The Wretched of the</text>
+<text x="12" y="843" font-size="12.5" font-weight="500" fill="#4a7fa5">Earth</text>
+<text x="212" y="825" font-size="12.5" font-weight="400" fill="#2a2620">critiques</text>
+<text x="362" y="825" font-size="12.5" font-weight="400" fill="#2a2620">Négritude</text>
+<text x="562" y="825" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="872" font-size="12.5" font-weight="500" fill="#4a7fa5">The Wretched of the</text>
+<text x="12" y="890" font-size="12.5" font-weight="500" fill="#4a7fa5">Earth</text>
+<text x="212" y="872" font-size="12.5" font-weight="400" fill="#2a2620">addresses</text>
+<text x="362" y="872" font-size="12.5" font-weight="400" fill="#2a2620">Colonialism</text>
+<text x="562" y="872" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="904" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="919" font-size="12.5" font-weight="500" fill="#4a7fa5">The Wretched of the</text>
+<text x="12" y="937" font-size="12.5" font-weight="500" fill="#4a7fa5">Earth</text>
+<text x="212" y="919" font-size="12.5" font-weight="400" fill="#2a2620">advocates</text>
+<text x="362" y="919" font-size="12.5" font-weight="400" fill="#2a2620">Decolonisation</text>
+<text x="562" y="919" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="966" font-size="12.5" font-weight="500" fill="#4a7fa5">The Wretched of the</text>
+<text x="12" y="984" font-size="12.5" font-weight="500" fill="#4a7fa5">Earth</text>
+<text x="212" y="966" font-size="12.5" font-weight="400" fill="#2a2620">date</text>
+<text x="362" y="966" font-size="12.5" font-weight="400" fill="#2a2620">1961.0</text>
+<text x="562" y="966" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="984" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="998" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="1013" font-size="12.5" font-weight="500" fill="#4a7fa5">The Wretched of the</text>
+<text x="12" y="1031" font-size="12.5" font-weight="500" fill="#4a7fa5">Earth</text>
+<text x="212" y="1013" font-size="12.5" font-weight="400" fill="#2a2620">language</text>
+<text x="362" y="1013" font-size="12.5" font-weight="400" fill="#2a2620">FR / EN (1963)</text>
+<text x="562" y="1013" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1031" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1060" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="1060" font-size="12.5" font-weight="400" fill="#2a2620">birth date</text>
+<text x="362" y="1060" font-size="12.5" font-weight="400" fill="#2a2620">1925.0</text>
+<text x="562" y="1060" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1078" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1092" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="1107" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="1107" font-size="12.5" font-weight="400" fill="#2a2620">death date</text>
+<text x="362" y="1107" font-size="12.5" font-weight="400" fill="#2a2620">1961.0</text>
+<text x="562" y="1107" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1125" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1154" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="1154" font-size="12.5" font-weight="400" fill="#2a2620">occupation</text>
+<text x="362" y="1154" font-size="12.5" font-weight="400" fill="#2a2620">psychiatrist</text>
+<text x="562" y="1154" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1172" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1186" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="1201" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="1201" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="362" y="1201" font-size="12.5" font-weight="400" fill="#2a2620">political philosophy</text>
+<text x="562" y="1201" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1219" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1248" font-size="12.5" font-weight="500" fill="#4a7fa5">Jean-Paul Sartre</text>
+<text x="212" y="1248" font-size="12.5" font-weight="400" fill="#2a2620">birth date</text>
+<text x="362" y="1248" font-size="12.5" font-weight="400" fill="#2a2620">1905.0</text>
+<text x="562" y="1248" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1266" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1280" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="1295" font-size="12.5" font-weight="500" fill="#4a7fa5">Jean-Paul Sartre</text>
+<text x="212" y="1295" font-size="12.5" font-weight="400" fill="#2a2620">death date</text>
+<text x="362" y="1295" font-size="12.5" font-weight="400" fill="#2a2620">1980.0</text>
+<text x="562" y="1295" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1313" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1342" font-size="12.5" font-weight="500" fill="#4a7fa5">Jean-Paul Sartre</text>
+<text x="212" y="1342" font-size="12.5" font-weight="400" fill="#2a2620">occupation</text>
+<text x="362" y="1342" font-size="12.5" font-weight="400" fill="#2a2620">philosopher</text>
+<text x="562" y="1342" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1360" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1374" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="1389" font-size="12.5" font-weight="500" fill="#4a7fa5">Jean-Paul Sartre</text>
+<text x="212" y="1389" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="362" y="1389" font-size="12.5" font-weight="400" fill="#2a2620">existentialism</text>
+<text x="562" y="1389" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1407" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1436" font-size="12.5" font-weight="500" fill="#4a7fa5">Homi K. Bhabha</text>
+<text x="212" y="1436" font-size="12.5" font-weight="400" fill="#2a2620">birth date</text>
+<text x="362" y="1436" font-size="12.5" font-weight="400" fill="#2a2620">1949.0</text>
+<text x="562" y="1436" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1454" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1468" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="1483" font-size="12.5" font-weight="500" fill="#4a7fa5">Homi K. Bhabha</text>
+<text x="212" y="1483" font-size="12.5" font-weight="400" fill="#2a2620">field</text>
+<text x="362" y="1483" font-size="12.5" font-weight="400" fill="#2a2620">postcolonial theory</text>
+<text x="562" y="1483" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1501" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1530" font-size="12.5" font-weight="500" fill="#4a7fa5">Homi K. Bhabha</text>
+<text x="212" y="1530" font-size="12.5" font-weight="400" fill="#2a2620">approach</text>
+<text x="362" y="1530" font-size="12.5" font-weight="400" fill="#2a2620">poststructuralism</text>
+<text x="562" y="1530" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1548" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1562" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="1577" font-size="12.5" font-weight="500" fill="#4a7fa5">Aimé Césaire</text>
+<text x="212" y="1577" font-size="12.5" font-weight="400" fill="#2a2620">birth date</text>
+<text x="362" y="1577" font-size="12.5" font-weight="400" fill="#2a2620">1913.0</text>
+<text x="562" y="1577" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1595" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1624" font-size="12.5" font-weight="500" fill="#4a7fa5">Aimé Césaire</text>
+<text x="212" y="1624" font-size="12.5" font-weight="400" fill="#2a2620">death date</text>
+<text x="362" y="1624" font-size="12.5" font-weight="400" fill="#2a2620">2008.0</text>
+<text x="562" y="1624" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1642" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1656" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="1671" font-size="12.5" font-weight="500" fill="#4a7fa5">Aimé Césaire</text>
+<text x="212" y="1671" font-size="12.5" font-weight="400" fill="#2a2620">occupation</text>
+<text x="362" y="1671" font-size="12.5" font-weight="400" fill="#2a2620">poet, politician</text>
+<text x="562" y="1671" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1689" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1718" font-size="12.5" font-weight="500" fill="#4a7fa5">Aimé Césaire</text>
+<text x="212" y="1718" font-size="12.5" font-weight="400" fill="#2a2620">orientation</text>
+<text x="362" y="1718" font-size="12.5" font-weight="400" fill="#2a2620">anticolonialism</text>
+<text x="562" y="1718" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1736" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1750" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="1765" font-size="12.5" font-weight="500" fill="#4a7fa5">Grove Press</text>
+<text x="212" y="1765" font-size="12.5" font-weight="400" fill="#2a2620">type</text>
+<text x="362" y="1765" font-size="12.5" font-weight="400" fill="#2a2620">independent publisher</text>
+<text x="562" y="1765" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1783" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1812" font-size="12.5" font-weight="500" fill="#4a7fa5">Grove Press</text>
+<text x="212" y="1812" font-size="12.5" font-weight="400" fill="#2a2620">location</text>
+<text x="362" y="1812" font-size="12.5" font-weight="400" fill="#2a2620">New York</text>
+<text x="562" y="1812" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1830" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1844" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="1859" font-size="12.5" font-weight="500" fill="#4a7fa5">Grove Press</text>
+<text x="212" y="1859" font-size="12.5" font-weight="400" fill="#2a2620">founding date</text>
+<text x="362" y="1859" font-size="12.5" font-weight="400" fill="#2a2620">1951.0</text>
+<text x="562" y="1859" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1877" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1906" font-size="12.5" font-weight="500" fill="#4a7fa5">Algeria</text>
+<text x="212" y="1906" font-size="12.5" font-weight="400" fill="#2a2620">type</text>
+<text x="362" y="1906" font-size="12.5" font-weight="400" fill="#2a2620">country</text>
+<text x="562" y="1906" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1924" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1938" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="1953" font-size="12.5" font-weight="500" fill="#4a7fa5">Martinique</text>
+<text x="212" y="1953" font-size="12.5" font-weight="400" fill="#2a2620">type</text>
+<text x="362" y="1953" font-size="12.5" font-weight="400" fill="#2a2620">island</text>
+<text x="562" y="1953" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="1971" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2000" font-size="12.5" font-weight="500" fill="#4a7fa5">Algerian Revolution</text>
+<text x="212" y="2000" font-size="12.5" font-weight="400" fill="#2a2620">start date</text>
+<text x="362" y="2000" font-size="12.5" font-weight="400" fill="#2a2620">1954.0</text>
+<text x="562" y="2000" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="2018" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2032" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="2047" font-size="12.5" font-weight="500" fill="#4a7fa5">Algerian Revolution</text>
+<text x="212" y="2047" font-size="12.5" font-weight="400" fill="#2a2620">end date</text>
+<text x="362" y="2047" font-size="12.5" font-weight="400" fill="#2a2620">1962.0</text>
+<text x="562" y="2047" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="2065" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2094" font-size="12.5" font-weight="500" fill="#4a7fa5">Second Congress</text>
+<text x="212" y="2094" font-size="12.5" font-weight="400" fill="#2a2620">date</text>
+<text x="362" y="2094" font-size="12.5" font-weight="400" fill="#2a2620">March–April 1959</text>
+<text x="562" y="2094" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="2112" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2126" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="2141" font-size="12.5" font-weight="500" fill="#4a7fa5">Second Congress</text>
+<text x="212" y="2141" font-size="12.5" font-weight="400" fill="#2a2620">location</text>
+<text x="362" y="2141" font-size="12.5" font-weight="400" fill="#2a2620">Rome, Italy</text>
+<text x="562" y="2141" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="2159" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2188" font-size="12.5" font-weight="500" fill="#4a7fa5">Second Congress</text>
+<text x="212" y="2188" font-size="12.5" font-weight="400" fill="#2a2620">organiser</text>
+<text x="362" y="2188" font-size="12.5" font-weight="400" fill="#2a2620">Présence Africaine</text>
+<text x="562" y="2188" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="2206" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2220" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="2235" font-size="12.5" font-weight="500" fill="#4a7fa5">Second Congress</text>
+<text x="212" y="2235" font-size="12.5" font-weight="400" fill="#2a2620">theme</text>
+<text x="362" y="2235" font-size="12.5" font-weight="400" fill="#2a2620">unity of Black cultures</text>
+<text x="562" y="2235" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="2253" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2282" font-size="12.5" font-weight="500" fill="#4a7fa5">Négritude</text>
+<text x="212" y="2282" font-size="12.5" font-weight="400" fill="#2a2620">date</text>
+<text x="362" y="2282" font-size="12.5" font-weight="400" fill="#2a2620">1930s</text>
+<text x="562" y="2282" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="2300" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2314" width="637" height="47" fill="#ece8df"/>
+<text x="12" y="2329" font-size="12.5" font-weight="500" fill="#4a7fa5">On Violence</text>
+<text x="212" y="2329" font-size="12.5" font-weight="400" fill="#2a2620">type</text>
+<text x="362" y="2329" font-size="12.5" font-weight="400" fill="#2a2620">essay, chapter</text>
+<text x="562" y="2329" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="562" y="2347" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<line x1="200" y1="64" x2="200" y2="2361" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="350" y1="64" x2="350" y2="2361" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="550" y1="64" x2="550" y2="2361" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="64" x2="637" y2="64" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="93" x2="637" y2="93" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="140" x2="637" y2="140" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="187" x2="637" y2="187" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="234" x2="637" y2="234" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="281" x2="637" y2="281" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="328" x2="637" y2="328" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="357" x2="637" y2="357" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="386" x2="637" y2="386" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="415" x2="637" y2="415" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="444" x2="637" y2="444" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="473" x2="637" y2="473" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="502" x2="637" y2="502" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="531" x2="637" y2="531" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="560" x2="637" y2="560" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="589" x2="637" y2="589" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="618" x2="637" y2="618" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="647" x2="637" y2="647" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="676" x2="637" y2="676" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="705" x2="637" y2="705" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="752" x2="637" y2="752" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="781" x2="637" y2="781" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="810" x2="637" y2="810" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="857" x2="637" y2="857" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="904" x2="637" y2="904" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="951" x2="637" y2="951" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="998" x2="637" y2="998" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1045" x2="637" y2="1045" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1092" x2="637" y2="1092" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1139" x2="637" y2="1139" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1186" x2="637" y2="1186" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1233" x2="637" y2="1233" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1280" x2="637" y2="1280" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1327" x2="637" y2="1327" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1374" x2="637" y2="1374" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1421" x2="637" y2="1421" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1468" x2="637" y2="1468" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1515" x2="637" y2="1515" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1562" x2="637" y2="1562" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1609" x2="637" y2="1609" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1656" x2="637" y2="1656" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1703" x2="637" y2="1703" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1750" x2="637" y2="1750" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1797" x2="637" y2="1797" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1844" x2="637" y2="1844" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1891" x2="637" y2="1891" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1938" x2="637" y2="1938" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1985" x2="637" y2="1985" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2032" x2="637" y2="2032" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2079" x2="637" y2="2079" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2126" x2="637" y2="2126" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2173" x2="637" y2="2173" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2220" x2="637" y2="2220" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2267" x2="637" y2="2267" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2314" x2="637" y2="2314" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2361" x2="637" y2="2361" stroke="#cdc7ba" stroke-width="0.6"/>
+<rect x="0.5" y="64" width="636" height="2297" fill="none" stroke="#4a7fa5" stroke-width="1"/>
+</svg>

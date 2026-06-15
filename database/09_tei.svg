@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="444" height="634" viewBox="0 0 444 634" font-family="'IBM Plex Mono', monospace">
+<rect width="444" height="634" fill="#f4f1ea"/>
+<text x="12" y="30" font-size="20" font-weight="700" fill="#2e5c8b">TEI</text>
+<text x="12" y="48" font-size="10.5" fill="#7a766a" letter-spacing="1.5">THE WRETCHED OF THE EARTH · DATA PROVENANCE</text>
+<line x1="12" y1="58" x2="432" y2="58" stroke="#4a7fa5" stroke-width="1.5"/>
+<rect x="0" y="64" width="444" height="29" fill="#2e5c8b"/>
+<text x="12" y="83" font-size="13" font-weight="600" fill="#ffffff">Entity</text>
+<text x="212" y="83" font-size="13" font-weight="600" fill="#ffffff">Type</text>
+<text x="320" y="83" font-size="13" font-weight="600" fill="#ffffff">Authority File</text>
+<text x="12" y="108" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="212" y="108" font-size="12.5" font-weight="400" fill="#2a2620">Person</text>
+<text x="320" y="108" font-size="12.5" font-weight="400" fill="#2a2620">VIAF:22490</text>
+<rect x="0" y="122" width="444" height="29" fill="#ece8df"/>
+<text x="12" y="137" font-size="12.5" font-weight="500" fill="#4a7fa5">Jean-Paul Sartre</text>
+<text x="212" y="137" font-size="12.5" font-weight="400" fill="#2a2620">Person</text>
+<text x="320" y="137" font-size="12.5" font-weight="400" fill="#2a2620">VIAF:76322562</text>
+<text x="12" y="166" font-size="12.5" font-weight="500" fill="#4a7fa5">Homi K. Bhabha</text>
+<text x="212" y="166" font-size="12.5" font-weight="400" fill="#2a2620">Person</text>
+<text x="320" y="166" font-size="12.5" font-weight="400" fill="#2a2620">WD:Q325741</text>
+<rect x="0" y="180" width="444" height="29" fill="#ece8df"/>
+<text x="12" y="195" font-size="12.5" font-weight="500" fill="#4a7fa5">Aimé Césaire</text>
+<text x="212" y="195" font-size="12.5" font-weight="400" fill="#2a2620">Person</text>
+<text x="320" y="195" font-size="12.5" font-weight="400" fill="#2a2620">VIAF:4925246</text>
+<text x="12" y="224" font-size="12.5" font-weight="500" fill="#4a7fa5">Martinique</text>
+<text x="212" y="224" font-size="12.5" font-weight="400" fill="#2a2620">Place</text>
+<text x="320" y="224" font-size="12.5" font-weight="400" fill="#2a2620">GeoNames:357031</text>
+<text x="320" y="242" font-size="12.5" font-weight="400" fill="#2a2620">1</text>
+<rect x="0" y="256" width="444" height="47" fill="#ece8df"/>
+<text x="12" y="271" font-size="12.5" font-weight="500" fill="#4a7fa5">Algeria</text>
+<text x="212" y="271" font-size="12.5" font-weight="400" fill="#2a2620">Place</text>
+<text x="320" y="271" font-size="12.5" font-weight="400" fill="#2a2620">GeoNames:258958</text>
+<text x="320" y="289" font-size="12.5" font-weight="400" fill="#2a2620">1</text>
+<text x="12" y="318" font-size="12.5" font-weight="500" fill="#4a7fa5">Grove Press</text>
+<text x="212" y="318" font-size="12.5" font-weight="400" fill="#2a2620">Organisatio</text>
+<text x="212" y="336" font-size="12.5" font-weight="400" fill="#2a2620">n</text>
+<text x="320" y="318" font-size="12.5" font-weight="400" fill="#2a2620">WD:Q3777164</text>
+<rect x="0" y="350" width="444" height="47" fill="#ece8df"/>
+<text x="12" y="365" font-size="12.5" font-weight="500" fill="#4a7fa5">François Maspero</text>
+<text x="212" y="365" font-size="12.5" font-weight="400" fill="#2a2620">Organisatio</text>
+<text x="212" y="383" font-size="12.5" font-weight="400" fill="#2a2620">n</text>
+<text x="320" y="365" font-size="12.5" font-weight="400" fill="#2a2620">WD:Q3085338</text>
+<text x="12" y="412" font-size="12.5" font-weight="500" fill="#4a7fa5">The Wretched of the</text>
+<text x="12" y="430" font-size="12.5" font-weight="500" fill="#4a7fa5">Earth</text>
+<text x="212" y="412" font-size="12.5" font-weight="400" fill="#2a2620">Work</text>
+<text x="320" y="412" font-size="12.5" font-weight="400" fill="#2a2620">WD:Q2741364</text>
+<rect x="0" y="444" width="444" height="29" fill="#ece8df"/>
+<text x="12" y="459" font-size="12.5" font-weight="500" fill="#4a7fa5">On Violence</text>
+<text x="212" y="459" font-size="12.5" font-weight="400" fill="#2a2620">Work</text>
+<text x="320" y="459" font-size="12.5" font-weight="400" fill="#2a2620">N/A</text>
+<text x="12" y="488" font-size="12.5" font-weight="500" fill="#4a7fa5">Algerian Revolution</text>
+<text x="212" y="488" font-size="12.5" font-weight="400" fill="#2a2620">Event</text>
+<text x="320" y="488" font-size="12.5" font-weight="400" fill="#2a2620">WD:Q200790</text>
+<rect x="0" y="502" width="444" height="29" fill="#ece8df"/>
+<text x="12" y="517" font-size="12.5" font-weight="500" fill="#4a7fa5">Second Congress</text>
+<text x="212" y="517" font-size="12.5" font-weight="400" fill="#2a2620">Event</text>
+<text x="320" y="517" font-size="12.5" font-weight="400" fill="#2a2620">WD:Q2993133</text>
+<text x="12" y="546" font-size="12.5" font-weight="500" fill="#4a7fa5">Colonialism</text>
+<text x="212" y="546" font-size="12.5" font-weight="400" fill="#2a2620">Concept</text>
+<text x="320" y="546" font-size="12.5" font-weight="400" fill="#2a2620">WD:Q7167</text>
+<rect x="0" y="560" width="444" height="29" fill="#ece8df"/>
+<text x="12" y="575" font-size="12.5" font-weight="500" fill="#4a7fa5">Decolonisation</text>
+<text x="212" y="575" font-size="12.5" font-weight="400" fill="#2a2620">Concept</text>
+<text x="320" y="575" font-size="12.5" font-weight="400" fill="#2a2620">WD:Q230533</text>
+<text x="12" y="604" font-size="12.5" font-weight="500" fill="#4a7fa5">Négritude</text>
+<text x="212" y="604" font-size="12.5" font-weight="400" fill="#2a2620">Concept</text>
+<text x="320" y="604" font-size="12.5" font-weight="400" fill="#2a2620">WD:Q852544</text>
+<line x1="200" y1="64" x2="200" y2="618" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="308" y1="64" x2="308" y2="618" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="64" x2="444" y2="64" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="93" x2="444" y2="93" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="122" x2="444" y2="122" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="151" x2="444" y2="151" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="180" x2="444" y2="180" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="209" x2="444" y2="209" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="256" x2="444" y2="256" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="303" x2="444" y2="303" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="350" x2="444" y2="350" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="397" x2="444" y2="397" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="444" x2="444" y2="444" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="473" x2="444" y2="473" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="502" x2="444" y2="502" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="531" x2="444" y2="531" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="560" x2="444" y2="560" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="589" x2="444" y2="589" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="618" x2="444" y2="618" stroke="#cdc7ba" stroke-width="0.6"/>
+<rect x="0.5" y="64" width="443" height="554" fill="none" stroke="#4a7fa5" stroke-width="1"/>
+</svg>

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="771" height="634" viewBox="0 0 771 634" font-family="'IBM Plex Mono', monospace">
+<rect width="771" height="634" fill="#f4f1ea"/>
+<text x="12" y="30" font-size="20" font-weight="700" fill="#2e5c8b">Metadata Analysis</text>
+<text x="12" y="48" font-size="10.5" fill="#7a766a" letter-spacing="1.5">THE WRETCHED OF THE EARTH · DATA PROVENANCE</text>
+<line x1="12" y1="58" x2="759" y2="58" stroke="#4a7fa5" stroke-width="1.5"/>
+<rect x="0" y="64" width="771" height="47" fill="#2e5c8b"/>
+<text x="12" y="83" font-size="13" font-weight="600" fill="#ffffff">Entity</text>
+<text x="346" y="83" font-size="13" font-weight="600" fill="#ffffff">Type</text>
+<text x="454" y="83" font-size="13" font-weight="600" fill="#ffffff">Authority / Institution</text>
+<text x="640" y="83" font-size="13" font-weight="600" fill="#ffffff">Metadata Standard</text>
+<text x="12" y="126" font-size="12.5" font-weight="500" fill="#4a7fa5">The Wretched of the Earth</text>
+<text x="346" y="126" font-size="12.5" font-weight="400" fill="#2a2620">Book</text>
+<text x="454" y="126" font-size="12.5" font-weight="400" fill="#2a2620">WorldCat</text>
+<text x="640" y="126" font-size="12.5" font-weight="400" fill="#2a2620">MARC21</text>
+<rect x="0" y="140" width="771" height="29" fill="#ece8df"/>
+<text x="12" y="155" font-size="12.5" font-weight="500" fill="#4a7fa5">Frantz Fanon</text>
+<text x="346" y="155" font-size="12.5" font-weight="400" fill="#2a2620">Person</text>
+<text x="454" y="155" font-size="12.5" font-weight="400" fill="#2a2620">VIAF</text>
+<text x="640" y="155" font-size="12.5" font-weight="400" fill="#2a2620">MARC21</text>
+<text x="12" y="184" font-size="12.5" font-weight="500" fill="#4a7fa5">Jean-Paul Sartre</text>
+<text x="346" y="184" font-size="12.5" font-weight="400" fill="#2a2620">Person</text>
+<text x="454" y="184" font-size="12.5" font-weight="400" fill="#2a2620">VIAF</text>
+<text x="640" y="184" font-size="12.5" font-weight="400" fill="#2a2620">MARC21</text>
+<rect x="0" y="198" width="771" height="29" fill="#ece8df"/>
+<text x="12" y="213" font-size="12.5" font-weight="500" fill="#4a7fa5">Homi K. Bhabha</text>
+<text x="346" y="213" font-size="12.5" font-weight="400" fill="#2a2620">Person</text>
+<text x="454" y="213" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata</text>
+<text x="640" y="213" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata schema</text>
+<text x="12" y="242" font-size="12.5" font-weight="500" fill="#4a7fa5">Aimé Césaire</text>
+<text x="346" y="242" font-size="12.5" font-weight="400" fill="#2a2620">Person</text>
+<text x="454" y="242" font-size="12.5" font-weight="400" fill="#2a2620">VIAF</text>
+<text x="640" y="242" font-size="12.5" font-weight="400" fill="#2a2620">MARC21</text>
+<rect x="0" y="256" width="771" height="47" fill="#ece8df"/>
+<text x="12" y="271" font-size="12.5" font-weight="500" fill="#4a7fa5">Grove Press</text>
+<text x="346" y="271" font-size="12.5" font-weight="400" fill="#2a2620">Organisatio</text>
+<text x="346" y="289" font-size="12.5" font-weight="400" fill="#2a2620">n</text>
+<text x="454" y="271" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata</text>
+<text x="640" y="271" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata schema</text>
+<text x="12" y="318" font-size="12.5" font-weight="500" fill="#4a7fa5">Algeria</text>
+<text x="346" y="318" font-size="12.5" font-weight="400" fill="#2a2620">Place</text>
+<text x="454" y="318" font-size="12.5" font-weight="400" fill="#2a2620">GeoNames</text>
+<text x="640" y="318" font-size="12.5" font-weight="400" fill="#2a2620">GeoNames schema</text>
+<rect x="0" y="332" width="771" height="29" fill="#ece8df"/>
+<text x="12" y="347" font-size="12.5" font-weight="500" fill="#4a7fa5">Martinique</text>
+<text x="346" y="347" font-size="12.5" font-weight="400" fill="#2a2620">Place</text>
+<text x="454" y="347" font-size="12.5" font-weight="400" fill="#2a2620">GeoNames</text>
+<text x="640" y="347" font-size="12.5" font-weight="400" fill="#2a2620">GeoNames schema</text>
+<text x="12" y="376" font-size="12.5" font-weight="500" fill="#4a7fa5">Algerian Revolution</text>
+<text x="346" y="376" font-size="12.5" font-weight="400" fill="#2a2620">Event</text>
+<text x="454" y="376" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata</text>
+<text x="640" y="376" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata schema</text>
+<rect x="0" y="390" width="771" height="47" fill="#ece8df"/>
+<text x="12" y="405" font-size="12.5" font-weight="500" fill="#4a7fa5">Second Congress of Black Writers and</text>
+<text x="12" y="423" font-size="12.5" font-weight="500" fill="#4a7fa5">Artists</text>
+<text x="346" y="405" font-size="12.5" font-weight="400" fill="#2a2620">Event</text>
+<text x="454" y="405" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata</text>
+<text x="640" y="405" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata schema</text>
+<text x="12" y="452" font-size="12.5" font-weight="500" fill="#4a7fa5">Colonialism</text>
+<text x="346" y="452" font-size="12.5" font-weight="400" fill="#2a2620">Concept</text>
+<text x="454" y="452" font-size="12.5" font-weight="400" fill="#2a2620">Getty AAT</text>
+<text x="640" y="452" font-size="12.5" font-weight="400" fill="#2a2620">CDWA</text>
+<rect x="0" y="466" width="771" height="29" fill="#ece8df"/>
+<text x="12" y="481" font-size="12.5" font-weight="500" fill="#4a7fa5">Decolonisation</text>
+<text x="346" y="481" font-size="12.5" font-weight="400" fill="#2a2620">Concept</text>
+<text x="454" y="481" font-size="12.5" font-weight="400" fill="#2a2620">Getty AAT</text>
+<text x="640" y="481" font-size="12.5" font-weight="400" fill="#2a2620">CDWA</text>
+<text x="12" y="510" font-size="12.5" font-weight="500" fill="#4a7fa5">Négritude</text>
+<text x="346" y="510" font-size="12.5" font-weight="400" fill="#2a2620">Concept</text>
+<text x="454" y="510" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata</text>
+<text x="640" y="510" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata schema</text>
+<rect x="0" y="524" width="771" height="47" fill="#ece8df"/>
+<text x="12" y="539" font-size="12.5" font-weight="500" fill="#4a7fa5">On Violence</text>
+<text x="346" y="539" font-size="12.5" font-weight="400" fill="#2a2620">Text /</text>
+<text x="346" y="557" font-size="12.5" font-weight="400" fill="#2a2620">Essay</text>
+<text x="454" y="539" font-size="12.5" font-weight="400" fill="#2a2620">Open Access Resource</text>
+<text x="640" y="539" font-size="12.5" font-weight="400" fill="#2a2620">Dublin Core</text>
+<text x="12" y="586" font-size="12.5" font-weight="500" fill="#4a7fa5">François Maspero</text>
+<text x="346" y="586" font-size="12.5" font-weight="400" fill="#2a2620">Organisatio</text>
+<text x="346" y="604" font-size="12.5" font-weight="400" fill="#2a2620">n</text>
+<text x="454" y="586" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata</text>
+<text x="640" y="586" font-size="12.5" font-weight="400" fill="#2a2620">Wikidata schema</text>
+<line x1="334" y1="64" x2="334" y2="618" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="442" y1="64" x2="442" y2="618" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="628" y1="64" x2="628" y2="618" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="64" x2="771" y2="64" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="111" x2="771" y2="111" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="140" x2="771" y2="140" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="169" x2="771" y2="169" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="198" x2="771" y2="198" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="227" x2="771" y2="227" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="256" x2="771" y2="256" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="303" x2="771" y2="303" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="332" x2="771" y2="332" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="361" x2="771" y2="361" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="390" x2="771" y2="390" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="437" x2="771" y2="437" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="466" x2="771" y2="466" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="495" x2="771" y2="495" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="524" x2="771" y2="524" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="571" x2="771" y2="571" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="618" x2="771" y2="618" stroke="#cdc7ba" stroke-width="0.6"/>
+<rect x="0.5" y="64" width="770" height="554" fill="none" stroke="#4a7fa5" stroke-width="1"/>
+</svg>

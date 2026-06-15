@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Wretched of the Earth — E/R Model</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f0ece4;font-family:'IBM Plex Sans',sans-serif;margin:0;overflow:hidden}
+#wrap{display:flex;flex-direction:column;width:100vw;height:100vh;}
+#desc{
+  flex-shrink:0;
+  padding:1.4rem 2rem 1rem;
+  background:#f0ece4;
+  border-bottom:1px solid rgba(0,0,0,0.08);
+  max-width:900px;
+}
+#desc .sec-tag{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:#888;margin-bottom:0.5rem;
+}
+#desc p{
+  font-size:0.82rem;line-height:1.7;color:#444;
+}
+#desc strong{font-weight:700;}
+#graph{flex:1;min-height:0;}
+svg{display:block;pointer-events:none}
+.node{pointer-events:all;cursor:default}
+.node circle{transition:filter .15s}
+.node:hover circle{filter:drop-shadow(0 0 16px rgba(0,0,0,.35))}
+.edge-label{font-family:'IBM Plex Mono',monospace;pointer-events:none;paint-order:stroke;stroke:#f0ece4;stroke-width:4px;stroke-linejoin:round;}
+#legend{
+  position:fixed;bottom:20px;left:20px;
+  background:rgba(245,240,235,0.96);
+  border:1px solid rgba(0,0,0,0.12);
+  border-radius:8px;padding:14px 18px;
+  font-family:'IBM Plex Mono',monospace;
+  z-index:50;
+}
+#legend .leg-title{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#888;margin-bottom:10px;}
+#legend .leg-item{display:flex;align-items:center;gap:8px;margin-bottom:8px;color:#333;font-size:12px;}
+#legend .leg-item:last-child{margin-bottom:0;}
+#legend .leg-dot{width:14px;height:14px;border-radius:50%;flex-shrink:0;border:2.5px solid;}
+#legend .leg-dash{width:24px;height:0;flex-shrink:0;border-top:2px dashed #aaa;}
+#legend .leg-solid{width:24px;height:2px;flex-shrink:0;background:#777;}
+#tooltip{
+  position:fixed;background:#1a1010;color:#f0ece4;
+  padding:.6rem 1rem;border-radius:6px;
+  font-family:'IBM Plex Mono',monospace;font-size:.65rem;
+  pointer-events:none;opacity:0;transition:opacity .15s;
+  max-width:280px;line-height:1.7;z-index:100;
+  border:1px solid rgba(255,255,255,0.1);
+}
+#tooltip.vis{opacity:1}
+.tt-lbl{font-weight:600;font-size:.72rem;margin-bottom:.3rem;color:#e8b47a}
+.tt-row{color:#9a9090}
+.tt-val{color:#e0d0c0;margin-left:.3rem}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="desc">
+    <div class="sec-tag">Knowledge Organisation — E/R Model</div>
+    <p>The E/R model formalises the semantic relations identified in the theoretical model by representing the domain through entities, relationships, and attributes. The model includes six main entity types: <strong>Person</strong>, <strong>Work</strong>, <strong>Concept</strong>, <strong>Event</strong>, <strong>Place</strong>, and <strong>Organization</strong>.</p>
+  </div>
+  <div id="graph"></div>
+</div>
+
+<div id="legend">
+  <div class="leg-title">Legend</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#2f0054;border-color:#7a4fa8"></div>Work</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#003e73;border-color:#2a6aaa"></div>Person</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#7a2800;border-color:#aa4a2a"></div>Concept</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#6e5000;border-color:#aa7a2a"></div>Event</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#006633;border-color:#2a8a5e"></div>Place</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#2d2d2d;border-color:#6a6a6a"></div>Organization</div>
+  <div class="leg-item"><div class="leg-solid"></div>Relation</div>
+  <div class="leg-item"><div class="leg-dash"></div>Attribute</div>
+</div>
+<div id="tooltip"></div>
+
+<script>
+const relations = [
+  ['PERSON','authored','WORK'],
+  ['PERSON','participated_in','EVENT'],
+  ['EVENT','took_place_in','PLACE'],
+  ['WORK','set_in','PLACE'],
+  ['WORK','critiques','CONCEPT'],
+  ['WORK','published_by','ORGANIZATION']
+];
+
+const attributes = [
+  ['PERSON','has attribute','person_id'],
+  ['PERSON','has attribute','name'],
+  ['PERSON','has attribute','birth_date'],
+  ['WORK','has attribute','work_id'],
+  ['WORK','has attribute','title'],
+  ['WORK','has attribute','type'],
+  ['EVENT','has attribute','event_id'],
+  ['EVENT','has attribute','name'],
+  ['PLACE','has attribute','place_id'],
+  ['PLACE','has attribute','name'],
+  ['CONCEPT','has attribute','concept_id'],
+  ['CONCEPT','has attribute','term'],
+  ['ORGANIZATION','has attribute','organization_id'],
+  ['ORGANIZATION','has attribute','name']
+];
+
+const C = {
+  WORK:         {fill:'#2f0054',stroke:'#7a4fa8',tc:'#e0c8ff'},
+  PERSON:       {fill:'#003e73',stroke:'#2a6aaa',tc:'#a8d0ff'},
+  CONCEPT:      {fill:'#7a2800',stroke:'#aa4a2a',tc:'#ffb888'},
+  EVENT:        {fill:'#6e5000',stroke:'#aa7a2a',tc:'#ffd890'},
+  PLACE:        {fill:'#006633',stroke:'#2a8a5e',tc:'#90ddb8'},
+  ORGANIZATION: {fill:'#2d2d2d',stroke:'#6a6a6a',tc:'#cccccc'},
+  attr:         {fill:'#faf7f2',stroke:'#d0c8c0',tc:'#5a5a5a'}
+};
+
+const ITEMS = new Set(['PERSON', 'WORK', 'CONCEPT', 'EVENT', 'PLACE', 'ORGANIZATION']);
+const nodeMap = new Map();
+const links = [];
+
+function getNode(id, parentId, isAttr) {
+  const key = isAttr ? `${parentId}__attr__${id}` : id;
+  if (!nodeMap.has(key)) {
+    const type = ITEMS.has(id) ? 'item' : 'attr';
+    nodeMap.set(key, {id:key, label:id, type, entityType:isAttr?'attr':id, parentId:isAttr?parentId:null, pred:isAttr?'has attribute':null});
+  }
+  return nodeMap.get(key);
+}
+
+relations.forEach(([s,p,o])=>{
+  const src=getNode(s,null,false), tgt=getNode(o,null,false);
+  links.push({source:src.id,target:tgt.id,label:p,dash:false});
+});
+
+attributes.forEach(([s,p,o])=>{
+  const src=getNode(s,null,false), tgt=getNode(o,s,true);
+  links.push({source:src.id,target:tgt.id,label:'',dash:true});
+});
+
+const nodes=[...nodeMap.values()];
+const SVG_W=5800, SVG_H=5800;
+const cx=SVG_W/2, cy=SVG_H/2;
+
+const ITEM_R=1500, ATTR_R=550, GAP=0.2;
+
+const itemAttrs={};
+ITEMS.forEach(id=>{itemAttrs[id]=[];});
+nodes.forEach(d=>{
+  if(d.type==='attr'&&d.parentId&&itemAttrs[d.parentId]) itemAttrs[d.parentId].push(d);
+});
+
+const ITEM_ORDER=['PERSON', 'EVENT', 'PLACE', 'WORK', 'ORGANIZATION', 'CONCEPT'];
+
+const itemNodes=ITEM_ORDER.map(id=>nodes.find(d=>d.id===id)).filter(Boolean);
+const usableArc=2*Math.PI-GAP*itemNodes.length;
+
+let cursor=-Math.PI/3;
+itemNodes.forEach((item,i)=>{
+  const arc=usableArc/itemNodes.length;
+  const a0=cursor+GAP/2, a1=a0+arc;
+  item.angle=(a0+a1)/2;
+  item.x=cx+ITEM_R*Math.cos(item.angle);
+  item.y=cy+ITEM_R*Math.sin(item.angle);
+  cursor+=GAP+arc;
+  
+  const sats=itemAttrs[item.id]||[];
+  const ns=sats.length;
+  const fan=1.2; 
+  sats.forEach((sat,j)=>{
+    const t=ns===1?0:(j/(ns-1)-0.5)*2;
+    const ang=item.angle+t*fan/2;
+    sat.x=item.x+ATTR_R*Math.cos(ang);
+    sat.y=item.y+ATTR_R*Math.sin(ang);
+  });
+});
+
+nodes.forEach(d=>{d.r=d.type==='item'?160:110;});
+
+const svg=d3.select('#graph').append('svg')
+  .attr('viewBox',`0 0 ${SVG_W} ${SVG_H}`)
+  .attr('preserveAspectRatio','xMidYMid meet')
+  .style('width','100%').style('height','100%');
+
+svg.append('defs').html(`
+  <marker id="ar-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,1 L9,5 L0,9Z" fill="#777"/>
+  </marker>
+  <marker id="ar-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,1 L9,5 L0,9Z" fill="#bbb"/>
+  </marker>
+`);
+
+const edgeG=svg.append('g');
+links.forEach(lnk=>{
+  const s=nodeMap.get(lnk.source), t=nodeMap.get(lnk.target);
+  if(!s||!t||s.x===undefined||t.x===undefined) return;
+  const dx=t.x-s.x, dy=t.y-s.y, L=Math.hypot(dx,dy)||1;
+  const ux=dx/L, uy=dy/L, nx=-uy, ny=ux;
+  const x1=s.x+ux*s.r, y1=s.y+uy*s.r;
+  const x2=t.x-ux*t.r, y2=t.y-uy*t.r;
+  
+  edgeG.append('line')
+    .attr('x1',x1).attr('y1',y1).attr('x2',x2).attr('y2',y2)
+    .attr('stroke',lnk.dash?'#bdb6ae':'#8f8f8f')
+    .attr('stroke-width',lnk.dash?3:4)
+    .attr('stroke-dasharray',lnk.dash?'12 10':'none')
+    .attr('marker-end',lnk.dash?'none':`url(#ar-s)`);
+    
+  if(lnk.label) {
+    const lx=(x1+x2)/2+nx*35, ly=(y1+y2)/2+ny*35;
+    edgeG.append('text').attr('class','edge-label')
+      .attr('x',lx).attr('y',ly)
+      .attr('text-anchor','middle').attr('dominant-baseline','middle')
+      .attr('font-size',32)
+      .attr('fill','#666')
+      .text(lnk.label);
+  }
+});
+
+const FONT="'IBM Plex Sans',sans-serif";
+const nodeG=svg.append('g');
+nodes.forEach(d=>{
+  if(d.x===undefined) return;
+  const c=C[d.entityType]||C.attr;
+  const ng=nodeG.append('g').attr('class','node')
+    .attr('transform',`translate(${d.x},${d.y})`);
+    
+  ng.append('circle').attr('r',d.r+6).attr('cx',4).attr('cy',5).attr('fill','rgba(0,0,0,0.12)');
+  ng.append('circle').attr('r',d.r).attr('fill',c.fill).attr('stroke',d.type==='item'?'none':c.stroke)
+    .attr('stroke-width',d.type==='item'?0:2);
+
+  const fs=d.type==='item'?36:26;
+  const fw=d.type==='item'?'700':'400';
+
+  ng.append('text')
+    .attr('x',0).attr('y',0)
+    .attr('text-anchor','middle').attr('dominant-baseline','middle')
+    .attr('font-family',FONT).attr('font-size',fs).attr('font-weight',fw)
+    .attr('fill',c.tc).attr('pointer-events','none').text(d.label);
+
+  ng.on('mousemove',function(e){
+    let html=`<div class="tt-lbl">${d.label}</div>`;
+    if(d.type==='attr'){
+      html+=`<div><span class="tt-row">← Attribute of</span><span class="tt-val">${d.parentId}</span></div>`;
+    } else {
+      html+=`<div><span class="tt-row">Type:</span><span class="tt-val">Entity Element</span></div>`;
+    }
+    const tt=document.getElementById('tooltip');
+    tt.innerHTML=html;tt.classList.add('vis');
+    tt.style.left=(e.clientX+18)+'px';tt.style.top=(e.clientY-10)+'px';
+  }).on('mouseleave',()=>document.getElementById('tooltip').classList.remove('vis'));
+});
+</script>
+</body>
+</html>

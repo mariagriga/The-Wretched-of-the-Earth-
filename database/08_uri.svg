@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="761" height="884" viewBox="0 0 761 884" font-family="'IBM Plex Mono', monospace">
+<rect width="761" height="884" fill="#f4f1ea"/>
+<text x="12" y="30" font-size="20" font-weight="700" fill="#2e5c8b">Uri</text>
+<text x="12" y="48" font-size="10.5" fill="#7a766a" letter-spacing="1.5">THE WRETCHED OF THE EARTH · DATA PROVENANCE</text>
+<line x1="12" y1="58" x2="749" y2="58" stroke="#4a7fa5" stroke-width="1.5"/>
+<rect x="0" y="64" width="761" height="29" fill="#2e5c8b"/>
+<text x="12" y="83" font-size="13" font-weight="600" fill="#ffffff">Category</text>
+<text x="141" y="83" font-size="13" font-weight="600" fill="#ffffff">Entity</text>
+<text x="341" y="83" font-size="13" font-weight="600" fill="#ffffff">URI</text>
+<text x="12" y="108" font-size="12.5" font-weight="500" fill="#4a7fa5">Item &amp;</text>
+<text x="12" y="126" font-size="12.5" font-weight="500" fill="#4a7fa5">Creation</text>
+<text x="141" y="108" font-size="12.5" font-weight="400" fill="#2a2620">The Wretched of the</text>
+<text x="141" y="126" font-size="12.5" font-weight="400" fill="#2a2620">Earth</text>
+<text x="341" y="108" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/item/theWretchedOfThe</text>
+<text x="341" y="126" font-size="12.5" font-weight="400" fill="#2a2620">Earth</text>
+<rect x="0" y="140" width="761" height="47" fill="#ece8df"/>
+<text x="12" y="155" font-size="12.5" font-weight="500" fill="#4a7fa5">Item &amp;</text>
+<text x="12" y="173" font-size="12.5" font-weight="500" fill="#4a7fa5">Creation</text>
+<text x="141" y="155" font-size="12.5" font-weight="400" fill="#2a2620">On Violence</text>
+<text x="341" y="155" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/item/onViolence</text>
+<text x="12" y="202" font-size="12.5" font-weight="500" fill="#4a7fa5">Item &amp;</text>
+<text x="12" y="220" font-size="12.5" font-weight="500" fill="#4a7fa5">Creation</text>
+<text x="141" y="202" font-size="12.5" font-weight="400" fill="#2a2620">Book Creation Event</text>
+<text x="341" y="202" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/creation/creationOfTh</text>
+<text x="341" y="220" font-size="12.5" font-weight="400" fill="#2a2620">eWretchedOfTheEarth</text>
+<rect x="0" y="234" width="761" height="29" fill="#ece8df"/>
+<text x="12" y="249" font-size="12.5" font-weight="500" fill="#4a7fa5">Time</text>
+<text x="141" y="249" font-size="12.5" font-weight="400" fill="#2a2620">1961.0</text>
+<text x="341" y="249" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/time/1961</text>
+<text x="12" y="278" font-size="12.5" font-weight="500" fill="#4a7fa5">Person</text>
+<text x="141" y="278" font-size="12.5" font-weight="400" fill="#2a2620">Frantz Fanon</text>
+<text x="341" y="278" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/person/fanon</text>
+<rect x="0" y="292" width="761" height="29" fill="#ece8df"/>
+<text x="12" y="307" font-size="12.5" font-weight="500" fill="#4a7fa5">Person</text>
+<text x="141" y="307" font-size="12.5" font-weight="400" fill="#2a2620">Jean-Paul Sartre</text>
+<text x="341" y="307" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/person/sartre</text>
+<text x="12" y="336" font-size="12.5" font-weight="500" fill="#4a7fa5">Person</text>
+<text x="141" y="336" font-size="12.5" font-weight="400" fill="#2a2620">Homi K. Bhabha</text>
+<text x="341" y="336" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/person/bhabha</text>
+<rect x="0" y="350" width="761" height="29" fill="#ece8df"/>
+<text x="12" y="365" font-size="12.5" font-weight="500" fill="#4a7fa5">Person</text>
+<text x="141" y="365" font-size="12.5" font-weight="400" fill="#2a2620">Aimé Césaire</text>
+<text x="341" y="365" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/person/cesaire</text>
+<text x="12" y="394" font-size="12.5" font-weight="500" fill="#4a7fa5">Organisation</text>
+<text x="141" y="394" font-size="12.5" font-weight="400" fill="#2a2620">Grove Press</text>
+<text x="341" y="394" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/org/grovepress</text>
+<rect x="0" y="408" width="761" height="29" fill="#ece8df"/>
+<text x="12" y="423" font-size="12.5" font-weight="500" fill="#4a7fa5">Place</text>
+<text x="141" y="423" font-size="12.5" font-weight="400" fill="#2a2620">Algeria</text>
+<text x="341" y="423" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/place/algeria</text>
+<text x="12" y="452" font-size="12.5" font-weight="500" fill="#4a7fa5">Place</text>
+<text x="141" y="452" font-size="12.5" font-weight="400" fill="#2a2620">Martinique</text>
+<text x="341" y="452" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/place/martinique</text>
+<rect x="0" y="466" width="761" height="47" fill="#ece8df"/>
+<text x="12" y="481" font-size="12.5" font-weight="500" fill="#4a7fa5">Event</text>
+<text x="141" y="481" font-size="12.5" font-weight="400" fill="#2a2620">Algerian Revolution</text>
+<text x="341" y="481" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/event/algerianrevolut</text>
+<text x="341" y="499" font-size="12.5" font-weight="400" fill="#2a2620">ion</text>
+<text x="12" y="528" font-size="12.5" font-weight="500" fill="#4a7fa5">Event</text>
+<text x="141" y="528" font-size="12.5" font-weight="400" fill="#2a2620">Second Congress</text>
+<text x="341" y="528" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/event/secondcongress</text>
+<rect x="0" y="542" width="761" height="29" fill="#ece8df"/>
+<text x="12" y="557" font-size="12.5" font-weight="500" fill="#4a7fa5">Concept</text>
+<text x="141" y="557" font-size="12.5" font-weight="400" fill="#2a2620">Colonialism</text>
+<text x="341" y="557" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/concept/colonialism</text>
+<text x="12" y="586" font-size="12.5" font-weight="500" fill="#4a7fa5">Concept</text>
+<text x="141" y="586" font-size="12.5" font-weight="400" fill="#2a2620">Decolonisation</text>
+<text x="341" y="586" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/concept/decolonisatio</text>
+<text x="341" y="604" font-size="12.5" font-weight="400" fill="#2a2620">n</text>
+<rect x="0" y="618" width="761" height="29" fill="#ece8df"/>
+<text x="12" y="633" font-size="12.5" font-weight="500" fill="#4a7fa5">Concept</text>
+<text x="141" y="633" font-size="12.5" font-weight="400" fill="#2a2620">Négritude</text>
+<text x="341" y="633" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/concept/negritude</text>
+<text x="12" y="662" font-size="12.5" font-weight="500" fill="#4a7fa5">Birth</text>
+<text x="141" y="662" font-size="12.5" font-weight="400" fill="#2a2620">Birth of Frantz Fanon</text>
+<text x="341" y="662" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/birth/fanon</text>
+<rect x="0" y="676" width="761" height="29" fill="#ece8df"/>
+<text x="12" y="691" font-size="12.5" font-weight="500" fill="#4a7fa5">Birth</text>
+<text x="141" y="691" font-size="12.5" font-weight="400" fill="#2a2620">Birth of Aimé Césaire</text>
+<text x="341" y="691" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/birth/cesaire</text>
+<text x="12" y="720" font-size="12.5" font-weight="500" fill="#4a7fa5">Activity</text>
+<text x="141" y="720" font-size="12.5" font-weight="400" fill="#2a2620">Césaire teaching Fanon</text>
+<text x="341" y="720" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/event/cesaireTeaching</text>
+<rect x="0" y="734" width="761" height="47" fill="#ece8df"/>
+<text x="12" y="749" font-size="12.5" font-weight="500" fill="#4a7fa5">Creation</text>
+<text x="141" y="749" font-size="12.5" font-weight="400" fill="#2a2620">Founding of Négritude</text>
+<text x="341" y="749" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/event/negritudeFoundi</text>
+<text x="341" y="767" font-size="12.5" font-weight="400" fill="#2a2620">ng</text>
+<text x="12" y="796" font-size="12.5" font-weight="500" fill="#4a7fa5">Organisation</text>
+<text x="141" y="796" font-size="12.5" font-weight="400" fill="#2a2620">François Maspero</text>
+<text x="341" y="796" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/org/maspero</text>
+<rect x="0" y="810" width="761" height="29" fill="#ece8df"/>
+<text x="12" y="825" font-size="12.5" font-weight="500" fill="#4a7fa5">Time</text>
+<text x="141" y="825" font-size="12.5" font-weight="400" fill="#2a2620">1954–1962</text>
+<text x="341" y="825" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/time/1954-1962</text>
+<text x="12" y="854" font-size="12.5" font-weight="500" fill="#4a7fa5">Time</text>
+<text x="141" y="854" font-size="12.5" font-weight="400" fill="#2a2620">1959.0</text>
+<text x="341" y="854" font-size="12.5" font-weight="400" fill="#2a2620">https://w3id.org/wretchedoftheearth/time/1959</text>
+<line x1="129" y1="64" x2="129" y2="868" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="329" y1="64" x2="329" y2="868" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="64" x2="761" y2="64" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="93" x2="761" y2="93" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="140" x2="761" y2="140" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="187" x2="761" y2="187" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="234" x2="761" y2="234" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="263" x2="761" y2="263" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="292" x2="761" y2="292" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="321" x2="761" y2="321" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="350" x2="761" y2="350" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="379" x2="761" y2="379" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="408" x2="761" y2="408" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="437" x2="761" y2="437" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="466" x2="761" y2="466" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="513" x2="761" y2="513" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="542" x2="761" y2="542" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="571" x2="761" y2="571" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="618" x2="761" y2="618" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="647" x2="761" y2="647" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="676" x2="761" y2="676" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="705" x2="761" y2="705" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="734" x2="761" y2="734" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="781" x2="761" y2="781" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="810" x2="761" y2="810" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="839" x2="761" y2="839" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="868" x2="761" y2="868" stroke="#cdc7ba" stroke-width="0.6"/>
+<rect x="0.5" y="64" width="760" height="804" fill="none" stroke="#4a7fa5" stroke-width="1"/>
+</svg>

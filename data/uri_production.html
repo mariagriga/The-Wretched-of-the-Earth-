@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Wretched of the Earth — URI Production</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #f0ece4; font-family: 'IBM Plex Sans', sans-serif; color: #1a1a1a; padding: 2.2rem 2.5rem 4rem; min-height: 100vh; }
+.sec-tag { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: #888; margin-bottom: 0.6rem; }
+.sec-desc { font-size: 0.82rem; line-height: 1.8; color: #444; max-width: 820px; margin-bottom: 2.5rem; padding-bottom: 1.6rem; border-bottom: 1px solid rgba(0,0,0,0.08); }
+.sec-desc strong { font-weight: 600; color: #1a1a1a; }
+.base-uri { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: #444; background: rgba(0,0,0,0.04); border-left: 3px solid #aaa; padding: 0.8rem 1.2rem; margin-bottom: 2.5rem; max-width: 680px; letter-spacing: 0.02em; }
+.base-uri .label { font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: #aaa; display: block; margin-bottom: 0.3rem; }
+.uri-group { margin-bottom: 2.5rem; max-width: 900px; }
+.group-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: #bbb; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; gap: 8px; }
+.group-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.uri-row { display: flex; align-items: baseline; gap: 1.5rem; padding: 0.55rem 0; border-bottom: 1px solid rgba(0,0,0,0.04); }
+.uri-row:last-child { border-bottom: none; }
+.uri-row:hover { background: rgba(0,0,0,0.02); margin: 0 -0.5rem; padding: 0.55rem 0.5rem; border-radius: 3px; }
+.uri-entity { font-family: 'IBM Plex Sans', sans-serif; font-size: 0.78rem; font-weight: 500; color: #1a1a1a; min-width: 220px; flex-shrink: 0; }
+.uri-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--tc); text-decoration: none; letter-spacing: 0.01em; word-break: break-all; }
+.uri-link:hover { opacity: 0.65; }
+.uri-group[data-t="item"] { --tc: #7a4fa8; }
+.uri-group[data-t="time"] { --tc: #1b3322; }
+.uri-group[data-t="person"] { --tc: #2a6aaa; }
+.uri-group[data-t="org"] { --tc: #6a6a6a; }
+.uri-group[data-t="place"] { --tc: #2a8a5e; }
+.uri-group[data-t="event"] { --tc: #aa7a2a; }
+.uri-group[data-t="concept"] { --tc: #aa4a2a; }
+.uri-group[data-t="birth"] { --tc: #2a8a8a; }
+.uri-group[data-t="activity"] { --tc: #8a8a2a; }
+</style>
+</head>
+<body>
+
+<div class="sec-tag">Knowledge Representation — URI Production</div>
+<div class="sec-desc">
+  The following URIs identify every entity, event and time-span used as an RDF subject in this project. Each URI follows the base namespace <strong>https://w3id.org/wretchedoftheearth/</strong> and is structured by entity type, ensuring stable and resolvable identifiers for Linked Open Data publication. The list corresponds exactly to the subjects serialised in the project dataset <strong>output.ttl</strong>.
+</div>
+
+<div class="base-uri">
+  <span class="label">Base Namespace</span>
+  https://w3id.org/wretchedoftheearth/
+</div>
+
+<div class="uri-group" data-t="item">
+  <div class="group-label">
+    <div class="group-dot" style="background:#7a4fa8"></div>
+    Texts &amp; Creation — frbroo:F2_Expression / F28
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">The Wretched of the Earth</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/bibl/wretchedoftheearth" target="_blank">https://w3id.org/wretchedoftheearth/bibl/wretchedoftheearth</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">&quot;On Violence&quot;</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/bibl/onviolence" target="_blank">https://w3id.org/wretchedoftheearth/bibl/onviolence</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Book Creation Event</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/creation/creationOfTheWretchedOfTheEarth" target="_blank">https://w3id.org/wretchedoftheearth/creation/creationOfTheWretchedOfTheEarth</a>
+  </div>
+</div>
+
+<div class="uri-group" data-t="person">
+  <div class="group-label">
+    <div class="group-dot" style="background:#2a6aaa"></div>
+    Person — crm:E21_Person
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Frantz Fanon</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/person/fanon" target="_blank">https://w3id.org/wretchedoftheearth/person/fanon</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Jean-Paul Sartre</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/person/sartre" target="_blank">https://w3id.org/wretchedoftheearth/person/sartre</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Homi K. Bhabha</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/person/bhabha" target="_blank">https://w3id.org/wretchedoftheearth/person/bhabha</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Aimé Césaire</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/person/cesaire" target="_blank">https://w3id.org/wretchedoftheearth/person/cesaire</a>
+  </div>
+</div>
+
+<div class="uri-group" data-t="birth">
+  <div class="group-label">
+    <div class="group-dot" style="background:#2a8a8a"></div>
+    Birth — crm:E67_Birth
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Birth of Frantz Fanon</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/event/birth-fanon" target="_blank">https://w3id.org/wretchedoftheearth/event/birth-fanon</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Birth of Jean-Paul Sartre</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/event/birth-sartre" target="_blank">https://w3id.org/wretchedoftheearth/event/birth-sartre</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Birth of Aimé Césaire</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/event/birth-cesaire" target="_blank">https://w3id.org/wretchedoftheearth/event/birth-cesaire</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Birth of Homi K. Bhabha</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/event/birth-bhabha" target="_blank">https://w3id.org/wretchedoftheearth/event/birth-bhabha</a>
+  </div>
+</div>
+
+<div class="uri-group" data-t="activity">
+  <div class="group-label">
+    <div class="group-dot" style="background:#8a8a2a"></div>
+    Activity — crm:E7_Activity
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Césaire founding Négritude</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/event/cesaire-founding-negritude" target="_blank">https://w3id.org/wretchedoftheearth/event/cesaire-founding-negritude</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Fanon critiquing Négritude</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/event/fanon-critique-negritude" target="_blank">https://w3id.org/wretchedoftheearth/event/fanon-critique-negritude</a>
+  </div>
+</div>
+
+<div class="uri-group" data-t="org">
+  <div class="group-label">
+    <div class="group-dot" style="background:#6a6a6a"></div>
+    Organisation — crm:E74_Group
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Grove Press</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/org/grovepress" target="_blank">https://w3id.org/wretchedoftheearth/org/grovepress</a>
+  </div>
+</div>
+
+<div class="uri-group" data-t="place">
+  <div class="group-label">
+    <div class="group-dot" style="background:#2a8a5e"></div>
+    Place — crm:E53_Place
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Algeria</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/place/algeria" target="_blank">https://w3id.org/wretchedoftheearth/place/algeria</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Martinique</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/place/martinique" target="_blank">https://w3id.org/wretchedoftheearth/place/martinique</a>
+  </div>
+</div>
+
+<div class="uri-group" data-t="event">
+  <div class="group-label">
+    <div class="group-dot" style="background:#aa7a2a"></div>
+    Event — crm:E5_Event
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Algerian Revolution</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/event/algerianrevolution" target="_blank">https://w3id.org/wretchedoftheearth/event/algerianrevolution</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Second Congress</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/event/secondcongress" target="_blank">https://w3id.org/wretchedoftheearth/event/secondcongress</a>
+  </div>
+</div>
+
+<div class="uri-group" data-t="concept">
+  <div class="group-label">
+    <div class="group-dot" style="background:#aa4a2a"></div>
+    Concept — crm:E28_Conceptual_Object
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Colonialism</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/concept/colonialism" target="_blank">https://w3id.org/wretchedoftheearth/concept/colonialism</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Decolonisation</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/concept/decolonisation" target="_blank">https://w3id.org/wretchedoftheearth/concept/decolonisation</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">Négritude</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/concept/negritude" target="_blank">https://w3id.org/wretchedoftheearth/concept/negritude</a>
+  </div>
+</div>
+
+<div class="uri-group" data-t="time">
+  <div class="group-label">
+    <div class="group-dot" style="background:#1b3322"></div>
+    Time — crm:E52_Time-Span
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">20 July 1925</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/time/1925-07-20" target="_blank">https://w3id.org/wretchedoftheearth/time/1925-07-20</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">21 June 1905</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/time/1905-06-21" target="_blank">https://w3id.org/wretchedoftheearth/time/1905-06-21</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">26 June 1913</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/time/1913-06-26" target="_blank">https://w3id.org/wretchedoftheearth/time/1913-06-26</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">1949</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/time/1949" target="_blank">https://w3id.org/wretchedoftheearth/time/1949</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">1954–1962</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/time/1954-1962" target="_blank">https://w3id.org/wretchedoftheearth/time/1954-1962</a>
+  </div>
+  <div class="uri-row">
+    <span class="uri-entity">1959</span>
+    <a class="uri-link" href="https://w3id.org/wretchedoftheearth/time/1959" target="_blank">https://w3id.org/wretchedoftheearth/time/1959</a>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+@prefix bibl: <https://w3id.org/wretchedoftheearth/bibl/> .
+@prefix concept: <https://w3id.org/wretchedoftheearth/concept/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix event: <https://w3id.org/wretchedoftheearth/event/> .
+@prefix frbroo: <http://erlangen-crm.org/efrbroo/> .
+@prefix org: <https://w3id.org/wretchedoftheearth/org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <https://w3id.org/wretchedoftheearth/person/> .
+@prefix place: <https://w3id.org/wretchedoftheearth/place/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <https://w3id.org/wretchedoftheearth/time/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+bibl:onviolence a frbroo:F2_Expression ;
+    rdfs:label "\"On Violence\""@en .
+
+concept:colonialism a crm:E28_Conceptual_Object ;
+    rdfs:label "Colonialism"@en ;
+    owl:sameAs <https://vocab.getty.edu/aat/300055142>,
+        <https://www.wikidata.org/wiki/Q7167> .
+
+concept:decolonisation a crm:E28_Conceptual_Object ;
+    rdfs:label "Decolonisation"@en ;
+    owl:sameAs <https://vocab.getty.edu/aat/300375556>,
+        <https://www.wikidata.org/wiki/Q230533> .
+
+<https://w3id.org/wretchedoftheearth/creation/creationOfTheWretchedOfTheEarth> a frbroo:F28_Expression_Creation ;
+    frbroo:R17_created bibl:wretchedoftheearth .
+
+event:algerianrevolution a crm:E5_Event ;
+    rdfs:label "Algerian Revolution"@en ;
+    crm:P4_has_time-span time:1954-1962 ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q200790> .
+
+event:birth-bhabha a crm:E67_Birth ;
+    crm:P4_has_time-span time:1949 ;
+    crm:P98_brought_into_life person:bhabha .
+
+event:birth-cesaire a crm:E67_Birth ;
+    crm:P4_has_time-span time:1913-06-26 ;
+    crm:P98_brought_into_life person:cesaire .
+
+event:birth-fanon a crm:E67_Birth ;
+    crm:P4_has_time-span time:1925-07-20 ;
+    crm:P98_brought_into_life person:fanon .
+
+event:birth-sartre a crm:E67_Birth ;
+    crm:P4_has_time-span time:1905-06-21 ;
+    crm:P98_brought_into_life person:sartre .
+
+event:cesaire-founding-negritude a crm:E7_Activity ;
+    crm:P14_carried_out_by person:cesaire ;
+    crm:P94_has_created concept:negritude .
+
+event:fanon-critique-negritude a crm:E7_Activity ;
+    crm:P129_is_about concept:negritude ;
+    crm:P14_carried_out_by person:fanon .
+
+event:secondcongress a crm:E5_Event ;
+    rdfs:label "Second Congress of Black Writers and Artists"@en ;
+    crm:P4_has_time-span time:1959 ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q2993133> .
+
+org:grovepress a crm:E74_Group ;
+    rdfs:label "Grove Press"@en ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q3777164> .
+
+place:algeria a crm:E53_Place ;
+    rdfs:label "Algeria"@en ;
+    crm:P168_place_is_defined_by "28.0339 1.6596" ;
+    owl:sameAs <https://www.geonames.org/2589581>,
+        <https://www.wikidata.org/wiki/Q262> .
+
+place:martinique a crm:E53_Place ;
+    rdfs:label "Martinique"@en ;
+    crm:P168_place_is_defined_by "14.6415 -61.0242" ;
+    owl:sameAs <https://www.geonames.org/3570311>,
+        <https://www.wikidata.org/wiki/Q17054> .
+
+bibl:wretchedoftheearth a frbroo:F2_Expression ;
+    rdfs:label "The Wretched of the Earth"@en ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q2741364>,
+        <https://www.worldcat.org/oclc/31510925> .
+
+person:bhabha a crm:E21_Person ;
+    rdfs:label "Homi K. Bhabha"@en ;
+    crm:P2_has_type "Postcolonial theorist, professor"@en ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q325741> .
+
+person:sartre a crm:E21_Person ;
+    rdfs:label "Jean-Paul Sartre"@en ;
+    crm:P2_has_type "Philosopher, writer"@en ;
+    owl:sameAs <https://viaf.org/viaf/76322562>,
+        <https://www.wikidata.org/wiki/Q9364> .
+
+time:1905-06-21 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1905-06-21"^^xsd:date .
+
+time:1913-06-26 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1913-06-26"^^xsd:date .
+
+time:1925-07-20 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1925-07-20"^^xsd:date .
+
+time:1949 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1949"^^xsd:gYear .
+
+time:1954-1962 a crm:E52_Time-Span ;
+    rdfs:label "1954-1962" .
+
+time:1959 a crm:E52_Time-Span ;
+    rdfs:label "1959" .
+
+concept:negritude a crm:E28_Conceptual_Object ;
+    rdfs:label "Négritude"@en ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q852544> .
+
+person:cesaire a crm:E21_Person ;
+    rdfs:label "Aimé Césaire"@en ;
+    crm:P2_has_type "Poet, playwright, politician"@en ;
+    owl:sameAs <https://viaf.org/viaf/4925246>,
+        <https://www.wikidata.org/wiki/Q223955> .
+
+person:fanon a crm:E21_Person ;
+    rdfs:label "Frantz Fanon"@en ;
+    crm:P2_has_type "Psychiatrist, philosopher, revolutionary"@en ;
+    owl:sameAs <https://viaf.org/viaf/22490>,
+        <https://www.wikidata.org/wiki/Q193670> .
+

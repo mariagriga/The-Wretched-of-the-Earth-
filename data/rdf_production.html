@@ -1,0 +1,153 @@
+<section id="rdf-production">
+  <div class="entities-header">
+    <div class="sec-tag rev">08 — Knowledge Representation</div>
+    <h2 class="sec-h2 rev">RDF<br><em>Production</em></h2>
+    <p class="entities-intro rev">
+      Dataset serialization in Turtle (.ttl) format based on the CIDOC-CRM and FRBRoo ontologies.
+      This file represents the formalised knowledge graph of the project, and is identical to the
+      downloadable <em>output.ttl</em>.
+    </p>
+  </div>
+
+  <div class="rev" style="margin-top: 2rem; padding: 0 5%; max-width: 900px; margin-left: auto; margin-right: auto;">
+    <div style="border: 1px solid #2a2620; padding: 15px; margin-bottom: 20px; background: rgba(255,255,255,0.03); text-align: center;">
+      <a href="data/output.ttl" download="output.ttl"
+         style="color: #4a7fa5; text-decoration: none; font-weight: bold; font-family: 'Courier New', monospace; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">
+        &#8595; Download output.ttl (Turtle format)
+      </a>
+    </div>
+
+    <div style="background: #0c0b09; padding: 25px; border: 1px solid #2a2620; font-family: 'Courier New', Courier, monospace; font-size: 0.82rem; height: 500px; overflow-y: auto; color: #f0ece4; border-radius: 4px; box-shadow: inset 0 0 10px rgba(0,0,0,0.5);">
+      <pre style="margin:0; white-space:pre-wrap; word-break:break-word;">
+@prefix bibl: &lt;https://w3id.org/wretchedoftheearth/bibl/&gt; .
+@prefix concept: &lt;https://w3id.org/wretchedoftheearth/concept/&gt; .
+@prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .
+@prefix event: &lt;https://w3id.org/wretchedoftheearth/event/&gt; .
+@prefix frbroo: &lt;http://erlangen-crm.org/efrbroo/&gt; .
+@prefix org: &lt;https://w3id.org/wretchedoftheearth/org/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix person: &lt;https://w3id.org/wretchedoftheearth/person/&gt; .
+@prefix place: &lt;https://w3id.org/wretchedoftheearth/place/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix time: &lt;https://w3id.org/wretchedoftheearth/time/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+bibl:onviolence a frbroo:F2_Expression ;
+    rdfs:label "\"On Violence\""@en .
+
+concept:colonialism a crm:E28_Conceptual_Object ;
+    rdfs:label "Colonialism"@en ;
+    owl:sameAs &lt;https://vocab.getty.edu/aat/300055142&gt;,
+        &lt;https://www.wikidata.org/wiki/Q7167&gt; .
+
+concept:decolonisation a crm:E28_Conceptual_Object ;
+    rdfs:label "Decolonisation"@en ;
+    owl:sameAs &lt;https://vocab.getty.edu/aat/300375556&gt;,
+        &lt;https://www.wikidata.org/wiki/Q230533&gt; .
+
+&lt;https://w3id.org/wretchedoftheearth/creation/creationOfTheWretchedOfTheEarth&gt; a frbroo:F28_Expression_Creation ;
+    frbroo:R17_created bibl:wretchedoftheearth .
+
+event:algerianrevolution a crm:E5_Event ;
+    rdfs:label "Algerian Revolution"@en ;
+    crm:P4_has_time-span time:1954-1962 ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q200790&gt; .
+
+event:birth-bhabha a crm:E67_Birth ;
+    crm:P4_has_time-span time:1949 ;
+    crm:P98_brought_into_life person:bhabha .
+
+event:birth-cesaire a crm:E67_Birth ;
+    crm:P4_has_time-span time:1913-06-26 ;
+    crm:P98_brought_into_life person:cesaire .
+
+event:birth-fanon a crm:E67_Birth ;
+    crm:P4_has_time-span time:1925-07-20 ;
+    crm:P98_brought_into_life person:fanon .
+
+event:birth-sartre a crm:E67_Birth ;
+    crm:P4_has_time-span time:1905-06-21 ;
+    crm:P98_brought_into_life person:sartre .
+
+event:cesaire-founding-negritude a crm:E7_Activity ;
+    crm:P14_carried_out_by person:cesaire ;
+    crm:P94_has_created concept:negritude .
+
+event:fanon-critique-negritude a crm:E7_Activity ;
+    crm:P129_is_about concept:negritude ;
+    crm:P14_carried_out_by person:fanon .
+
+event:secondcongress a crm:E5_Event ;
+    rdfs:label "Second Congress of Black Writers and Artists"@en ;
+    crm:P4_has_time-span time:1959 ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q2993133&gt; .
+
+org:grovepress a crm:E74_Group ;
+    rdfs:label "Grove Press"@en ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q3777164&gt; .
+
+place:algeria a crm:E53_Place ;
+    rdfs:label "Algeria"@en ;
+    crm:P168_place_is_defined_by "28.0339 1.6596" ;
+    owl:sameAs &lt;https://www.geonames.org/2589581&gt;,
+        &lt;https://www.wikidata.org/wiki/Q262&gt; .
+
+place:martinique a crm:E53_Place ;
+    rdfs:label "Martinique"@en ;
+    crm:P168_place_is_defined_by "14.6415 -61.0242" ;
+    owl:sameAs &lt;https://www.geonames.org/3570311&gt;,
+        &lt;https://www.wikidata.org/wiki/Q17054&gt; .
+
+bibl:wretchedoftheearth a frbroo:F2_Expression ;
+    rdfs:label "The Wretched of the Earth"@en ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q2741364&gt;,
+        &lt;https://www.worldcat.org/oclc/31510925&gt; .
+
+person:bhabha a crm:E21_Person ;
+    rdfs:label "Homi K. Bhabha"@en ;
+    crm:P2_has_type "Postcolonial theorist, professor"@en ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q325741&gt; .
+
+person:sartre a crm:E21_Person ;
+    rdfs:label "Jean-Paul Sartre"@en ;
+    crm:P2_has_type "Philosopher, writer"@en ;
+    owl:sameAs &lt;https://viaf.org/viaf/76322562&gt;,
+        &lt;https://www.wikidata.org/wiki/Q9364&gt; .
+
+time:1905-06-21 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1905-06-21"^^xsd:date .
+
+time:1913-06-26 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1913-06-26"^^xsd:date .
+
+time:1925-07-20 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1925-07-20"^^xsd:date .
+
+time:1949 a crm:E52_Time-Span ;
+    crm:P82_at_some_time_within "1949"^^xsd:gYear .
+
+time:1954-1962 a crm:E52_Time-Span ;
+    rdfs:label "1954-1962" .
+
+time:1959 a crm:E52_Time-Span ;
+    rdfs:label "1959" .
+
+concept:negritude a crm:E28_Conceptual_Object ;
+    rdfs:label "Négritude"@en ;
+    owl:sameAs &lt;https://www.wikidata.org/wiki/Q852544&gt; .
+
+person:cesaire a crm:E21_Person ;
+    rdfs:label "Aimé Césaire"@en ;
+    crm:P2_has_type "Poet, playwright, politician"@en ;
+    owl:sameAs &lt;https://viaf.org/viaf/4925246&gt;,
+        &lt;https://www.wikidata.org/wiki/Q223955&gt; .
+
+person:fanon a crm:E21_Person ;
+    rdfs:label "Frantz Fanon"@en ;
+    crm:P2_has_type "Psychiatrist, philosopher, revolutionary"@en ;
+    owl:sameAs &lt;https://viaf.org/viaf/22490&gt;,
+        &lt;https://www.wikidata.org/wiki/Q193670&gt; .
+      </pre>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="503" height="959" viewBox="0 0 503 959" font-family="'IBM Plex Mono', monospace">
+<rect width="503" height="959" fill="#f4f1ea"/>
+<text x="12" y="30" font-size="20" font-weight="700" fill="#2e5c8b">ER-model</text>
+<text x="12" y="48" font-size="10.5" fill="#7a766a" letter-spacing="1.5">THE WRETCHED OF THE EARTH · DATA PROVENANCE</text>
+<line x1="12" y1="58" x2="491" y2="58" stroke="#4a7fa5" stroke-width="1.5"/>
+<rect x="0" y="64" width="503" height="47" fill="#2e5c8b"/>
+<text x="12" y="83" font-size="13" font-weight="600" fill="#ffffff">Entity</text>
+<text x="120" y="83" font-size="13" font-weight="600" fill="#ffffff">Type</text>
+<text x="207" y="83" font-size="13" font-weight="600" fill="#ffffff">Attribute/Relationship</text>
+<text x="386" y="83" font-size="13" font-weight="600" fill="#ffffff">Target/Value</text>
+<text x="12" y="126" font-size="12.5" font-weight="500" fill="#4a7fa5">PERSON</text>
+<text x="120" y="126" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="207" y="126" font-size="12.5" font-weight="400" fill="#2a2620">authored</text>
+<text x="386" y="126" font-size="12.5" font-weight="400" fill="#2a2620">WORK</text>
+<rect x="0" y="140" width="503" height="29" fill="#ece8df"/>
+<text x="12" y="155" font-size="12.5" font-weight="500" fill="#4a7fa5">PERSON</text>
+<text x="120" y="155" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="207" y="155" font-size="12.5" font-weight="400" fill="#2a2620">participated_in</text>
+<text x="386" y="155" font-size="12.5" font-weight="400" fill="#2a2620">EVENT</text>
+<text x="12" y="184" font-size="12.5" font-weight="500" fill="#4a7fa5">EVENT</text>
+<text x="120" y="184" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="207" y="184" font-size="12.5" font-weight="400" fill="#2a2620">took_place_in</text>
+<text x="386" y="184" font-size="12.5" font-weight="400" fill="#2a2620">PLACE</text>
+<rect x="0" y="198" width="503" height="29" fill="#ece8df"/>
+<text x="12" y="213" font-size="12.5" font-weight="500" fill="#4a7fa5">WORK</text>
+<text x="120" y="213" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="207" y="213" font-size="12.5" font-weight="400" fill="#2a2620">set_in</text>
+<text x="386" y="213" font-size="12.5" font-weight="400" fill="#2a2620">PLACE</text>
+<text x="12" y="242" font-size="12.5" font-weight="500" fill="#4a7fa5">WORK</text>
+<text x="120" y="242" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="207" y="242" font-size="12.5" font-weight="400" fill="#2a2620">critiques</text>
+<text x="386" y="242" font-size="12.5" font-weight="400" fill="#2a2620">CONCEPT</text>
+<rect x="0" y="256" width="503" height="29" fill="#ece8df"/>
+<text x="12" y="271" font-size="12.5" font-weight="500" fill="#4a7fa5">WORK</text>
+<text x="120" y="271" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="207" y="271" font-size="12.5" font-weight="400" fill="#2a2620">published_by</text>
+<text x="386" y="271" font-size="12.5" font-weight="400" fill="#2a2620">ORGANIZATION</text>
+<text x="12" y="300" font-size="12.5" font-weight="500" fill="#4a7fa5">PERSON</text>
+<text x="120" y="300" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="318" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="300" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="300" font-size="12.5" font-weight="400" fill="#2a2620">person_id</text>
+<rect x="0" y="332" width="503" height="47" fill="#ece8df"/>
+<text x="12" y="347" font-size="12.5" font-weight="500" fill="#4a7fa5">PERSON</text>
+<text x="120" y="347" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="365" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="347" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="347" font-size="12.5" font-weight="400" fill="#2a2620">name</text>
+<text x="12" y="394" font-size="12.5" font-weight="500" fill="#4a7fa5">PERSON</text>
+<text x="120" y="394" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="412" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="394" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="394" font-size="12.5" font-weight="400" fill="#2a2620">birth_date</text>
+<rect x="0" y="426" width="503" height="47" fill="#ece8df"/>
+<text x="12" y="441" font-size="12.5" font-weight="500" fill="#4a7fa5">WORK</text>
+<text x="120" y="441" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="459" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="441" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="441" font-size="12.5" font-weight="400" fill="#2a2620">work_id</text>
+<text x="12" y="488" font-size="12.5" font-weight="500" fill="#4a7fa5">WORK</text>
+<text x="120" y="488" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="506" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="488" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="488" font-size="12.5" font-weight="400" fill="#2a2620">title</text>
+<rect x="0" y="520" width="503" height="47" fill="#ece8df"/>
+<text x="12" y="535" font-size="12.5" font-weight="500" fill="#4a7fa5">WORK</text>
+<text x="120" y="535" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="553" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="535" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="535" font-size="12.5" font-weight="400" fill="#2a2620">type</text>
+<text x="12" y="582" font-size="12.5" font-weight="500" fill="#4a7fa5">EVENT</text>
+<text x="120" y="582" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="600" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="582" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="582" font-size="12.5" font-weight="400" fill="#2a2620">event_id</text>
+<rect x="0" y="614" width="503" height="47" fill="#ece8df"/>
+<text x="12" y="629" font-size="12.5" font-weight="500" fill="#4a7fa5">EVENT</text>
+<text x="120" y="629" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="647" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="629" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="629" font-size="12.5" font-weight="400" fill="#2a2620">name</text>
+<text x="12" y="676" font-size="12.5" font-weight="500" fill="#4a7fa5">PLACE</text>
+<text x="120" y="676" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="694" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="676" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="676" font-size="12.5" font-weight="400" fill="#2a2620">place_id</text>
+<rect x="0" y="708" width="503" height="47" fill="#ece8df"/>
+<text x="12" y="723" font-size="12.5" font-weight="500" fill="#4a7fa5">PLACE</text>
+<text x="120" y="723" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="741" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="723" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="723" font-size="12.5" font-weight="400" fill="#2a2620">name</text>
+<text x="12" y="770" font-size="12.5" font-weight="500" fill="#4a7fa5">CONCEPT</text>
+<text x="120" y="770" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="788" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="770" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="770" font-size="12.5" font-weight="400" fill="#2a2620">concept_id</text>
+<rect x="0" y="802" width="503" height="47" fill="#ece8df"/>
+<text x="12" y="817" font-size="12.5" font-weight="500" fill="#4a7fa5">CONCEPT</text>
+<text x="120" y="817" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="835" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="817" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="817" font-size="12.5" font-weight="400" fill="#2a2620">term</text>
+<text x="12" y="864" font-size="12.5" font-weight="500" fill="#4a7fa5">ORGANIZATIO</text>
+<text x="12" y="882" font-size="12.5" font-weight="500" fill="#4a7fa5">N</text>
+<text x="120" y="864" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="882" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="864" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="864" font-size="12.5" font-weight="400" fill="#2a2620">organization_i</text>
+<text x="386" y="882" font-size="12.5" font-weight="400" fill="#2a2620">d</text>
+<rect x="0" y="896" width="503" height="47" fill="#ece8df"/>
+<text x="12" y="911" font-size="12.5" font-weight="500" fill="#4a7fa5">ORGANIZATIO</text>
+<text x="12" y="929" font-size="12.5" font-weight="500" fill="#4a7fa5">N</text>
+<text x="120" y="911" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="120" y="929" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="207" y="911" font-size="12.5" font-weight="400" fill="#2a2620">has attribute</text>
+<text x="386" y="911" font-size="12.5" font-weight="400" fill="#2a2620">name</text>
+<line x1="108" y1="64" x2="108" y2="943" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="195" y1="64" x2="195" y2="943" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="374" y1="64" x2="374" y2="943" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="64" x2="503" y2="64" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="111" x2="503" y2="111" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="140" x2="503" y2="140" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="169" x2="503" y2="169" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="198" x2="503" y2="198" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="227" x2="503" y2="227" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="256" x2="503" y2="256" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="285" x2="503" y2="285" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="332" x2="503" y2="332" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="379" x2="503" y2="379" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="426" x2="503" y2="426" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="473" x2="503" y2="473" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="520" x2="503" y2="520" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="567" x2="503" y2="567" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="614" x2="503" y2="614" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="661" x2="503" y2="661" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="708" x2="503" y2="708" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="755" x2="503" y2="755" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="802" x2="503" y2="802" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="849" x2="503" y2="849" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="896" x2="503" y2="896" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="943" x2="503" y2="943" stroke="#cdc7ba" stroke-width="0.6"/>
+<rect x="0.5" y="64" width="502" height="879" fill="none" stroke="#4a7fa5" stroke-width="1"/>
+</svg>

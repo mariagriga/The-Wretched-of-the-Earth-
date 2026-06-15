@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Wretched of the Earth — Items Description</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f0ece4;
+      font-family: 'IBM Plex Sans', sans-serif;
+      color: #1a1a1a;
+      padding: 2.2rem 2.5rem 4rem;
+      min-height: 100vh;
+    }
+
+    .sec-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 0.6rem;
+    }
+
+    .sec-desc {
+      font-size: 0.82rem;
+      line-height: 1.8;
+      color: #444;
+      max-width: 820px;
+      margin-bottom: 2.2rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .sec-desc strong {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .sec-desc em {
+      font-style: italic;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 2.2rem;
+    }
+
+    .filter-btn {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 3px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      background: #faf8f4;
+      color: #666;
+      cursor: pointer;
+      transition: all 0.18s;
+    }
+
+    .filter-btn:hover {
+      border-color: rgba(0, 0, 0, 0.3);
+      color: #1a1a1a;
+    }
+
+    .filter-btn.active {
+      background: #1a1a1a;
+      color: #f0ece4;
+      border-color: #1a1a1a;
+    }
+
+    .entity-block {
+      margin-bottom: 3rem;
+      max-width: 960px;
+    }
+
+    .entity-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .entity-name {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+
+    .entity-uri {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem;
+      color: #aaa;
+    }
+
+    .type-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      margin-right: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.72rem;
+      margin-bottom: 0.8rem;
+    }
+
+    thead tr {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    th {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #aaa;
+      text-align: left;
+      padding: 0.5rem 1rem 0.5rem 0;
+    }
+
+    td {
+      padding: 0.4rem 1rem 0.4rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      vertical-align: middle;
+      color: #555;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    td:first-child {
+      color: rgba(155, 127, 232, 0.8);
+      width: 30%;
+    }
+
+    td:nth-child(2) {
+      color: rgba(74, 127, 165, 0.9);
+      width: 35%;
+    }
+
+    td:last-child {
+      color: #555;
+    }
+
+    td a {
+      color: rgba(74, 127, 165, 0.8);
+      text-decoration: none;
+      font-size: 0.65rem;
+    }
+
+    td a:hover {
+      opacity: 0.7;
+    }
+
+    .dl-btn {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      background: #faf8f4;
+      color: #666;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: all 0.18s;
+    }
+
+    .dl-btn:hover {
+      background: #1a1a1a;
+      color: #f0ece4;
+      border-color: #1a1a1a;
+    }
+
+    .type-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sec-tag">Knowledge Representation — Items Description</div>
+  <div class="sec-desc">
+    RDF triples for each entity — <strong>subject</strong>, <strong>predicate</strong>, <strong>object</strong> —
+    aligned to <strong>CIDOC-CRM</strong> and <strong>FRBRoo</strong> ontologies. Each entity is linked to external
+    authority records through <em>owl:sameAs</em>. These triples correspond exactly to the project dataset serialised
+    in <em>output.ttl</em> (RDF Production).
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterAll(this)">All</button>
+    <button class="filter-btn" onclick="filterType('work', this)">Work</button>
+    <button class="filter-btn" onclick="filterType('person', this)">Person</button>
+    <button class="filter-btn" onclick="filterType('birth', this)">Birth</button>
+    <button class="filter-btn" onclick="filterType('activity', this)">Activity</button>
+    <button class="filter-btn" onclick="filterType('org', this)">Organisation</button>
+    <button class="filter-btn" onclick="filterType('place', this)">Place</button>
+    <button class="filter-btn" onclick="filterType('event', this)">Event</button>
+    <button class="filter-btn" onclick="filterType('concept', this)">Concept</button>
+    <button class="filter-btn" onclick="filterType('time', this)">Time-span</button>
+  </div>
+
+  <div class="type-label" data-section="work">Texts &amp; Creations — frbroo:F2_Expression / F28</div>
+  <div class="entity-block" data-type="work">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#9b7fe8"></span>
+      <span class="entity-name">The Wretched of the Earth</span>
+      <span class="entity-uri">bibl:wretchedoftheearth</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>bibl:wretchedoftheearth</td>
+          <td>rdf:type</td>
+          <td>frbroo:F2_Expression</td>
+        </tr>
+        <tr>
+          <td>bibl:wretchedoftheearth</td>
+          <td>rdfs:label</td>
+          <td>&quot;The Wretched of the Earth&quot;@en</td>
+        </tr>
+        <tr>
+          <td>bibl:wretchedoftheearth</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q2741364" target="_blank">wd:Q2741364</a></td>
+        </tr>
+        <tr>
+          <td>bibl:wretchedoftheearth</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.worldcat.org/oclc/31510925" target="_blank">worldcat:31510925</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('bibl:wretchedoftheearth')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="work">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#9b7fe8"></span>
+      <span class="entity-name">&quot;On Violence&quot;</span>
+      <span class="entity-uri">bibl:onviolence</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>bibl:onviolence</td>
+          <td>rdf:type</td>
+          <td>frbroo:F2_Expression</td>
+        </tr>
+        <tr>
+          <td>bibl:onviolence</td>
+          <td>rdfs:label</td>
+          <td>&quot;\&quot;On Violence\&quot;&quot;@en</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('bibl:onviolence')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="work">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#7F77DD"></span>
+      <span class="entity-name">Book Creation Event</span>
+      <span class="entity-uri">creation:creationOfTheWretchedOfTheEarth</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>creation:creationOfTheWretchedOfTheEarth</td>
+          <td>rdf:type</td>
+          <td>frbroo:F28_Expression_Creation</td>
+        </tr>
+        <tr>
+          <td>creation:creationOfTheWretchedOfTheEarth</td>
+          <td>frbroo:R17_created</td>
+          <td>bibl:wretchedoftheearth</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('creation:creationOfTheWretchedOfTheEarth')">Download CSV</button>
+  </div>
+
+  <div class="type-label" data-section="person">Persons — crm:E21_Person</div>
+  <div class="entity-block" data-type="person">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#5b9bd5"></span>
+      <span class="entity-name">Frantz Fanon</span>
+      <span class="entity-uri">person:fanon</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>person:fanon</td>
+          <td>rdf:type</td>
+          <td>crm:E21_Person</td>
+        </tr>
+        <tr>
+          <td>person:fanon</td>
+          <td>rdfs:label</td>
+          <td>&quot;Frantz Fanon&quot;@en</td>
+        </tr>
+        <tr>
+          <td>person:fanon</td>
+          <td>crm:P2_has_type</td>
+          <td>&quot;Psychiatrist, philosopher, revolutionary&quot;@en</td>
+        </tr>
+        <tr>
+          <td>person:fanon</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://viaf.org/viaf/22490" target="_blank">viaf:22490</a></td>
+        </tr>
+        <tr>
+          <td>person:fanon</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q193670" target="_blank">wd:Q193670</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('person:fanon')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="person">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#5b9bd5"></span>
+      <span class="entity-name">Jean-Paul Sartre</span>
+      <span class="entity-uri">person:sartre</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>person:sartre</td>
+          <td>rdf:type</td>
+          <td>crm:E21_Person</td>
+        </tr>
+        <tr>
+          <td>person:sartre</td>
+          <td>rdfs:label</td>
+          <td>&quot;Jean-Paul Sartre&quot;@en</td>
+        </tr>
+        <tr>
+          <td>person:sartre</td>
+          <td>crm:P2_has_type</td>
+          <td>&quot;Philosopher, writer&quot;@en</td>
+        </tr>
+        <tr>
+          <td>person:sartre</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://viaf.org/viaf/76322562" target="_blank">viaf:76322562</a></td>
+        </tr>
+        <tr>
+          <td>person:sartre</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q9364" target="_blank">wd:Q9364</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('person:sartre')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="person">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#5b9bd5"></span>
+      <span class="entity-name">Homi K. Bhabha</span>
+      <span class="entity-uri">person:bhabha</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>person:bhabha</td>
+          <td>rdf:type</td>
+          <td>crm:E21_Person</td>
+        </tr>
+        <tr>
+          <td>person:bhabha</td>
+          <td>rdfs:label</td>
+          <td>&quot;Homi K. Bhabha&quot;@en</td>
+        </tr>
+        <tr>
+          <td>person:bhabha</td>
+          <td>crm:P2_has_type</td>
+          <td>&quot;Postcolonial theorist, professor&quot;@en</td>
+        </tr>
+        <tr>
+          <td>person:bhabha</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q325741" target="_blank">wd:Q325741</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('person:bhabha')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="person">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#5b9bd5"></span>
+      <span class="entity-name">Aimé Césaire</span>
+      <span class="entity-uri">person:cesaire</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>person:cesaire</td>
+          <td>rdf:type</td>
+          <td>crm:E21_Person</td>
+        </tr>
+        <tr>
+          <td>person:cesaire</td>
+          <td>rdfs:label</td>
+          <td>&quot;Aimé Césaire&quot;@en</td>
+        </tr>
+        <tr>
+          <td>person:cesaire</td>
+          <td>crm:P2_has_type</td>
+          <td>&quot;Poet, playwright, politician&quot;@en</td>
+        </tr>
+        <tr>
+          <td>person:cesaire</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://viaf.org/viaf/4925246" target="_blank">viaf:4925246</a></td>
+        </tr>
+        <tr>
+          <td>person:cesaire</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q223955" target="_blank">wd:Q223955</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('person:cesaire')">Download CSV</button>
+  </div>
+
+  <div class="type-label" data-section="birth">Birth events — crm:E67_Birth</div>
+  <div class="entity-block" data-type="birth">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#2a8a8a"></span>
+      <span class="entity-name">Birth of Frantz Fanon</span>
+      <span class="entity-uri">event:birth-fanon</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>event:birth-fanon</td>
+          <td>rdf:type</td>
+          <td>crm:E67_Birth</td>
+        </tr>
+        <tr>
+          <td>event:birth-fanon</td>
+          <td>crm:P4_has_time-span</td>
+          <td>time:1925-07-20</td>
+        </tr>
+        <tr>
+          <td>event:birth-fanon</td>
+          <td>crm:P98_brought_into_life</td>
+          <td>person:fanon</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('event:birth-fanon')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="birth">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#2a8a8a"></span>
+      <span class="entity-name">Birth of Jean-Paul Sartre</span>
+      <span class="entity-uri">event:birth-sartre</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>event:birth-sartre</td>
+          <td>rdf:type</td>
+          <td>crm:E67_Birth</td>
+        </tr>
+        <tr>
+          <td>event:birth-sartre</td>
+          <td>crm:P4_has_time-span</td>
+          <td>time:1905-06-21</td>
+        </tr>
+        <tr>
+          <td>event:birth-sartre</td>
+          <td>crm:P98_brought_into_life</td>
+          <td>person:sartre</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('event:birth-sartre')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="birth">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#2a8a8a"></span>
+      <span class="entity-name">Birth of Aimé Césaire</span>
+      <span class="entity-uri">event:birth-cesaire</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>event:birth-cesaire</td>
+          <td>rdf:type</td>
+          <td>crm:E67_Birth</td>
+        </tr>
+        <tr>
+          <td>event:birth-cesaire</td>
+          <td>crm:P4_has_time-span</td>
+          <td>time:1913-06-26</td>
+        </tr>
+        <tr>
+          <td>event:birth-cesaire</td>
+          <td>crm:P98_brought_into_life</td>
+          <td>person:cesaire</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('event:birth-cesaire')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="birth">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#2a8a8a"></span>
+      <span class="entity-name">Birth of Homi K. Bhabha</span>
+      <span class="entity-uri">event:birth-bhabha</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>event:birth-bhabha</td>
+          <td>rdf:type</td>
+          <td>crm:E67_Birth</td>
+        </tr>
+        <tr>
+          <td>event:birth-bhabha</td>
+          <td>crm:P4_has_time-span</td>
+          <td>time:1949</td>
+        </tr>
+        <tr>
+          <td>event:birth-bhabha</td>
+          <td>crm:P98_brought_into_life</td>
+          <td>person:bhabha</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('event:birth-bhabha')">Download CSV</button>
+  </div>
+
+  <div class="type-label" data-section="activity">Activities — crm:E7_Activity</div>
+  <div class="entity-block" data-type="activity">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#8a8a2a"></span>
+      <span class="entity-name">Césaire founding Négritude</span>
+      <span class="entity-uri">event:cesaire-founding-negritude</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>event:cesaire-founding-negritude</td>
+          <td>rdf:type</td>
+          <td>crm:E7_Activity</td>
+        </tr>
+        <tr>
+          <td>event:cesaire-founding-negritude</td>
+          <td>crm:P14_carried_out_by</td>
+          <td>person:cesaire</td>
+        </tr>
+        <tr>
+          <td>event:cesaire-founding-negritude</td>
+          <td>crm:P94_has_created</td>
+          <td>concept:negritude</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('event:cesaire-founding-negritude')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="activity">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#b08a4a"></span>
+      <span class="entity-name">Fanon critiquing Négritude</span>
+      <span class="entity-uri">event:fanon-critique-negritude</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>event:fanon-critique-negritude</td>
+          <td>rdf:type</td>
+          <td>crm:E7_Activity</td>
+        </tr>
+        <tr>
+          <td>event:fanon-critique-negritude</td>
+          <td>crm:P14_carried_out_by</td>
+          <td>person:fanon</td>
+        </tr>
+        <tr>
+          <td>event:fanon-critique-negritude</td>
+          <td>crm:P129_is_about</td>
+          <td>concept:negritude</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('event:fanon-critique-negritude')">Download CSV</button>
+  </div>
+
+  <div class="type-label" data-section="org">Organisations — crm:E74_Group</div>
+  <div class="entity-block" data-type="org">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#6b6b6b"></span>
+      <span class="entity-name">Grove Press</span>
+      <span class="entity-uri">org:grovepress</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>org:grovepress</td>
+          <td>rdf:type</td>
+          <td>crm:E74_Group</td>
+        </tr>
+        <tr>
+          <td>org:grovepress</td>
+          <td>rdfs:label</td>
+          <td>&quot;Grove Press&quot;@en</td>
+        </tr>
+        <tr>
+          <td>org:grovepress</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q3777164" target="_blank">wd:Q3777164</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('org:grovepress')">Download CSV</button>
+  </div>
+
+  <div class="type-label" data-section="place">Places — crm:E53_Place</div>
+  <div class="entity-block" data-type="place">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#3dab7e"></span>
+      <span class="entity-name">Martinique</span>
+      <span class="entity-uri">place:martinique</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>place:martinique</td>
+          <td>rdf:type</td>
+          <td>crm:E53_Place</td>
+        </tr>
+        <tr>
+          <td>place:martinique</td>
+          <td>rdfs:label</td>
+          <td>&quot;Martinique&quot;@en</td>
+        </tr>
+        <tr>
+          <td>place:martinique</td>
+          <td>crm:P168_place_is_defined_by</td>
+          <td>&quot;14.6415 -61.0242&quot;</td>
+        </tr>
+        <tr>
+          <td>place:martinique</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.geonames.org/3570311" target="_blank">geonames:3570311</a></td>
+        </tr>
+        <tr>
+          <td>place:martinique</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q17054" target="_blank">wd:Q17054</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('place:martinique')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="place">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#3dab7e"></span>
+      <span class="entity-name">Algeria</span>
+      <span class="entity-uri">place:algeria</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>place:algeria</td>
+          <td>rdf:type</td>
+          <td>crm:E53_Place</td>
+        </tr>
+        <tr>
+          <td>place:algeria</td>
+          <td>rdfs:label</td>
+          <td>&quot;Algeria&quot;@en</td>
+        </tr>
+        <tr>
+          <td>place:algeria</td>
+          <td>crm:P168_place_is_defined_by</td>
+          <td>&quot;28.0339 1.6596&quot;</td>
+        </tr>
+        <tr>
+          <td>place:algeria</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.geonames.org/2589581" target="_blank">geonames:2589581</a></td>
+        </tr>
+        <tr>
+          <td>place:algeria</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q262" target="_blank">wd:Q262</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('place:algeria')">Download CSV</button>
+  </div>
+
+  <div class="type-label" data-section="event">Events — crm:E5_Event</div>
+  <div class="entity-block" data-type="event">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#c9853a"></span>
+      <span class="entity-name">Algerian Revolution</span>
+      <span class="entity-uri">event:algerianrevolution</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>event:algerianrevolution</td>
+          <td>rdf:type</td>
+          <td>crm:E5_Event</td>
+        </tr>
+        <tr>
+          <td>event:algerianrevolution</td>
+          <td>rdfs:label</td>
+          <td>&quot;Algerian Revolution&quot;@en</td>
+        </tr>
+        <tr>
+          <td>event:algerianrevolution</td>
+          <td>crm:P4_has_time-span</td>
+          <td>time:1954-1962</td>
+        </tr>
+        <tr>
+          <td>event:algerianrevolution</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q200790" target="_blank">wd:Q200790</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('event:algerianrevolution')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="event">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#c9853a"></span>
+      <span class="entity-name">Second Congress of Black Writers and Artists</span>
+      <span class="entity-uri">event:secondcongress</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>event:secondcongress</td>
+          <td>rdf:type</td>
+          <td>crm:E5_Event</td>
+        </tr>
+        <tr>
+          <td>event:secondcongress</td>
+          <td>rdfs:label</td>
+          <td>&quot;Second Congress of Black Writers and Artists&quot;@en</td>
+        </tr>
+        <tr>
+          <td>event:secondcongress</td>
+          <td>crm:P4_has_time-span</td>
+          <td>time:1959</td>
+        </tr>
+        <tr>
+          <td>event:secondcongress</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q2993133" target="_blank">wd:Q2993133</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('event:secondcongress')">Download CSV</button>
+  </div>
+
+  <div class="type-label" data-section="concept">Concepts — crm:E28_Conceptual_Object</div>
+  <div class="entity-block" data-type="concept">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#c45680"></span>
+      <span class="entity-name">Colonialism</span>
+      <span class="entity-uri">concept:colonialism</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>concept:colonialism</td>
+          <td>rdf:type</td>
+          <td>crm:E28_Conceptual_Object</td>
+        </tr>
+        <tr>
+          <td>concept:colonialism</td>
+          <td>rdfs:label</td>
+          <td>&quot;Colonialism&quot;@en</td>
+        </tr>
+        <tr>
+          <td>concept:colonialism</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://vocab.getty.edu/aat/300055142" target="_blank">aat:300055142</a></td>
+        </tr>
+        <tr>
+          <td>concept:colonialism</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q7167" target="_blank">wd:Q7167</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('concept:colonialism')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="concept">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#c45680"></span>
+      <span class="entity-name">Decolonisation</span>
+      <span class="entity-uri">concept:decolonisation</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>concept:decolonisation</td>
+          <td>rdf:type</td>
+          <td>crm:E28_Conceptual_Object</td>
+        </tr>
+        <tr>
+          <td>concept:decolonisation</td>
+          <td>rdfs:label</td>
+          <td>&quot;Decolonisation&quot;@en</td>
+        </tr>
+        <tr>
+          <td>concept:decolonisation</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://vocab.getty.edu/aat/300375556" target="_blank">aat:300375556</a></td>
+        </tr>
+        <tr>
+          <td>concept:decolonisation</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q230533" target="_blank">wd:Q230533</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('concept:decolonisation')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="concept">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#c45680"></span>
+      <span class="entity-name">Négritude</span>
+      <span class="entity-uri">concept:negritude</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>concept:negritude</td>
+          <td>rdf:type</td>
+          <td>crm:E28_Conceptual_Object</td>
+        </tr>
+        <tr>
+          <td>concept:negritude</td>
+          <td>rdfs:label</td>
+          <td>&quot;Négritude&quot;@en</td>
+        </tr>
+        <tr>
+          <td>concept:negritude</td>
+          <td>owl:sameAs</td>
+          <td><a href="https://www.wikidata.org/wiki/Q852544" target="_blank">wd:Q852544</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('concept:negritude')">Download CSV</button>
+  </div>
+
+  <div class="type-label" data-section="time">Time-spans — crm:E52_Time-Span</div>
+  <div class="entity-block" data-type="time">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#1b3322"></span>
+      <span class="entity-name">20 July 1925</span>
+      <span class="entity-uri">time:1925-07-20</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>time:1925-07-20</td>
+          <td>rdf:type</td>
+          <td>crm:E52_Time-Span</td>
+        </tr>
+        <tr>
+          <td>time:1925-07-20</td>
+          <td>crm:P82_at_some_time_within</td>
+          <td>&quot;1925-07-20&quot;^^xsd:date</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('time:1925-07-20')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="time">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#1b3322"></span>
+      <span class="entity-name">21 June 1905</span>
+      <span class="entity-uri">time:1905-06-21</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>time:1905-06-21</td>
+          <td>rdf:type</td>
+          <td>crm:E52_Time-Span</td>
+        </tr>
+        <tr>
+          <td>time:1905-06-21</td>
+          <td>crm:P82_at_some_time_within</td>
+          <td>&quot;1905-06-21&quot;^^xsd:date</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('time:1905-06-21')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="time">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#1b3322"></span>
+      <span class="entity-name">26 June 1913</span>
+      <span class="entity-uri">time:1913-06-26</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>time:1913-06-26</td>
+          <td>rdf:type</td>
+          <td>crm:E52_Time-Span</td>
+        </tr>
+        <tr>
+          <td>time:1913-06-26</td>
+          <td>crm:P82_at_some_time_within</td>
+          <td>&quot;1913-06-26&quot;^^xsd:date</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('time:1913-06-26')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="time">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#1b3322"></span>
+      <span class="entity-name">1949</span>
+      <span class="entity-uri">time:1949</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>time:1949</td>
+          <td>rdf:type</td>
+          <td>crm:E52_Time-Span</td>
+        </tr>
+        <tr>
+          <td>time:1949</td>
+          <td>crm:P82_at_some_time_within</td>
+          <td>&quot;1949&quot;^^xsd:gYear</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('time:1949')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="time">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#1b3322"></span>
+      <span class="entity-name">1954–1962</span>
+      <span class="entity-uri">time:1954-1962</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>time:1954-1962</td>
+          <td>rdf:type</td>
+          <td>crm:E52_Time-Span</td>
+        </tr>
+        <tr>
+          <td>time:1954-1962</td>
+          <td>rdfs:label</td>
+          <td>&quot;1954-1962&quot;</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('time:1954-1962')">Download CSV</button>
+  </div>
+
+  <div class="entity-block" data-type="time">
+    <div class="entity-header">
+      <span class="type-dot" style="background:#1b3322"></span>
+      <span class="entity-name">1959</span>
+      <span class="entity-uri">time:1959</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Predicate</th>
+          <th>Object</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>time:1959</td>
+          <td>rdf:type</td>
+          <td>crm:E52_Time-Span</td>
+        </tr>
+        <tr>
+          <td>time:1959</td>
+          <td>rdfs:label</td>
+          <td>&quot;1959&quot;</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="dl-btn" onclick="downloadCSV('time:1959')">Download CSV</button>
+  </div>
+
+
+  <script>
+    function filterAll(btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.entity-block').forEach(b => b.style.display = '');
+      document.querySelectorAll('.type-label').forEach(l => l.style.display = '');
+    }
+
+    function filterType(type, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.entity-block').forEach(b => {
+        b.style.display = b.dataset.type === type ? '' : 'none';
+      });
+      document.querySelectorAll('.type-label').forEach(l => {
+        l.style.display = l.dataset.section === type ? '' : 'none';
+      });
+    }
+
+    function downloadCSV(entityId) {
+      const blocks = document.querySelectorAll('.entity-block');
+      let targetTable = null;
+      blocks.forEach(block => {
+        const uri = block.querySelector('.entity-uri');
+        if (uri && uri.textContent.trim().toLowerCase() === entityId.toLowerCase()) {
+          targetTable = block.querySelector('table');
+        }
+      });
+      if (!targetTable) return;
+      let csv = 'Subject,Predicate,Object\n';
+      targetTable.querySelectorAll('tbody tr').forEach(row => {
+        const cells = row.querySelectorAll('td');
+        const row_data = [...cells].map(c => `"${c.textContent.trim()}"`).join(',');
+        csv += row_data + '\n';
+      });
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `${entityId.replace(/[:\/]/g, '_')}_triples.csv`;
+      a.click();
+    }
+  </script>
+</body>
+
+</html>

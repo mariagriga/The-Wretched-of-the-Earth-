@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Wretched of the Earth — Metadata Alignment</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #f0ece4;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #1a1a1a;
+  padding: 2.2rem 2.5rem 4rem;
+  min-height: 100vh;
+}
+
+.sec-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.6rem;
+}
+
+.sec-desc {
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: #444;
+  max-width: 820px;
+  margin-bottom: 2.8rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.sec-desc p { margin-bottom: 0.9rem; }
+.sec-desc p:last-child { margin-bottom: 0; }
+.sec-desc em { font-style: italic; }
+.sec-desc strong { font-weight: 600; color: #1a1a1a; }
+
+
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 0;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  max-width: 960px;
+}
+.tab-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #999;
+  background: none;
+  border: none;
+  padding: 0.7rem 1.6rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.tab-btn:hover { color: #444; }
+.tab-btn.active { color: #1a1a1a; border-bottom-color: #1a1a1a; }
+
+
+.tab-panel { display: none; max-width: 960px; }
+.tab-panel.active { display: block; }
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  margin-top: 1.8rem;
+}
+thead tr { border-bottom: 2px solid rgba(0,0,0,0.12); }
+th {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  text-align: left;
+  padding: 0.55rem 1.2rem 0.55rem 0;
+  white-space: nowrap;
+}
+td {
+  padding: 0.5rem 1.2rem 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  vertical-align: middle;
+  color: #555;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(0,0,0,0.02); }
+
+td:first-child { color: #1a1a1a; font-weight: 500; min-width: 200px; }
+td.na { color: #bbb; font-style: italic; }
+td.crm { color: #aa4a2a; }
+td.dc  { color: #2a6aaa; }
+td.marc { color: #2a8a5e; }
+td.schema { color: #7a4fa8; }
+
+.cidoc-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #aa4a2a;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(170,74,42,0.2);
+}
+</style>
+</head>
+<body>
+
+<div class="sec-tag">Knowledge Organisation — Metadata Alignment</div>
+
+<div class="sec-desc">
+  <p>After identifying the entities and their corresponding metadata standards, the metadata alignment phase established semantic interoperability between the different resources included in the project. The final adopted standards include <strong>Dublin Core Terms (DCTerms)</strong>, <strong>MARC21</strong>, <strong>CIDOC-CRM</strong>, and <strong>Schema.org</strong>, selected according to the type of entity and relation represented in the dataset.</p>
+  <p>Dublin Core Terms and Schema.org were used for general descriptive properties related to authorship, publication, titles, places, and dates. MARC21 was primarily adopted for bibliographic entities such as <em>The Wretched of the Earth</em> and <em>"On Violence,"</em> while CIDOC-CRM was used for more complex cultural and semantic relations involving events, participation, influence, and conceptual connections.</p>
+  <p>The alignment process was structured around four semantic dimensions: <strong>WHO</strong>, <strong>WHAT</strong>, <strong>WHERE</strong>, and <strong>WHEN</strong>. Additional project-specific relations such as critiques, advocates, theorises, participated in, and originated from were aligned through CIDOC-CRM properties in order to support a richer semantic representation and future RDF transformation.</p>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="showTab('who')">WHO</button>
+  <button class="tab-btn" onclick="showTab('what')">WHAT</button>
+  <button class="tab-btn" onclick="showTab('where')">WHERE</button>
+  <button class="tab-btn" onclick="showTab('when')">WHEN</button>
+  <button class="tab-btn" onclick="showTab('cidoc')">CIDOC-CRM</button>
+</div>
+
+<div class="tab-panel active" id="tab-who">
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>DCTerms</th>
+        <th>MARC21</th>
+        <th>CIDOC-CRM</th>
+        <th>Schema.org</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Creator (authored)</td>
+        <td class="dc">dcterms:creator</td>
+        <td class="marc">field 100</td>
+        <td class="crm">crm:P14_carried_out_by</td>
+        <td class="schema">schema:author</td>
+      </tr>
+      <tr>
+        <td>Contributor (preface/foreword)</td>
+        <td class="dc">dcterms:contributor</td>
+        <td class="marc">field 700</td>
+        <td class="crm">crm:P14_carried_out_by</td>
+        <td class="schema">schema:contributor</td>
+      </tr>
+      <tr>
+        <td>Publisher</td>
+        <td class="dc">dcterms:publisher</td>
+        <td class="marc">field 260</td>
+        <td class="crm">crm:P108_was_produced_by</td>
+        <td class="schema">schema:publisher</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tab-panel" id="tab-what">
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>DCTerms</th>
+        <th>MARC21</th>
+        <th>CIDOC-CRM</th>
+        <th>Schema.org</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Title</td>
+        <td class="dc">dcterms:title</td>
+        <td class="marc">field 245</td>
+        <td class="crm">crm:P102_has_title</td>
+        <td class="schema">schema:name</td>
+      </tr>
+      <tr>
+        <td>Type</td>
+        <td class="dc">dcterms:type</td>
+        <td class="marc">field 655</td>
+        <td class="crm">crm:P2_has_type</td>
+        <td class="schema">schema:additionalType</td>
+      </tr>
+      <tr>
+        <td>Subject / About</td>
+        <td class="dc">dcterms:subject</td>
+        <td class="marc">field 650</td>
+        <td class="crm">crm:P129_is_about</td>
+        <td class="schema">schema:about</td>
+      </tr>
+      <tr>
+        <td>Is Part Of</td>
+        <td class="dc">dcterms:isPartOf</td>
+        <td class="marc">field 773</td>
+        <td class="crm">crm:P106_is_composed_of</td>
+        <td class="schema">schema:isPartOf</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td class="dc">dcterms:description</td>
+        <td class="marc">field 520</td>
+        <td class="crm">crm:P3_has_note</td>
+        <td class="schema">schema:description</td>
+      </tr>
+      <tr>
+        <td>Language</td>
+        <td class="dc">dcterms:language</td>
+        <td class="marc">field 041</td>
+        <td class="crm">crm:P72_has_language</td>
+        <td class="schema">schema:inLanguage</td>
+      </tr>
+      <tr>
+        <td>Identifier</td>
+        <td class="dc">dcterms:identifier</td>
+        <td class="marc">field 024</td>
+        <td class="crm">crm:P48_has_preferred_identifier</td>
+        <td class="schema">schema:identifier</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tab-panel" id="tab-where">
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>DCTerms</th>
+        <th>MARC21</th>
+        <th>CIDOC-CRM</th>
+        <th>Schema.org</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Place of birth</td>
+        <td class="na">N/A</td>
+        <td class="marc">field 370</td>
+        <td class="crm">crm:P98_brought_into_life</td>
+        <td class="schema">schema:birthPlace</td>
+      </tr>
+      <tr>
+        <td>Place of work</td>
+        <td class="dc">dcterms:spatial</td>
+        <td class="marc">field 370</td>
+        <td class="crm">crm:P74_has_current_or_former_residence</td>
+        <td class="schema">schema:workLocation</td>
+      </tr>
+      <tr>
+        <td>Place of event</td>
+        <td class="dc">dcterms:spatial</td>
+        <td class="marc">field 651</td>
+        <td class="crm">crm:P7_took_place_at</td>
+        <td class="schema">schema:location</td>
+      </tr>
+      <tr>
+        <td>Place of publication</td>
+        <td class="dc">dcterms:spatial</td>
+        <td class="marc">field 260</td>
+        <td class="crm">crm:P7_took_place_at</td>
+        <td class="schema">schema:locationCreated</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tab-panel" id="tab-when">
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>DCTerms</th>
+        <th>MARC21</th>
+        <th>CIDOC-CRM</th>
+        <th>Schema.org</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Date of publication</td>
+        <td class="dc">dcterms:issued</td>
+        <td class="marc">field 260</td>
+        <td class="crm">crm:P4_has_time-span</td>
+        <td class="schema">schema:datePublished</td>
+      </tr>
+      <tr>
+        <td>Date of event</td>
+        <td class="dc">dcterms:date</td>
+        <td class="marc">field 518</td>
+        <td class="crm">crm:P4_has_time-span</td>
+        <td class="schema">schema:startDate</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="tab-panel" id="tab-cidoc">
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>DCTerms</th>
+        <th>MARC21</th>
+        <th>CIDOC-CRM</th>
+        <th>Schema.org</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>critiques / advocates / theorises / supported</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="crm">crm:P129_is_about</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td>participated in / spoke at</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="crm">crm:P11_had_participant</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td>taught by</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="crm">crm:P14_carried_out_by</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td>founded by</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="crm">crm:P94_has_created</td>
+        <td class="na">N/A</td>
+      </tr>
+      <tr>
+        <td>originated from</td>
+        <td class="na">N/A</td>
+        <td class="na">N/A</td>
+        <td class="crm">crm:P17_was_motivated_by</td>
+        <td class="na">N/A</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+function showTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
+

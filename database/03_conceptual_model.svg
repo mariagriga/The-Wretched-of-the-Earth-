@@ -1,0 +1,605 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="4095" viewBox="0 0 1060 4095" font-family="'IBM Plex Mono', monospace">
+<rect width="1060" height="4095" fill="#f4f1ea"/>
+<text x="12" y="30" font-size="20" font-weight="700" fill="#2e5c8b">Conceptual Model</text>
+<text x="12" y="48" font-size="10.5" fill="#7a766a" letter-spacing="1.5">THE WRETCHED OF THE EARTH · DATA PROVENANCE</text>
+<line x1="12" y1="58" x2="1048" y2="58" stroke="#4a7fa5" stroke-width="1.5"/>
+<rect x="0" y="64" width="1060" height="29" fill="#2e5c8b"/>
+<text x="12" y="83" font-size="13" font-weight="600" fill="#ffffff">Subject</text>
+<text x="318" y="83" font-size="13" font-weight="600" fill="#ffffff">Predicate</text>
+<text x="616" y="83" font-size="13" font-weight="600" fill="#ffffff">Object</text>
+<text x="985" y="83" font-size="13" font-weight="600" fill="#ffffff">Type</text>
+<text x="12" y="108" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="108" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="108" font-size="12.5" font-weight="400" fill="#2a2620">frbroo:F2_Expression</text>
+<text x="985" y="108" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="126" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="140" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="155" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="155" font-size="12.5" font-weight="400" fill="#2a2620">crm:P102_has_title</text>
+<text x="616" y="155" font-size="12.5" font-weight="400" fill="#2a2620">&quot;The Wretched of the Earth&quot;@en</text>
+<text x="985" y="155" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="173" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="202" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="202" font-size="12.5" font-weight="400" fill="#2a2620">crm:P102_has_title</text>
+<text x="616" y="202" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Les Damnés de la Terre&quot;@fr</text>
+<text x="985" y="202" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="220" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="234" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="249" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="249" font-size="12.5" font-weight="400" fill="#2a2620">crm:P129_is_about</text>
+<text x="616" y="249" font-size="12.5" font-weight="400" fill="#2a2620">concept:colonialism</text>
+<text x="985" y="249" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="278" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="278" font-size="12.5" font-weight="400" fill="#2a2620">crm:P129_is_about</text>
+<text x="616" y="278" font-size="12.5" font-weight="400" fill="#2a2620">concept:decolonisation</text>
+<text x="985" y="278" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="292" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="307" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="307" font-size="12.5" font-weight="400" fill="#2a2620">crm:P129_is_about</text>
+<text x="616" y="307" font-size="12.5" font-weight="400" fill="#2a2620">concept:negritude</text>
+<text x="985" y="307" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="336" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="336" font-size="12.5" font-weight="400" fill="#2a2620">crm:P106_is_composed_of</text>
+<text x="616" y="336" font-size="12.5" font-weight="400" fill="#2a2620">item:onViolence</text>
+<text x="985" y="336" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="350" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="365" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="365" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:contributor</text>
+<text x="616" y="365" font-size="12.5" font-weight="400" fill="#2a2620">person:sartre</text>
+<text x="985" y="365" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="394" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="394" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:contributor</text>
+<text x="616" y="394" font-size="12.5" font-weight="400" fill="#2a2620">person:bhabha</text>
+<text x="985" y="394" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="408" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="423" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="423" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:publisher</text>
+<text x="616" y="423" font-size="12.5" font-weight="400" fill="#2a2620">org:maspero</text>
+<text x="985" y="423" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="452" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="452" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:publisher</text>
+<text x="616" y="452" font-size="12.5" font-weight="400" fill="#2a2620">org:grovepress</text>
+<text x="985" y="452" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="466" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="481" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="481" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:issued</text>
+<text x="616" y="481" font-size="12.5" font-weight="400" fill="#2a2620">1961.0</text>
+<text x="985" y="481" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="499" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="528" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="528" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:issued</text>
+<text x="616" y="528" font-size="12.5" font-weight="400" fill="#2a2620">1963.0</text>
+<text x="985" y="528" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="546" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="560" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="575" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="575" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:language</text>
+<text x="616" y="575" font-size="12.5" font-weight="400" fill="#2a2620">fr</text>
+<text x="985" y="575" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="593" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="622" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="622" font-size="12.5" font-weight="400" fill="#2a2620">dcterms:language</text>
+<text x="616" y="622" font-size="12.5" font-weight="400" fill="#2a2620">en</text>
+<text x="985" y="622" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="640" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="654" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="669" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="669" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="669" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q2741364</text>
+<text x="985" y="669" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="687" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="716" font-size="12.5" font-weight="500" fill="#4a7fa5">item:theWretchedOfTheEarth</text>
+<text x="318" y="716" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="716" font-size="12.5" font-weight="400" fill="#2a2620">worldcat:31510925</text>
+<text x="985" y="716" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="734" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="748" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="763" font-size="12.5" font-weight="500" fill="#4a7fa5">item:onViolence</text>
+<text x="318" y="763" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="763" font-size="12.5" font-weight="400" fill="#2a2620">frbroo:F2_Expression</text>
+<text x="985" y="763" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="781" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="810" font-size="12.5" font-weight="500" fill="#4a7fa5">item:onViolence</text>
+<text x="318" y="810" font-size="12.5" font-weight="400" fill="#2a2620">crm:P102_has_title</text>
+<text x="616" y="810" font-size="12.5" font-weight="400" fill="#2a2620">&quot;On Violence&quot;@en</text>
+<text x="985" y="810" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="828" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="842" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="857" font-size="12.5" font-weight="500" fill="#4a7fa5">item:onViolence</text>
+<text x="318" y="857" font-size="12.5" font-weight="400" fill="#2a2620">crm:P129_is_about</text>
+<text x="616" y="857" font-size="12.5" font-weight="400" fill="#2a2620">concept:colonialism</text>
+<text x="985" y="857" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="886" font-size="12.5" font-weight="500" fill="#4a7fa5">item:onViolence</text>
+<text x="318" y="886" font-size="12.5" font-weight="400" fill="#2a2620">crm:P129_is_about</text>
+<text x="616" y="886" font-size="12.5" font-weight="400" fill="#2a2620">concept:decolonisation</text>
+<text x="985" y="886" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="900" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="915" font-size="12.5" font-weight="500" fill="#4a7fa5">creation:creationOfTheWretchedOfTheEarth</text>
+<text x="318" y="915" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="915" font-size="12.5" font-weight="400" fill="#2a2620">frbroo:F28_Expression_Creation</text>
+<text x="985" y="915" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="933" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="962" font-size="12.5" font-weight="500" fill="#4a7fa5">creation:creationOfTheWretchedOfTheEarth</text>
+<text x="318" y="962" font-size="12.5" font-weight="400" fill="#2a2620">frbroo:R17_created</text>
+<text x="616" y="962" font-size="12.5" font-weight="400" fill="#2a2620">item:theWretchedOfTheEarth</text>
+<text x="985" y="962" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="976" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="991" font-size="12.5" font-weight="500" fill="#4a7fa5">creation:creationOfTheWretchedOfTheEarth</text>
+<text x="318" y="991" font-size="12.5" font-weight="400" fill="#2a2620">crm:P14_carried_out_by</text>
+<text x="616" y="991" font-size="12.5" font-weight="400" fill="#2a2620">person:fanon</text>
+<text x="985" y="991" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="1020" font-size="12.5" font-weight="500" fill="#4a7fa5">creation:creationOfTheWretchedOfTheEarth</text>
+<text x="318" y="1020" font-size="12.5" font-weight="400" fill="#2a2620">crm:P4_has_time-span</text>
+<text x="616" y="1020" font-size="12.5" font-weight="400" fill="#2a2620">time:1961</text>
+<text x="985" y="1020" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1038" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1052" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="1067" font-size="12.5" font-weight="500" fill="#4a7fa5">person:fanon</text>
+<text x="318" y="1067" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="1067" font-size="12.5" font-weight="400" fill="#2a2620">crm:E21_Person</text>
+<text x="985" y="1067" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1085" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1114" font-size="12.5" font-weight="500" fill="#4a7fa5">person:fanon</text>
+<text x="318" y="1114" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="1114" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Frantz Fanon&quot;@en</text>
+<text x="985" y="1114" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1132" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1146" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="1161" font-size="12.5" font-weight="500" fill="#4a7fa5">person:fanon</text>
+<text x="318" y="1161" font-size="12.5" font-weight="400" fill="#2a2620">crm:P74_has_current_or_former_residenc</text>
+<text x="318" y="1179" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="616" y="1161" font-size="12.5" font-weight="400" fill="#2a2620">place:algeria</text>
+<text x="985" y="1161" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="1208" font-size="12.5" font-weight="500" fill="#4a7fa5">person:fanon</text>
+<text x="318" y="1208" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="1208" font-size="12.5" font-weight="400" fill="#2a2620">viaf:22490</text>
+<text x="985" y="1208" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1226" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1240" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="1255" font-size="12.5" font-weight="500" fill="#4a7fa5">person:fanon</text>
+<text x="318" y="1255" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="1255" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q193670</text>
+<text x="985" y="1255" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1273" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1302" font-size="12.5" font-weight="500" fill="#4a7fa5">person:sartre</text>
+<text x="318" y="1302" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="1302" font-size="12.5" font-weight="400" fill="#2a2620">crm:E21_Person</text>
+<text x="985" y="1302" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1320" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1334" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="1349" font-size="12.5" font-weight="500" fill="#4a7fa5">person:sartre</text>
+<text x="318" y="1349" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="1349" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Jean-Paul Sartre&quot;@en</text>
+<text x="985" y="1349" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1367" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1396" font-size="12.5" font-weight="500" fill="#4a7fa5">person:sartre</text>
+<text x="318" y="1396" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="1396" font-size="12.5" font-weight="400" fill="#2a2620">viaf:76322562</text>
+<text x="985" y="1396" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1414" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1428" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="1443" font-size="12.5" font-weight="500" fill="#4a7fa5">person:sartre</text>
+<text x="318" y="1443" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="1443" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q9364</text>
+<text x="985" y="1443" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1461" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1490" font-size="12.5" font-weight="500" fill="#4a7fa5">person:bhabha</text>
+<text x="318" y="1490" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="1490" font-size="12.5" font-weight="400" fill="#2a2620">crm:E21_Person</text>
+<text x="985" y="1490" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1508" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1522" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="1537" font-size="12.5" font-weight="500" fill="#4a7fa5">person:bhabha</text>
+<text x="318" y="1537" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="1537" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Homi K. Bhabha&quot;@en</text>
+<text x="985" y="1537" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1555" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1584" font-size="12.5" font-weight="500" fill="#4a7fa5">person:bhabha</text>
+<text x="318" y="1584" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="1584" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q325741</text>
+<text x="985" y="1584" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1602" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1616" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="1631" font-size="12.5" font-weight="500" fill="#4a7fa5">person:cesaire</text>
+<text x="318" y="1631" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="1631" font-size="12.5" font-weight="400" fill="#2a2620">crm:E21_Person</text>
+<text x="985" y="1631" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1649" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1678" font-size="12.5" font-weight="500" fill="#4a7fa5">person:cesaire</text>
+<text x="318" y="1678" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="1678" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Aimé Césaire&quot;@en</text>
+<text x="985" y="1678" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1696" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1710" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="1725" font-size="12.5" font-weight="500" fill="#4a7fa5">person:cesaire</text>
+<text x="318" y="1725" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="1725" font-size="12.5" font-weight="400" fill="#2a2620">viaf:4925246</text>
+<text x="985" y="1725" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1743" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1772" font-size="12.5" font-weight="500" fill="#4a7fa5">person:cesaire</text>
+<text x="318" y="1772" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="1772" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q223955</text>
+<text x="985" y="1772" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1790" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1804" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="1819" font-size="12.5" font-weight="500" fill="#4a7fa5">birth:fanon</text>
+<text x="318" y="1819" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="1819" font-size="12.5" font-weight="400" fill="#2a2620">crm:E67_Birth</text>
+<text x="985" y="1819" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1837" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="1866" font-size="12.5" font-weight="500" fill="#4a7fa5">birth:fanon</text>
+<text x="318" y="1866" font-size="12.5" font-weight="400" fill="#2a2620">crm:P98_brought_into_life</text>
+<text x="616" y="1866" font-size="12.5" font-weight="400" fill="#2a2620">person:fanon</text>
+<text x="985" y="1866" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="1880" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="1895" font-size="12.5" font-weight="500" fill="#4a7fa5">birth:fanon</text>
+<text x="318" y="1895" font-size="12.5" font-weight="400" fill="#2a2620">crm:P7_took_place_at</text>
+<text x="616" y="1895" font-size="12.5" font-weight="400" fill="#2a2620">place:martinique</text>
+<text x="985" y="1895" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="1924" font-size="12.5" font-weight="500" fill="#4a7fa5">birth:cesaire</text>
+<text x="318" y="1924" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="1924" font-size="12.5" font-weight="400" fill="#2a2620">crm:E67_Birth</text>
+<text x="985" y="1924" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="1942" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="1956" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="1971" font-size="12.5" font-weight="500" fill="#4a7fa5">birth:cesaire</text>
+<text x="318" y="1971" font-size="12.5" font-weight="400" fill="#2a2620">crm:P98_brought_into_life</text>
+<text x="616" y="1971" font-size="12.5" font-weight="400" fill="#2a2620">person:cesaire</text>
+<text x="985" y="1971" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="2000" font-size="12.5" font-weight="500" fill="#4a7fa5">birth:cesaire</text>
+<text x="318" y="2000" font-size="12.5" font-weight="400" fill="#2a2620">crm:P7_took_place_at</text>
+<text x="616" y="2000" font-size="12.5" font-weight="400" fill="#2a2620">place:martinique</text>
+<text x="985" y="2000" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="2014" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="2029" font-size="12.5" font-weight="500" fill="#4a7fa5">event:cesaireTeaching</text>
+<text x="318" y="2029" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="2029" font-size="12.5" font-weight="400" fill="#2a2620">crm:E7_Activity</text>
+<text x="985" y="2029" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2047" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2076" font-size="12.5" font-weight="500" fill="#4a7fa5">event:cesaireTeaching</text>
+<text x="318" y="2076" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="2076" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Aimé Césaire teaching Frantz Fanon&quot;@en</text>
+<text x="985" y="2076" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2094" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2108" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="2123" font-size="12.5" font-weight="500" fill="#4a7fa5">event:cesaireTeaching</text>
+<text x="318" y="2123" font-size="12.5" font-weight="400" fill="#2a2620">crm:P14_carried_out_by</text>
+<text x="616" y="2123" font-size="12.5" font-weight="400" fill="#2a2620">person:cesaire</text>
+<text x="985" y="2123" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="2152" font-size="12.5" font-weight="500" fill="#4a7fa5">event:cesaireTeaching</text>
+<text x="318" y="2152" font-size="12.5" font-weight="400" fill="#2a2620">crm:P11_had_participant</text>
+<text x="616" y="2152" font-size="12.5" font-weight="400" fill="#2a2620">person:fanon</text>
+<text x="985" y="2152" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="2166" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="2181" font-size="12.5" font-weight="500" fill="#4a7fa5">event:cesaire-founding-negritude</text>
+<text x="318" y="2181" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="2181" font-size="12.5" font-weight="400" fill="#2a2620">crm:E7_Activity</text>
+<text x="985" y="2181" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2199" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2228" font-size="12.5" font-weight="500" fill="#4a7fa5">event:cesaire-founding-negritude</text>
+<text x="318" y="2228" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="2228" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Founding of Négritude&quot;@en</text>
+<text x="985" y="2228" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2246" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2260" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="2275" font-size="12.5" font-weight="500" fill="#4a7fa5">event:cesaire-founding-negritude</text>
+<text x="318" y="2275" font-size="12.5" font-weight="400" fill="#2a2620">crm:P14_carried_out_by</text>
+<text x="616" y="2275" font-size="12.5" font-weight="400" fill="#2a2620">person:cesaire</text>
+<text x="985" y="2275" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="2304" font-size="12.5" font-weight="500" fill="#4a7fa5">event:cesaire-founding-negritude</text>
+<text x="318" y="2304" font-size="12.5" font-weight="400" fill="#2a2620">crm:P94_has_created</text>
+<text x="616" y="2304" font-size="12.5" font-weight="400" fill="#2a2620">concept:negritude</text>
+<text x="985" y="2304" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="2318" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="2333" font-size="12.5" font-weight="500" fill="#4a7fa5">org:maspero</text>
+<text x="318" y="2333" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="2333" font-size="12.5" font-weight="400" fill="#2a2620">crm:E74_Group</text>
+<text x="985" y="2333" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2351" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2380" font-size="12.5" font-weight="500" fill="#4a7fa5">org:maspero</text>
+<text x="318" y="2380" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="2380" font-size="12.5" font-weight="400" fill="#2a2620">&quot;François Maspero&quot;@en</text>
+<text x="985" y="2380" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2398" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2412" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="2427" font-size="12.5" font-weight="500" fill="#4a7fa5">org:maspero</text>
+<text x="318" y="2427" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="2427" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q3085338</text>
+<text x="985" y="2427" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2445" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2474" font-size="12.5" font-weight="500" fill="#4a7fa5">org:grovepress</text>
+<text x="318" y="2474" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="2474" font-size="12.5" font-weight="400" fill="#2a2620">crm:E74_Group</text>
+<text x="985" y="2474" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2492" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2506" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="2521" font-size="12.5" font-weight="500" fill="#4a7fa5">org:grovepress</text>
+<text x="318" y="2521" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="2521" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Grove Press&quot;@en</text>
+<text x="985" y="2521" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2539" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2568" font-size="12.5" font-weight="500" fill="#4a7fa5">org:grovepress</text>
+<text x="318" y="2568" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="2568" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q3777164</text>
+<text x="985" y="2568" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2586" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2600" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="2615" font-size="12.5" font-weight="500" fill="#4a7fa5">place:martinique</text>
+<text x="318" y="2615" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="2615" font-size="12.5" font-weight="400" fill="#2a2620">crm:E53_Place</text>
+<text x="985" y="2615" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2633" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2662" font-size="12.5" font-weight="500" fill="#4a7fa5">place:martinique</text>
+<text x="318" y="2662" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="2662" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Martinique&quot;@en</text>
+<text x="985" y="2662" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2680" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2694" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="2709" font-size="12.5" font-weight="500" fill="#4a7fa5">place:martinique</text>
+<text x="318" y="2709" font-size="12.5" font-weight="400" fill="#2a2620">crm:P168_place_is_defined_by</text>
+<text x="616" y="2709" font-size="12.5" font-weight="400" fill="#2a2620">14.6415 -61.0242</text>
+<text x="985" y="2709" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2727" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2756" font-size="12.5" font-weight="500" fill="#4a7fa5">place:martinique</text>
+<text x="318" y="2756" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="2756" font-size="12.5" font-weight="400" fill="#2a2620">geonames:3570311</text>
+<text x="985" y="2756" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2774" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2788" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="2803" font-size="12.5" font-weight="500" fill="#4a7fa5">place:martinique</text>
+<text x="318" y="2803" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="2803" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q17054</text>
+<text x="985" y="2803" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2821" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2850" font-size="12.5" font-weight="500" fill="#4a7fa5">place:algeria</text>
+<text x="318" y="2850" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="2850" font-size="12.5" font-weight="400" fill="#2a2620">crm:E53_Place</text>
+<text x="985" y="2850" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2868" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2882" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="2897" font-size="12.5" font-weight="500" fill="#4a7fa5">place:algeria</text>
+<text x="318" y="2897" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="2897" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Algeria&quot;@en</text>
+<text x="985" y="2897" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2915" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="2944" font-size="12.5" font-weight="500" fill="#4a7fa5">place:algeria</text>
+<text x="318" y="2944" font-size="12.5" font-weight="400" fill="#2a2620">crm:P168_place_is_defined_by</text>
+<text x="616" y="2944" font-size="12.5" font-weight="400" fill="#2a2620">28.0339 1.6596</text>
+<text x="985" y="2944" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="2962" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="2976" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="2991" font-size="12.5" font-weight="500" fill="#4a7fa5">place:algeria</text>
+<text x="318" y="2991" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="2991" font-size="12.5" font-weight="400" fill="#2a2620">geonames:2589581</text>
+<text x="985" y="2991" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3009" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="3038" font-size="12.5" font-weight="500" fill="#4a7fa5">place:algeria</text>
+<text x="318" y="3038" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="3038" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q262</text>
+<text x="985" y="3038" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3056" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="3070" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="3085" font-size="12.5" font-weight="500" fill="#4a7fa5">event:algerianrevolution</text>
+<text x="318" y="3085" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="3085" font-size="12.5" font-weight="400" fill="#2a2620">crm:E5_Event</text>
+<text x="985" y="3085" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3103" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="3132" font-size="12.5" font-weight="500" fill="#4a7fa5">event:algerianrevolution</text>
+<text x="318" y="3132" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="3132" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Algerian Revolution&quot;@en</text>
+<text x="985" y="3132" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3150" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="3164" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="3179" font-size="12.5" font-weight="500" fill="#4a7fa5">event:algerianrevolution</text>
+<text x="318" y="3179" font-size="12.5" font-weight="400" fill="#2a2620">crm:P7_took_place_at</text>
+<text x="616" y="3179" font-size="12.5" font-weight="400" fill="#2a2620">place:algeria</text>
+<text x="985" y="3179" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="3208" font-size="12.5" font-weight="500" fill="#4a7fa5">event:algerianrevolution</text>
+<text x="318" y="3208" font-size="12.5" font-weight="400" fill="#2a2620">crm:P11_had_participant</text>
+<text x="616" y="3208" font-size="12.5" font-weight="400" fill="#2a2620">person:fanon</text>
+<text x="985" y="3208" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="3222" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="3237" font-size="12.5" font-weight="500" fill="#4a7fa5">event:algerianrevolution</text>
+<text x="318" y="3237" font-size="12.5" font-weight="400" fill="#2a2620">crm:P4_has_time-span</text>
+<text x="616" y="3237" font-size="12.5" font-weight="400" fill="#2a2620">time:1954-1962</text>
+<text x="985" y="3237" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3255" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="3284" font-size="12.5" font-weight="500" fill="#4a7fa5">event:algerianrevolution</text>
+<text x="318" y="3284" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="3284" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q200790</text>
+<text x="985" y="3284" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3302" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="3316" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="3331" font-size="12.5" font-weight="500" fill="#4a7fa5">event:secondcongress</text>
+<text x="318" y="3331" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="3331" font-size="12.5" font-weight="400" fill="#2a2620">crm:E5_Event</text>
+<text x="985" y="3331" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3349" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="3378" font-size="12.5" font-weight="500" fill="#4a7fa5">event:secondcongress</text>
+<text x="318" y="3378" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="3378" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Second Congress of Black Writers and</text>
+<text x="616" y="3396" font-size="12.5" font-weight="400" fill="#2a2620">Artists&quot;@en</text>
+<text x="985" y="3378" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3396" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="3410" width="1060" height="29" fill="#ece8df"/>
+<text x="12" y="3425" font-size="12.5" font-weight="500" fill="#4a7fa5">event:secondcongress</text>
+<text x="318" y="3425" font-size="12.5" font-weight="400" fill="#2a2620">crm:P11_had_participant</text>
+<text x="616" y="3425" font-size="12.5" font-weight="400" fill="#2a2620">person:fanon</text>
+<text x="985" y="3425" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<text x="12" y="3454" font-size="12.5" font-weight="500" fill="#4a7fa5">event:secondcongress</text>
+<text x="318" y="3454" font-size="12.5" font-weight="400" fill="#2a2620">crm:P11_had_participant</text>
+<text x="616" y="3454" font-size="12.5" font-weight="400" fill="#2a2620">person:cesaire</text>
+<text x="985" y="3454" font-size="12.5" font-weight="400" fill="#2a2620">Relation</text>
+<rect x="0" y="3468" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="3483" font-size="12.5" font-weight="500" fill="#4a7fa5">event:secondcongress</text>
+<text x="318" y="3483" font-size="12.5" font-weight="400" fill="#2a2620">crm:P4_has_time-span</text>
+<text x="616" y="3483" font-size="12.5" font-weight="400" fill="#2a2620">time:1959</text>
+<text x="985" y="3483" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3501" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="3530" font-size="12.5" font-weight="500" fill="#4a7fa5">event:secondcongress</text>
+<text x="318" y="3530" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="3530" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q2993133</text>
+<text x="985" y="3530" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3548" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="3562" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="3577" font-size="12.5" font-weight="500" fill="#4a7fa5">concept:colonialism</text>
+<text x="318" y="3577" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="3577" font-size="12.5" font-weight="400" fill="#2a2620">crm:E28_Conceptual_Object</text>
+<text x="985" y="3577" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3595" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="3624" font-size="12.5" font-weight="500" fill="#4a7fa5">concept:colonialism</text>
+<text x="318" y="3624" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="3624" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Colonialism&quot;@en</text>
+<text x="985" y="3624" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3642" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="3656" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="3671" font-size="12.5" font-weight="500" fill="#4a7fa5">concept:colonialism</text>
+<text x="318" y="3671" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="3671" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q7167</text>
+<text x="985" y="3671" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3689" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="3718" font-size="12.5" font-weight="500" fill="#4a7fa5">concept:colonialism</text>
+<text x="318" y="3718" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="3718" font-size="12.5" font-weight="400" fill="#2a2620">aat:300055142</text>
+<text x="985" y="3718" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3736" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="3750" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="3765" font-size="12.5" font-weight="500" fill="#4a7fa5">concept:decolonisation</text>
+<text x="318" y="3765" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="3765" font-size="12.5" font-weight="400" fill="#2a2620">crm:E28_Conceptual_Object</text>
+<text x="985" y="3765" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3783" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="3812" font-size="12.5" font-weight="500" fill="#4a7fa5">concept:decolonisation</text>
+<text x="318" y="3812" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="3812" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Decolonisation&quot;@en</text>
+<text x="985" y="3812" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3830" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="3844" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="3859" font-size="12.5" font-weight="500" fill="#4a7fa5">concept:decolonisation</text>
+<text x="318" y="3859" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="3859" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q230533</text>
+<text x="985" y="3859" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3877" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="3906" font-size="12.5" font-weight="500" fill="#4a7fa5">concept:decolonisation</text>
+<text x="318" y="3906" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="3906" font-size="12.5" font-weight="400" fill="#2a2620">aat:300375556</text>
+<text x="985" y="3906" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3924" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="3938" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="3953" font-size="12.5" font-weight="500" fill="#4a7fa5">concept:negritude</text>
+<text x="318" y="3953" font-size="12.5" font-weight="400" fill="#2a2620">rdf:type</text>
+<text x="616" y="3953" font-size="12.5" font-weight="400" fill="#2a2620">crm:E28_Conceptual_Object</text>
+<text x="985" y="3953" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="3971" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<text x="12" y="4000" font-size="12.5" font-weight="500" fill="#4a7fa5">concept:negritude</text>
+<text x="318" y="4000" font-size="12.5" font-weight="400" fill="#2a2620">rdfs:label</text>
+<text x="616" y="4000" font-size="12.5" font-weight="400" fill="#2a2620">&quot;Négritude&quot;@en</text>
+<text x="985" y="4000" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="4018" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<rect x="0" y="4032" width="1060" height="47" fill="#ece8df"/>
+<text x="12" y="4047" font-size="12.5" font-weight="500" fill="#4a7fa5">concept:negritude</text>
+<text x="318" y="4047" font-size="12.5" font-weight="400" fill="#2a2620">owl:sameAs</text>
+<text x="616" y="4047" font-size="12.5" font-weight="400" fill="#2a2620">wd:Q852544</text>
+<text x="985" y="4047" font-size="12.5" font-weight="400" fill="#2a2620">Attribut</text>
+<text x="985" y="4065" font-size="12.5" font-weight="400" fill="#2a2620">e</text>
+<line x1="306" y1="64" x2="306" y2="4079" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="604" y1="64" x2="604" y2="4079" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="973" y1="64" x2="973" y2="4079" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="64" x2="1060" y2="64" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="93" x2="1060" y2="93" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="140" x2="1060" y2="140" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="187" x2="1060" y2="187" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="234" x2="1060" y2="234" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="263" x2="1060" y2="263" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="292" x2="1060" y2="292" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="321" x2="1060" y2="321" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="350" x2="1060" y2="350" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="379" x2="1060" y2="379" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="408" x2="1060" y2="408" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="437" x2="1060" y2="437" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="466" x2="1060" y2="466" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="513" x2="1060" y2="513" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="560" x2="1060" y2="560" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="607" x2="1060" y2="607" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="654" x2="1060" y2="654" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="701" x2="1060" y2="701" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="748" x2="1060" y2="748" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="795" x2="1060" y2="795" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="842" x2="1060" y2="842" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="871" x2="1060" y2="871" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="900" x2="1060" y2="900" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="947" x2="1060" y2="947" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="976" x2="1060" y2="976" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1005" x2="1060" y2="1005" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1052" x2="1060" y2="1052" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1099" x2="1060" y2="1099" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1146" x2="1060" y2="1146" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1193" x2="1060" y2="1193" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1240" x2="1060" y2="1240" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1287" x2="1060" y2="1287" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1334" x2="1060" y2="1334" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1381" x2="1060" y2="1381" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1428" x2="1060" y2="1428" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1475" x2="1060" y2="1475" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1522" x2="1060" y2="1522" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1569" x2="1060" y2="1569" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1616" x2="1060" y2="1616" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1663" x2="1060" y2="1663" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1710" x2="1060" y2="1710" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1757" x2="1060" y2="1757" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1804" x2="1060" y2="1804" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1851" x2="1060" y2="1851" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1880" x2="1060" y2="1880" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1909" x2="1060" y2="1909" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1956" x2="1060" y2="1956" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="1985" x2="1060" y2="1985" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2014" x2="1060" y2="2014" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2061" x2="1060" y2="2061" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2108" x2="1060" y2="2108" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2137" x2="1060" y2="2137" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2166" x2="1060" y2="2166" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2213" x2="1060" y2="2213" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2260" x2="1060" y2="2260" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2289" x2="1060" y2="2289" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2318" x2="1060" y2="2318" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2365" x2="1060" y2="2365" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2412" x2="1060" y2="2412" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2459" x2="1060" y2="2459" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2506" x2="1060" y2="2506" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2553" x2="1060" y2="2553" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2600" x2="1060" y2="2600" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2647" x2="1060" y2="2647" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2694" x2="1060" y2="2694" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2741" x2="1060" y2="2741" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2788" x2="1060" y2="2788" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2835" x2="1060" y2="2835" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2882" x2="1060" y2="2882" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2929" x2="1060" y2="2929" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="2976" x2="1060" y2="2976" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3023" x2="1060" y2="3023" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3070" x2="1060" y2="3070" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3117" x2="1060" y2="3117" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3164" x2="1060" y2="3164" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3193" x2="1060" y2="3193" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3222" x2="1060" y2="3222" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3269" x2="1060" y2="3269" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3316" x2="1060" y2="3316" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3363" x2="1060" y2="3363" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3410" x2="1060" y2="3410" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3439" x2="1060" y2="3439" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3468" x2="1060" y2="3468" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3515" x2="1060" y2="3515" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3562" x2="1060" y2="3562" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3609" x2="1060" y2="3609" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3656" x2="1060" y2="3656" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3703" x2="1060" y2="3703" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3750" x2="1060" y2="3750" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3797" x2="1060" y2="3797" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3844" x2="1060" y2="3844" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3891" x2="1060" y2="3891" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3938" x2="1060" y2="3938" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="3985" x2="1060" y2="3985" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="4032" x2="1060" y2="4032" stroke="#cdc7ba" stroke-width="0.6"/>
+<line x1="0" y1="4079" x2="1060" y2="4079" stroke="#cdc7ba" stroke-width="0.6"/>
+<rect x="0.5" y="64" width="1059" height="4015" fill="none" stroke="#4a7fa5" stroke-width="1"/>
+</svg>
